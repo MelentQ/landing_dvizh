@@ -1,0 +1,69 @@
+.album {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 10rem;
+
+  &__year {
+    display: inline-block;
+
+    margin-bottom: 1.4rem;
+
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.2;
+    @include titleFF;
+  }
+
+  &__list {
+    overflow: hidden;
+  }
+
+  &__list-item {
+    @include flexRowGap(2.2rem);
+  }
+
+  &__image {
+    max-width: 585px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.album-scroll {
+  position: absolute;
+  top: 0;
+  left: -5.6rem;
+
+  width: 2px;
+  height: 100%;
+
+  background-color: #94A9D0;
+
+  &__btn {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    background-color: #C82030;
+
+    cursor: pointer;
+
+    background-image: url(../img/icons/burger.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 24px 17px;
+    
+    transition: background-color 0.3s ease;
+
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+    }
+  }
+}

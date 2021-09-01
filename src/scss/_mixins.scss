@@ -209,3 +209,10 @@
 @mixin titleFF {
   font-family: 'Nekst', sans-serif;
 }
+
+@mixin flexRowGap($gap) {
+  margin-bottom: $gap;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}

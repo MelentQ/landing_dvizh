@@ -4,12 +4,13 @@
   width: 100%;
   height: 100%;
 
-  max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
+  max-width: calc(var(--max-container-width) + var(--content-padding-left) + var(--content-padding-right));
   margin: 0 auto;
-  padding: 0 var(--content-padding);
+  padding-left: var(--content-padding-left);
+  padding-right: var(--content-padding-right);
   @supports (width: max(20vw, 100px)) {
-    padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
-    padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
+    padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding-left));
+    padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding-right));
   }
 }
 
@@ -32,4 +33,35 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+}
+
+.section-title {
+  position: relative;
+
+  display: inline-block;
+
+  font-size: 9rem;
+  line-height: 1.2;
+  font-weight: 500;
+  @include titleFF;
+  text-transform: uppercase;
+
+  z-index: 2;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    width: 118px;
+    height: 76px;
+    z-index: -1;
+
+    background-image: url(../img/icons/red-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top right;
+
+    pointer-events: none;
+  }
 }

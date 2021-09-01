@@ -11,16 +11,22 @@
 }
 
 :root {
-  --max-container-width: 156rem;
-  --content-padding: 6rem;
+  --max-container-width: 145rem;
+  --content-padding-left: 15rem;
+  --content-padding-right: 6rem;
   --primary-color: #13b17c;
-  --text-color: white;
+  --text-color: #0F347C;
+  --accent-color: #E31C24;
 }
 
 html {
   box-sizing: border-box;
-  font-size: 10px;
+  font-size: .5953vw; //10px
   -webkit-text-size-adjust: 100%;
+
+  @media screen and (max-width: 1024px) {
+    font-style: 10px;
+  }
 
   @include noHighlight();
 }
