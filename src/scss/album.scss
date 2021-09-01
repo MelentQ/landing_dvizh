@@ -15,18 +15,21 @@
     @include titleFF;
   }
 
-  &__list {
+  &__slider {
     overflow: hidden;
   }
 
+  &__list {
+  }
+
   &__list-item {
-    @include flexRowGap(2.2rem);
+  }
+
+  &__image-wrapper {
+    @include imageWrapper(345, 211);
   }
 
   &__image {
-    max-width: 585px;
-    width: 100%;
-    height: auto;
   }
 }
 

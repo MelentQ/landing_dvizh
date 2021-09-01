@@ -12,6 +12,8 @@ import datepicker from './datepicker';
 import accordions from './accordions';
 import modals from './modals';
 
+import initAlbumSlider from './components/initAlbumSlider';
+
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
@@ -25,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
     mediaPlayer();
     modals();
     datepicker();
+
+    initAlbumSlider();
 });
 
 window.addEventListener('load', function() {
