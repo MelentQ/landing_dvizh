@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Nekst';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(./Nekst/Nekst-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nekst';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./Nekst/NEKST-SEMIBOLD-DESKTOP.OTF) format('opentype');
+}
+
+@font-face {
+  font-family: 'Nekst';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(./Nekst/Nekst-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nekst';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(./Nekst/Nekst-Semi.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nekst';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(./Nekst/Nekst-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nekst';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(./Nekst/Nekst-Black.ttf) format('truetype');
+}
