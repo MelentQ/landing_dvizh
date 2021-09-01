@@ -1,0 +1,136 @@
+.intro {
+  position: relative;
+
+  height: 100vh;
+
+  &__bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    background: radial-gradient(143.45% 255.01% at 11.01% 57.38%, #0f347c 0%, rgba(15, 52, 124, 0) 100%);
+    transform: rotate(-180deg);
+  }
+
+  &__inner {
+    position: relative;
+
+    height: 100%;
+  }
+
+  &__image {
+    position: absolute;
+    top: 17.4rem;
+    left: -10rem;
+
+    width: 461px;
+    height: 506px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    height: 100%;
+    padding-top: 25rem;
+    padding-bottom: 10rem;
+  }
+
+  &__date {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 3rem;
+
+    font-size: 4.6rem;
+    line-height: 1.2;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include titleFF;
+  }
+
+  &__title-container {
+    display: flex;
+
+    margin-bottom: 3rem;
+  }
+
+  &__title {
+    margin-right: 10rem;
+
+    font-size: 7.2rem;
+    line-height: 1.1;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include titleFF;
+  }
+
+  &__btn {
+    flex-shrink: 0;
+
+    align-self: flex-end;
+
+    padding: 2.5rem 10rem;
+
+    background: linear-gradient(86.67deg, rgba(227, 28, 36, 0) -27.1%, rgba(227, 28, 36, 0.415053) 46.93%, #e31c24 112.61%);
+    border-radius: 2px;
+
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 500;
+    @include titleFF;
+
+    text-transform: uppercase;
+
+    @include defaultHoverEffect(0.6);
+  }
+
+  &__slogan {
+  }
+
+  &__slogan-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__slogan-text {
+    flex: 0 0 auto;
+
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 600;
+    @include titleFF;
+  }
+
+  &__slogan-separator {
+    position: relative;
+    top: 3px;
+
+    display: block;
+
+    margin: 0 8px;
+    min-width: 6rem;
+    width: 100%;
+    height: 3px;
+
+    background-color: var(--text-color);
+  }
+}
