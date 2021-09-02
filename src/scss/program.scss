@@ -1,0 +1,121 @@
+.program {
+  padding-top: 11.4rem;
+  padding-bottom: 27.5rem;
+
+  background: linear-gradient(180.01deg, #A0B2E0 6.92%, #E1E0E7 99.99%);
+
+  &__inner {
+  }
+
+  &__title {
+    max-width: 86.8rem;
+    margin-bottom: 10rem;
+  }
+
+  &__list {
+    
+  }
+
+  &__item {
+    @include flexRowGap(12.8rem)
+  }
+}
+
+.program-card {
+  display: flex;
+
+  &__date-block {
+    flex: 0 0 26.6rem;
+  }
+
+  &__date-day {
+    display: block;
+
+    font-size: 18.8rem;
+    font-weight: 600;
+    line-height: 1.1;
+
+    @include titleFF;
+  }
+
+  &__date-month {
+    display: block;
+
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__description-block {
+    position: relative;
+
+    margin-right: 9.5rem;
+    margin-left: 20.4rem;
+  }
+
+  &__bg-image {
+    position: absolute;
+    top: -2.8rem;
+    left: -3.3rem;
+
+    max-width: unset;
+    width: 83.5rem;
+    height: 83.5rem;
+
+    pointer-events: none;
+  }
+
+  &__description-list {
+    position: relative;
+    z-index: 4;
+
+    color: var(--content-color);
+  }
+
+  &__description-item {
+    @include flexRowGap(6rem);
+  }
+
+  &__title-wrapper {
+    position: relative;
+
+    margin-bottom: 0.5rem;
+  }
+
+  &__time {
+    position: absolute;
+    left: -12rem;
+    top: 0.5rem;
+
+    display: inline-block;
+
+    width: min-content;
+
+    color: var(--text-color);
+    font-size: 2.4rem;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  &__title {
+    display: block;
+
+    font-size: 3.6rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  &__desc {
+  }
+
+  &__image-block {
+    flex: 0 0 48rem;
+  }
+
+  &__image-wrapper {
+    @include imageWrapper(480, 324);
+  }
+
+  &__image {
+  }
+}
