@@ -7,7 +7,7 @@ export default function aboutPast() {
   if (!hostElem) return;
 
   new Swiper(hostElem.querySelector('.about-past__slider-wrapper'), {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 20,
     mousewheel: true,
     grabCursor: true,
@@ -16,6 +16,9 @@ export default function aboutPast() {
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
+      567: {
+        slidesPerView: 2
+      },
       768: {
         slidesPerView: 3
       }
