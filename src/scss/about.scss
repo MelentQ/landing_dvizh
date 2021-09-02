@@ -1,10 +1,13 @@
 .about {
+  position: relative;
+
   background: linear-gradient(0deg, #A0B2E0 0.26%, #E1E0E7 100%);
+
+  padding-top: 9.2rem;
+  padding-bottom: 34rem;
 
   &__inner {
     position: relative;
-
-    padding-top: 9.2rem;
   }
 
   &__header {
@@ -40,13 +43,9 @@
   }
 
   &__two-columns {
-    display: flex;
-  }
-
-  &__album {
-    flex: 0 0 58.1rem;
-
-    margin-right: 12rem;
+    display: grid;
+    grid-template-columns: 58.1rem 60rem;
+    column-gap: 12rem;
   }
 
   &__paragraphs {
@@ -83,5 +82,33 @@
     min-width: 102.8rem;
     min-height: 58.7rem;
     object-fit: contain;
+  }
+
+  &__footer {
+    margin-top: 6.9rem;
+  }
+
+  &__footer-title {
+    font-size: 4.1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    @include titleFF;
+  }
+
+  &__footer-subtitle {
+    align-self: flex-end;
+
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  &__bg-iamge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    object-fit: contain;
+    width: 100%;
   }
 }

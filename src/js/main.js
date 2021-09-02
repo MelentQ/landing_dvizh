@@ -36,19 +36,20 @@ document.addEventListener('DOMContentLoaded', function() {
     datepicker();
 
     initAlbumSlider();
-    alignHeights('.speakers__inner', '.speaker__name');
     toggleStickyHeader();
     aboutPast();
     initThematicSectionsSlider();
-    alignHeights('.thematic-sections__list', '.thematic-section__title');
     setThematicSectionTabs();
     initTicketsSlider();
-    alignHeights('.tickets__list', '.ticket__title');
-    alignHeights('.tickets__list', '.ticket__list');
     initPromisesSlider();
 });
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
     setTimeout(() => document.body.classList.add('animatable'), 300);
+
+    alignHeights('.thematic-sections__list', '.thematic-section__title');
+    alignHeights('.speakers__inner', '.speaker__name');
+    alignHeights('.tickets__list', '.ticket__title');
+    alignHeights('.tickets__list', '.ticket__list');
 })
