@@ -20,7 +20,7 @@
       // Обнуляем height, иначе при ресайзе будет баг
       elements[i].style.height = 'auto';
 
-      let currentHeight = elements[i].offsetHeight;
+      let currentHeight = elements[i].clientHeight;
       if(currentHeight > height) {
         height = currentHeight;
       }

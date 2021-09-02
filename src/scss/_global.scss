@@ -10,6 +10,10 @@
   outline: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+}
+
 :root {
   --max-container-width: 145rem;
   --content-padding-left: 15rem;
@@ -22,12 +26,8 @@
 
 html {
   box-sizing: border-box;
-  font-size: .5953vw; //10px
+  font-size: .5952381vw; //1680px -> 10px
   -webkit-text-size-adjust: 100%;
-
-  @media screen and (max-width: 1024px) {
-    font-style: 10px;
-  }
 
   @include noHighlight();
 }
