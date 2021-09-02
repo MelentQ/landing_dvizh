@@ -19,17 +19,8 @@
     overflow: hidden;
   }
 
-  &__list {
-  }
-
-  &__list-item {
-  }
-
   &__image-wrapper {
     @include imageWrapper(345, 211);
-  }
-
-  &__image {
   }
 }
 
