@@ -7,7 +7,7 @@ export default function initAlbumSlider() {
   // Для корректной работы рассчитываем высоту слайдера
   // Сумма высот трёх карточек
   const spaceBetween = 22;
-  const cardHeight = container.querySelector('.swiper-slide').clientHeight;
+  const cardHeight = container.querySelector('.album__image-wrapper').clientHeight;
   const containerHeight = cardHeight * 3 + spaceBetween * 2;
 
   new Swiper('#albumSwiper', {
@@ -20,4 +20,12 @@ export default function initAlbumSlider() {
   });
 
   container.style.height = containerHeight + 'px';
+
+  window.addEventListener('resize', () => {
+    container.style.removeProperty('height');
+    const cardHeight = container.querySelector('.album__image-wrapper').clientHeight;
+    const containerHeight = cardHeight * 3 + spaceBetween * 2;
+
+    container.style.height = containerHeight + 'px';
+  })
 }

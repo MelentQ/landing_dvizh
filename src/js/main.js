@@ -12,7 +12,9 @@ import datepicker from './datepicker';
 import accordions from './accordions';
 import modals from './modals';
 
+import toggleStickyHeader from './components/toggleStickyHeader';
 import initAlbumSlider from './components/initAlbumSlider';
+import alignHeights from './components/alignHeights';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -29,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
     datepicker();
 
     initAlbumSlider();
+    alignHeights('.speakers__inner', '.speaker__name');
+    toggleStickyHeader();
 });
 
 window.addEventListener('load', function() {
