@@ -15,6 +15,7 @@ import modals from './modals';
 import toggleStickyHeader from './components/toggleStickyHeader';
 import initAlbumSlider from './components/initAlbumSlider';
 import alignHeights from './components/alignHeights';
+import aboutPast from './components/aboutPast';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initAlbumSlider();
     alignHeights('.speakers__inner', '.speaker__name');
     toggleStickyHeader();
+    aboutPast();
 });
 
 window.addEventListener('load', function() {
