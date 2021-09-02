@@ -1,0 +1,112 @@
+.tickets {
+  padding-top: 13.4rem;
+  padding-bottom: 10.4rem;
+
+  background-color: linear-gradient(360deg, #A0B2E0 0.26%, #E1E0E7 100%);
+
+  &__item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &:nth-child(2n + 1) {
+      background-image: url(../img/icons/tickets/ticket-1.svg);
+    }
+    &:nth-child(2n + 2) {
+      background-image: url(../img/icons/tickets/ticket-2.svg);
+    }
+    &:nth-child(2n + 3) {
+      background-image: url(../img/icons/tickets/ticket-3.svg);
+    }
+    &:nth-child(2n + 4) {
+      background-image: url(../img/icons/tickets/ticket-4.svg);
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 5.2rem;
+  }
+
+  &__header-text {
+    flex: 0 1 50%;
+
+    margin-left: 2rem;
+
+    font-size: 2.8rem;
+    line-height: 1.2;
+    font-weight: 600;
+    @include titleFF;
+    color: var(--content-color);
+  }
+}
+
+.ticket {
+
+  padding: 3.4rem 3rem 3.4rem 5.2rem;
+
+  border-radius: 0.4rem;
+  background: linear-gradient(179.35deg, #A0B2E0 2.33%, rgba(225, 224, 231, 0.27) 98.11%);
+
+  &__title {
+    margin-bottom: 3.3rem;
+
+    font-size: 3.9rem;
+    line-height: 1.2;
+    font-weight: 600;
+    @include titleFF;
+  }
+
+  &__list {
+    max-width: 22.2rem;
+    margin-bottom: 2rem;
+
+    font-size: 1.6rem;
+    line-height: 1.2;
+    color: var(--content-color);
+  }
+
+  &__list-item {
+    @include flexRowGap(2.8rem);
+  }
+
+  &__price-block {
+    position: relative;
+
+    padding-top: 2rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 110%;
+      height: 0.1rem;
+      
+      background-color: var(--text-color);
+    }
+  }
+
+  &__price {
+    display: block;
+
+    margin-bottom: 0.6rem;
+
+    font-size: 3.9rem;
+    line-height: 1.2;
+    font-weight: 600;
+    @include titleFF;
+  }
+
+  &__price-label {
+    display: block;
+
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: white;
+  }
+}
