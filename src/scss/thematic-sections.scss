@@ -36,7 +36,7 @@
   padding: 2rem;
 
   background: linear-gradient(350.76deg, #A0B2E0 -26.11%, rgba(225, 224, 231, 0) 167.92%);
-  filter: drop-shadow(0px 4px 40px #97A7D0);
+  filter: drop-shadow(0 0.4rem 4rem #97A7D0);
 
   &__image {
     margin-bottom: 3.3rem;
@@ -80,7 +80,7 @@
     align-items: flex-start;
 
     padding: 4.4rem 3.2rem 4.4rem 5.6rem;
-    width: calc(200% + 15px);
+    width: calc(200% + 1.5rem);
     height: 100%;
     background-color: white;
     z-index: 2;

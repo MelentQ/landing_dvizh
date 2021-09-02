@@ -13,6 +13,10 @@ export default function initAlbumSlider() {
   new Swiper('#albumSwiper', {
     direction: "vertical",
     slidesPerView: 3,
+    freeMode: {
+      enabled: true,
+      sticky: true,
+    },
     spaceBetween: spaceBetween,
     mousewheel: true,
     grabCursor: true,
