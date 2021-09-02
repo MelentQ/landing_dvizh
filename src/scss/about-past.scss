@@ -1,0 +1,124 @@
+.about-past {
+  padding-top: 5.6rem;
+  padding-bottom: 8.6rem;
+  background: linear-gradient(0.16deg, #A0B2E0 0.38%, #FFFFFF 97.57%);
+}
+
+.about-past__title {
+  max-width: 106rem;
+}
+
+.about-past__slider-wrapper {
+  margin-top: 13rem;
+}
+
+.about-past__slide-item {
+  padding: 4rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border-radius: .4rem;
+  min-height: 35rem;
+}
+
+.about-past__slide-head-mark {
+  height: 5rem;
+}
+
+.about-past__slide-head-mark {
+  &--style-1 {
+    fill: #E31C24;
+  }
+
+  &--style-2 {
+    fill: #EC8B24;
+  }
+
+  &--style-3 {
+    fill: #009F93;
+  }
+}
+
+.about-past__slide-title {
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+  color: #000;
+
+  &.mod-crop {
+    /*обезаем до 3-х строк*/
+    height: calc(3.4rem * 4);
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.about-past__bnt-read-completely-wrapper {
+  margin: 0 -1.8rem;
+}
+
+.about-past__bnt-read-completely {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+  color: #0F347C;
+  padding: 1.8rem;
+}
+
+.about-past__slide-content {
+  display: grid;
+  grid-template-columns: 5.6rem auto;
+  grid-gap: 2rem;
+}
+
+.about-past__slide-content-img {
+  height: 5.6rem;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.about-past__slide-content-title {
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.about-past__slide-content-subtitle {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #000000;
+}
+
+.about-past__btns-wrapper {
+  width: 18.2rem;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6rem;
+}
+
+.about-past__btn {
+  width: 0;
+  height: 0;
+  border-top: 4rem solid transparent;
+  border-bottom: 4rem solid transparent;
+  position: relative !important;
+
+  &:after {
+    content: none !important;
+  }
+
+  &--prev {
+    border-right: 4rem solid #E31C24;
+  }
+
+  &--next {
+    border-left: 4rem solid #E31C24;
+  }
+}
