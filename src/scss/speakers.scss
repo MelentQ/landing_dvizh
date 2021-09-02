@@ -11,6 +11,8 @@
 
     width: 88.4rem;
     height: 59.1rem;
+
+    pointer-events: none;
   }
 
   &__header {
@@ -93,5 +95,9 @@
 
   &__post {
     display: block;
+
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: black;
   }
 }
