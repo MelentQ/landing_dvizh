@@ -19,6 +19,7 @@ import aboutPast from './components/aboutPast';
 import initThematicSectionsSlider from './components/initThematicSectionsSlider';
 import setThematicSectionTabs from './components/setThematicSectionTabs';
 import initTicketsSlider from './components/initTicketsSlider';
+import initPromisesSlider from './components/initPromisesSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initTicketsSlider();
     alignHeights('.tickets__list', '.ticket__title');
     alignHeights('.tickets__list', '.ticket__list');
+    initPromisesSlider();
 });
 
 window.addEventListener('load', function() {

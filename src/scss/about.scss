@@ -4,18 +4,28 @@
   &__inner {
     position: relative;
 
-    display: flex;
-
     padding-top: 9.2rem;
   }
 
-  &__photos {
-    flex: 0 0 60rem;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 
-    margin-right: 12rem;
+    margin-bottom: 8.6rem;
+  }
+
+  &__title {
+    flex-shrink: 0;
+  }
+
+  &__second-title {
+    margin-bottom: 16.1rem;
   }
 
   &__subtitle {
+    flex-basis: 50%;
+
     margin-bottom: 3rem;
 
     color: var(--accent-color);
@@ -23,6 +33,20 @@
     font-weight: 600;
     line-height: 1.2;
     @include titleFF;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__two-columns {
+    display: flex;
+  }
+
+  &__album {
+    flex: 0 0 58.1rem;
+
+    margin-right: 12rem;
   }
 
   &__paragraphs {
