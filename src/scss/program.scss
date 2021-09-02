@@ -61,6 +61,8 @@
     max-width: unset;
     width: 83.5rem;
     height: 83.5rem;
+
+    pointer-events: none;
   }
 
   &__description-list {
