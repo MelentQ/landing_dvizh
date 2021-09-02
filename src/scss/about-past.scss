@@ -44,7 +44,7 @@
   font-weight: 600;
   font-size: 2.8rem;
   line-height: 3.4rem;
-  color: #000;
+  color: var(--content-color);
 
   &.mod-crop {
     /*обезаем до 3-х строк*/
@@ -63,9 +63,8 @@
 .about-past__bnt-read-completely {
   font-weight: 600;
   font-size: 1rem;
-  line-height: 1.2rem;
+  line-height: 1.2;
   text-transform: uppercase;
-  color: #0F347C;
   padding: 1.8rem;
 }
 
@@ -83,8 +82,8 @@
 
 .about-past__slide-content-title {
   font-size: 2.8rem;
-  line-height: 3.4rem;
-  color: #000000;
+  line-height: 1.2;
+  color: var(--content-color);
   margin-bottom: 1rem;
   font-weight: bold;
 }
@@ -92,7 +91,7 @@
 .about-past__slide-content-subtitle {
   font-size: 1.4rem;
   line-height: 1.8rem;
-  color: #000000;
+  color: var(--content-color);
 }
 
 .about-past__btns-wrapper {
@@ -115,10 +114,10 @@
   }
 
   &--prev {
-    border-right: 4rem solid #E31C24;
+    border-right: 4rem solid var(--accent-color);
   }
 
   &--next {
-    border-left: 4rem solid #E31C24;
+    border-left: 4rem solid var(--accent-color);
   }
 }
