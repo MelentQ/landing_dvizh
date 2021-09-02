@@ -16,6 +16,9 @@ import toggleStickyHeader from './components/toggleStickyHeader';
 import initAlbumSlider from './components/initAlbumSlider';
 import alignHeights from './components/alignHeights';
 import aboutPast from './components/aboutPast';
+import initThematicSectionsSlider from './components/initThematicSectionsSlider';
+import setThematicSectionTabs from './components/setThematicSectionTabs';
+import initTicketsSlider from './components/initTicketsSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -35,6 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
     alignHeights('.speakers__inner', '.speaker__name');
     toggleStickyHeader();
     aboutPast();
+    initThematicSectionsSlider();
+    alignHeights('.thematic-sections__list', '.thematic-section__title');
+    setThematicSectionTabs();
+    initTicketsSlider();
+    alignHeights('.tickets__list', '.ticket__title');
+    alignHeights('.tickets__list', '.ticket__list');
 });
 
 window.addEventListener('load', function() {
