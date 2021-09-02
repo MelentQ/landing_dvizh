@@ -15,6 +15,8 @@ import modals from './modals';
 import toggleStickyHeader from './components/toggleStickyHeader';
 import initAlbumSlider from './components/initAlbumSlider';
 import alignHeights from './components/alignHeights';
+import initThematicSectionsSlider from './components/initThematicSectionsSlider';
+import setThematicSectionTabs from './components/setThematicSectionTabs';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -33,6 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initAlbumSlider();
     alignHeights('.speakers__inner', '.speaker__name');
     toggleStickyHeader();
+    initThematicSectionsSlider();
+    alignHeights('.thematic-sections__list', '.thematic-section__title');
+    setThematicSectionTabs();
 });
 
 window.addEventListener('load', function() {
