@@ -1,0 +1,43 @@
+.form {
+
+  &__inputs {
+    border: none;
+  }
+
+  &__input {
+    padding: 3rem 1.8rem;
+    background: rgba(255, 255, 255, 0.3);
+    border-bottom: 2px solid #A0B2E0;
+
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: var(--text-color);
+
+    &::placeholder {
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+    }
+  }
+
+  &__submit-btn {
+    display: block;
+
+    width: 100%;
+    padding: 2.4rem 0;
+
+    border: 4px solid #FFFFFF;
+  }
+
+  &__btn-label {
+    display: block;
+    text-align: center;
+
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 500;
+
+    color: white;
+  }
+}

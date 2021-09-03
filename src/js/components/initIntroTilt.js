@@ -8,7 +8,8 @@ function initVanillaTilt() {
   VanillaTilt.init(element, {
 		max: 8,
 		speed: 1000,
-    reverse: true
+    reverse: true,
+    gyroscope: false
 	});
 }
 
