@@ -19,8 +19,7 @@ export default function initAlbumSlider() {
     },
     spaceBetween: spaceBetween,
     mousewheel: true,
-    grabCursor: true,
-    autoHeight: true
+    grabCursor: true
   });
 
   container.style.height = containerHeight + 'px';

@@ -6,16 +6,28 @@
   padding-top: 9.2rem;
   padding-bottom: 34rem;
 
+  @include breakpoint(small-tablet) {
+    padding-top: 6.2rem;
+    padding-bottom: 24rem;
+  }
+  @include breakpoint(mobile) {
+    padding-top: 4rem;
+    padding-bottom: 20rem;
+  }
+
   &__inner {
     position: relative;
   }
 
   &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
     margin-bottom: 8.6rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 6rem;
+    }
+    @include breakpoint(small-tablet) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__title {
@@ -24,28 +36,63 @@
 
   &__second-title {
     margin-bottom: 16.1rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 8rem;
+    }
+    @include breakpoint(small-tablet) {
+      margin-bottom: 6rem;
+    }
   }
 
   &__subtitle {
     flex-basis: 50%;
-
-    margin-bottom: 3rem;
 
     color: var(--accent-color);
     font-size: 4.1rem;
     font-weight: 600;
     line-height: 1.2;
     @include titleFF;
+
+    @include breakpoint(tablet) {
+      font-size: 2.8rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 2rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+    }
   }
 
   &__content {
     position: relative;
+
+    margin-left: 5rem;
   }
 
   &__two-columns {
     display: grid;
-    grid-template-columns: 58.1rem 60rem;
+    grid-template-columns: 58.1rem 67.9rem;
     column-gap: 12rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 4rem;
+    }
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+      row-gap: 4rem;
+    }
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+      row-gap: 3rem;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
   }
 
   &__paragraphs {
@@ -59,29 +106,60 @@
     color: var(--text-color);
 
     z-index: 2;
+
+    @include breakpoint(tablet) {
+      font-size: 1.7rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.4rem;
+    }
   }
 
   &__paragraph {
     @include flexRowGap(3rem);
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__megaphone {
+    flex: 1 1 100%;
     position: relative;
 
     width: 100%;
-    min-height: 45rem;
+    min-height: 40rem;
 
     pointer-events: none;
   }
 
   &__megaphone-image {
     position: absolute;
-    right: -7rem;
-    bottom: 0;
+    top: 50%;
+    transform: translateY(-50%);
 
-    min-width: 102.8rem;
-    min-height: 58.7rem;
+    right: -8rem;
+
+    width: 44.6rem;
+    height: 44.1rem;
     object-fit: contain;
+
+    @include breakpoint(tablet) {
+      right: 0;
+    }
+  }
+
+  &__marquee {
+    position: absolute;
+    top: 50%;
+
+    width: 117rem;
+
+    transform: rotate(16.56deg) translateY(-50%);
+
+    &:nth-child(2) {
+      transform: rotate(-17.28deg) translateY(-50%);
+    }
   }
 
   &__footer {
@@ -93,6 +171,10 @@
     font-weight: 600;
     line-height: 1.2;
     @include titleFF;
+
+    @include breakpoint(tablet) {
+      font-size: 2.8rem;
+    }
   }
 
   &__footer-subtitle {
@@ -101,6 +183,10 @@
     font-size: 2.4rem;
     font-weight: 500;
     line-height: 1.2;
+
+    @include breakpoint(tablet) {
+      font-size: 1.7rem;
+    }
   }
 
   &__bg-iamge {
@@ -110,13 +196,5 @@
 
     object-fit: contain;
     width: 100%;
-  }
-
-  &__marquee {
-    transform: rotate(16.56deg);
-
-    &:nth-child(2) {
-      transform: rotate(-17.28deg);
-    }
   }
 }

@@ -16,11 +16,35 @@
   }
 
   &__slider {
+    // height: 116.3rem;
+
     overflow: hidden;
+
+    // @include breakpoint(tablet) {
+    //   height: 90rem;
+    // }
   }
 
   &__image-wrapper {
-    @include imageWrapper(345, 211);
+    height: 35.5rem;
+
+    @include breakpoint(tablet) {
+      height: 32.5rem;
+    }
+    @include breakpoint(small-tablet) {
+      height: 27.5rem;
+    }
+    @include breakpoint(mobile) {
+      height: 24.5rem;
+    }
+
+    img {
+      width: 100%;
+      min-width: 100%;
+
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 
@@ -28,17 +52,23 @@
   position: absolute;
   top: 0;
   left: -5.6rem;
+  z-index: 25;
 
   width: 0.2rem;
   height: 100%;
 
   background-color: #94A9D0;
 
+  @include breakpoint(tablet) {
+    left: -3.6rem;
+  }
+
   &__btn {
     position: absolute;
     left: 50%;
     top: 30%;
     transform: translateX(-50%);
+    z-index: 26;
 
     width: 4.5rem;
     height: 4.5rem;
@@ -59,5 +89,29 @@
     &:focus {
       background-color: var(--accent-color);
     }
+
+    @include breakpoint(tablet) {
+      width: 3.5rem;
+      height: 3.5rem;
+
+      background-size: 1.8rem 1.2rem;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: -3rem;
+    transform: translateY(-50%) rotate(-90deg);
+
+    display: block;
+
+    width: max-content;
+
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #94A9D0;
+    @include titleFF;
   }
 }
