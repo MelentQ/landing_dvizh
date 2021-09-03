@@ -14,10 +14,10 @@ export default function aboutPast() {
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-      567: {
+      769: {
         slidesPerView: 2
       },
-      768: {
+      1025: {
         slidesPerView: 3
       }
     }
