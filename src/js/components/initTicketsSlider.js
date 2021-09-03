@@ -11,6 +11,23 @@ function initTicketsSlider() {
   new Swiper('.tickets__slider', {
     slidesPerView: 4,
     spaceBetween: 20,
+    simulateTouch: false,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        simulateTouch: true
+      },
+      577: {
+        slidesPerView: 2
+      },
+      769: {
+        slidesPerView: 3,
+      },
+      1025: {
+        slidesPerView: 4,
+        simulateTouch: false
+      }
+    }
   })
 }
 

@@ -4,21 +4,52 @@
 
   background: linear-gradient(180deg, #A0B2E0 5.76%, #E1E0E7 100%);
 
+  @include breakpoint(tablet) {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+  }
+  @include breakpoint(small-tablet) {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+  @include breakpoint(mobile) {
+    padding-top: 4rem;
+  }
+
   &__bg {
     position: absolute;
     bottom: 0;
     left: 0;
 
     width: 88.4rem;
-    height: 59.1rem;
+    height: auto;
 
     pointer-events: none;
+
+    @include breakpoint(tablet) {
+      left: 3rem;
+
+      width: 80%;
+    }
   }
 
   &__header {
     display: flex;
 
     margin-bottom: 9.5rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      margin-bottom: 6rem;
+    }
+    @include breakpoint(small-tablet) {
+      margin-bottom: 4rem;
+    }
+    @include breakpoint(mobile) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__more {
@@ -26,16 +57,16 @@
     align-items: center;
     justify-content: center;
 
-    flex: 0 0 35.9rem;
+    flex: 0 0 29.5rem;
     align-self: flex-end;
 
     margin-left: 4.4rem;
-    width: 35.9rem;
-    height: 7.9rem;
+    width: 29.5rem;
+    height: 6.1rem;
 
     background-image: url(../img/icons/btn-arrow.svg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
     background-position: top right;
 
     font-weight: 600;
@@ -44,21 +75,69 @@
     color: white !important;
 
     @include defaultHoverEffect(0.7);
+
+    @include breakpoint(tablet) {
+      flex-basis: auto;
+
+      margin-top: 3rem;
+      margin-left: 0;
+
+      width: 24.5rem;
+      height: 5.1rem;
+
+      font-size: 1.6rem;
+    }
+    @include breakpoint(small-tablet) {
+      width: 19.5rem;
+      height: 4.1rem;
+
+      font-size: 1.4rem;
+    }
+    @include breakpoint(mobile) {
+      width: 14.5rem;
+      height: 3.1rem;
+
+      font-size: 1.2rem;
+    }
   }
 
   &__list {
+    position: relative;
+    z-index: 10;
+
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
-    align-items: flex-start;
 
-    margin: 0 -1.2rem;
+    padding-left: 20%;
+    margin: -10px;
 
-    @include flexRowGap(4.3rem);
+    @include breakpoint(tablet) {
+      padding-left: 0;
+    }
+    @include breakpoint(small-tablet) {
+
+    }
+    @include breakpoint(mobile) {
+
+    }
   }
 
   &__item {
-    flex: 0 0 28rem;
-    margin: 0 1.2rem;
+    flex: 0 0 auto;
+
+    width: calc(25% - 20px);
+    
+    margin: 10px;
+
+    @include breakpoint(tablet) {
+    }
+    @include breakpoint(small-tablet) {
+      width: calc(33.333% - 20px);
+    }
+    @include breakpoint(mobile) {
+      width: calc(50% - 20px);
+    }
   }
 }
 
@@ -81,6 +160,22 @@
       border: 3.7rem solid transparent;
       border-right: 3.7rem solid var(--accent-color);
       border-bottom: 3.7rem solid var(--accent-color);
+
+      @include breakpoint(tablet) {
+        border: 3.2rem solid transparent;
+        border-right: 3.2rem solid var(--accent-color);
+        border-bottom: 3.2rem solid var(--accent-color);
+      }
+      @include breakpoint(small-tablet) {
+        border: 2.8rem solid transparent;
+        border-right: 2.8rem solid var(--accent-color);
+        border-bottom: 2.8rem solid var(--accent-color);
+      }
+      @include breakpoint(mobile) {
+        border: 2.4rem solid transparent;
+        border-right: 2.4rem solid var(--accent-color);
+        border-bottom: 2.4rem solid var(--accent-color);
+      }
     }
   }
 
@@ -93,6 +188,16 @@
     font-size: 2.8rem;
     line-height: 1;
     @include titleFF;
+
+    @include breakpoint(tablet) {
+      font-size: 2.8rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 2rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+    }
   }
 
   &__post {
@@ -101,5 +206,12 @@
     font-size: 1.4rem;
     line-height: 1.2;
     color: black;
+
+    @include breakpoint(tablet) {
+      font-size: 1.2rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 1rem;
+    }
   }
 }
