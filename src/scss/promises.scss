@@ -3,13 +3,40 @@
   padding-bottom: 19.8rem;
 
   background-color: #A0B2E0;
+
+  @include breakpoint(tablet) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  @include breakpoint(small-tablet) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  @include breakpoint(mobile) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
   
   &__title {
     margin-bottom: 12rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 8rem;
+    }
+    @include breakpoint(small-tablet) {
+      margin-bottom: 6rem;
+    }
+    @include breakpoint(mobile) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__slider {
-    width: calc(100% - 20rem);
+    margin-right: 20rem;
+
+    @include breakpoint(tablet) {
+      margin-right: 6rem;
+    }
   }
 
   &__list-item {
@@ -41,6 +68,10 @@
     background: linear-gradient(90deg, #A0B2E0 0.52%, rgba(160, 178, 224, 0) 201.85%);
 
     transition: opacity 0.3s, visibility 0.3s ease;
+
+    @include breakpoint(tablet) {
+      width: calc(100% + 2rem);
+    }
   }
 }
 
@@ -48,10 +79,30 @@
   display: flex;
   align-items: center;
 
+  @include breakpoint(tablet) {
+    align-items: flex-start;
+  }
+  @include breakpoint(small-tablet) {
+    flex-direction: column;
+  }
+
   &__content {
     flex: 0 0 50%;
 
     padding-right: 12.1rem;
+
+    @include breakpoint(tablet) {
+      padding-right: 6rem;
+      padding-left: 4rem;
+
+      flex-basis: 60%;
+    }
+    @include breakpoint(small-tablet) {
+      flex-basis: auto;
+      margin-bottom: 3rem;
+      padding-left: 2.5rem;
+      padding-right: 0;
+    }
   }
 
   &__title-wrapper {
@@ -62,6 +113,16 @@
     font-weight: 600;
     @include titleFF;
     color: white;
+
+    @include breakpoint(tablet) {
+      font-size: 3.2rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 2.6rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 2rem;
+    }
   }
 
   &__title-number {
@@ -70,25 +131,53 @@
     position: absolute;
     top: 0;
     left: -4rem;
+
+    @include breakpoint(small-tablet) {
+      left: -2.5rem;
+    }
   }
 
   &__title {
     margin-bottom: 3.7rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 3rem;
+    }
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2.6rem;
+    }
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__description {
     font-size: 1.9rem;
     line-height: 1.2;
     color: var(--content-color);
+
+    @include breakpoint(tablet) {
+      font-size: 1.6rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 1.4rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.2rem;
+    }
   }
 
   &__image-block {
     flex: 0 0 50%;
-  }
 
-  &__image-wrapper {
-  }
+    @include breakpoint(tablet) {
+      flex-basis: 40%;
+    }
+    @include breakpoint(small-tablet) {
+      flex-basis: auto;
 
-  &__image {
+      max-width: 40rem;
+      padding-left: 2.5rem;
+    }
   }
 }
