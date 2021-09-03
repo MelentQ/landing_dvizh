@@ -36,6 +36,15 @@
 
     padding-top: 15rem;
     padding-bottom: 7rem;
+
+    @include breakpoint(tablet) {
+      padding-top: 10rem;
+      padding-bottom: 4rem;
+    }
+    @include breakpoint(mobile) {
+      padding-top: 6rem;
+      padding-bottom: 2rem;
+    }
   }
 
   &__content {
@@ -49,10 +58,22 @@
 
     height: 100%;
     margin-bottom: 10rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 6rem;
+    }
+    @include breakpoint(mobile) {
+      margin-top: 10rem;
+      margin-bottom: 4rem;
+    }
   }
 
   &__title-container {
     display: flex;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -67,6 +88,18 @@
     font-weight: 600;
     text-transform: uppercase;
     @include titleFF;
+
+    @include breakpoint(tablet) {
+      margin-right: 0;
+      margin-bottom: 3rem;
+      margin-top: 3rem;
+      padding-left: 0;
+
+      font-size: 5.2rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 2.8rem;
+    }
 
     &::before {
       content: '';
@@ -85,6 +118,21 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: left top;
+
+      @include breakpoint(tablet) {
+        left: -3rem;
+        top: -34rem;
+
+        width: 63.5rem;
+        height: 33rem;
+      }
+      @include breakpoint(mobile) {
+        left: -2rem;
+        top: -20rem;
+
+        width: 31.76rem;
+        height: 16.55rem;
+      }
     }
   }
 
@@ -106,6 +154,22 @@
     text-transform: uppercase;
 
     @include defaultHoverEffect(0.6);
+
+    @include breakpoint(tablet) {
+      padding: 1.8rem 7rem;
+
+      font-size: 1.6rem;
+    }
+    @include breakpoint(mobile) {
+      padding: 1.5rem 5rem;
+
+      font-size: 1.4rem;
+    }
+  }
+
+  &__slogan {
+    position: relative;
+    z-index: 10;
   }
 
   &__slogan-item {
@@ -121,6 +185,13 @@
     line-height: 1.2;
     font-weight: 600;
     @include titleFF;
+
+    @include breakpoint(tablet) {
+      font-size: 2.6rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.4rem;
+    }
   }
 
   &__slogan-separator {
@@ -135,6 +206,12 @@
     height: 0.3rem;
 
     background-color: white;
+
+    @include breakpoint(mobile) {
+      min-width: 2rem;
+      height: 0.1rem;
+      margin: 0 0.4rem;
+    }
   }
 
   &__footer {
@@ -150,6 +227,13 @@
     font-weight: 600;
     @include titleFF;
     text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+      font-size: 4rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 2rem;
+    }
   }
 
   &__partner {
@@ -158,9 +242,16 @@
 
   &__partner-image {
     width: 18.1rem;
-    height: 6.4rem;
+    height: auto;
 
     margin-bottom: 0.7rem;
+
+    @include breakpoint(tablet) {
+      width: 14rem;
+    }
+    @include breakpoint(mobile) {
+      width: 10rem;
+    }
   }
 
   &__partner-label {
@@ -170,5 +261,12 @@
     line-height: 1.2;
     letter-spacing: 2%;
     text-align: center;
+
+    @include breakpoint(tablet) {
+      font-size: 1.2rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 0.8rem;
+    }
   }
 }
