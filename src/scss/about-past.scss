@@ -8,7 +8,11 @@
   max-width: 106rem;
 }
 
-.about-past__slider-wrapper {
+.about-past__slider {
+  position: relative;
+}
+
+.about-past__slider-container {
   margin-top: 13rem;
 }
 
@@ -20,10 +24,6 @@
   background: #FFFFFF;
   border-radius: .4rem;
   min-height: 35rem;
-
-  @include breakpoint(small-tablet) {
-    min-height: 90rem;
-  }
 }
 
 .about-past__slide-head-mark {
@@ -48,25 +48,7 @@
   font-weight: 600;
   font-size: 2.8rem;
   line-height: 3.4rem;
-  color: #000;
-
-  @include breakpoint(small-tablet) {
-    font-size: 4.8rem;
-    line-height: 6.4rem;
-
-    &.mod-crop {
-      height: calc(6.4rem * 4);
-    }
-  }
-
-  @include breakpoint(small-mobile) {
-    font-size: 8.8rem;
-    line-height: 11.4rem;
-
-    &.mod-crop {
-      height: calc(11.4rem * 4);
-    }
-  }
+  color: var(--content-color);
 
   &.mod-crop {
     /*обезаем до 3-х строк*/
@@ -80,35 +62,14 @@
 
 .about-past__bnt-read-completely-wrapper {
   margin: 0 -1.8rem;
-
-  @include breakpoint(small-tablet) {
-    margin: 0 -3.8rem;
-  }
-
-  @include breakpoint(mobile) {
-    margin: 0 -6.8rem;
-  }
 }
 
 .about-past__bnt-read-completely {
   font-weight: 600;
   font-size: 1rem;
-  line-height: 1.2rem;
+  line-height: 1.2;
   text-transform: uppercase;
-  color: #0F347C;
   padding: 1.8rem;
-
-  @include breakpoint(small-tablet) {
-    font-size: 3rem;
-    line-height: 4.2rem;
-    padding: 3.8rem;
-  }
-
-  @include breakpoint(mobile) {
-    font-size: 5rem;
-    line-height: 6.2rem;
-    padding: 6.8rem;
-  }
 }
 
 .about-past__slide-content {
@@ -116,11 +77,6 @@
   grid-template-columns: 5.6rem auto;
   grid-gap: 2rem;
   width: 100%;
-
-  @include breakpoint(small-tablet) {
-    grid-template-columns: 10.6rem auto;
-    grid-gap: 8rem;
-  }
 }
 
 .about-past__slide-content-img {
@@ -131,60 +87,29 @@
 
 .about-past__slide-content-title {
   font-size: 2.8rem;
-  line-height: 3.4rem;
-  color: #000000;
+  line-height: 1.2;
+  color: var(--content-color);
   margin-bottom: 1rem;
   font-weight: bold;
-
-  @include breakpoint(small-tablet) {
-    font-size: 3.8rem;
-    line-height: 4rem;
-  }
-
-  @include breakpoint(small-mobile) {
-    font-size: 4.8rem;
-    line-height: 5rem;
-  }
 }
 
 .about-past__slide-content-subtitle {
   font-size: 1.4rem;
   line-height: 1.8rem;
-  color: #000000;
-
-  @include breakpoint(small-tablet) {
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-  }
-
-  @include breakpoint(small-mobile) {
-    font-size: 3.4rem;
-    line-height: 5.8rem;
-
-  }
+  color: var(--content-color);
 }
 
-.about-past__btns-wrapper {
-  width: 182px;
-  height: 40px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 60px;
+.about-past__btn-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 
-  @include breakpoint(tablet) {
-    width: 152px;
-    height: 30px;
-    margin-top: 40px;
+  &:nth-child(1) {
+    left: -6rem;
   }
 
-  @include breakpoint(small-tablet) {
-    width: 100px;
-    margin-top: 30px;
-  }
-
-  @include breakpoint(small-mobile) {
-    width: 90px;
-    margin-top: 20px;
+  &:nth-child(2) {
+    right: -6rem;
   }
 }
 
@@ -200,36 +125,10 @@
   }
 
   &--prev {
-    border-right: 4rem solid #E31C24;
+    border-right: 4rem solid var(--accent-color);
   }
 
   &--next {
-    border-left: 4rem solid #E31C24;
-  }
-
-  @include breakpoint(small-tablet) {
-    border-top: 6rem solid transparent;
-    border-bottom: 6rem solid transparent;
-
-    &--prev {
-      border-right: 6rem solid #E31C24;
-    }
-
-    &--next {
-      border-left: 6rem solid #E31C24;
-    }
-  }
-
-  @include breakpoint(small-mobile) {
-    border-top: 8rem solid transparent;
-    border-bottom: 8rem solid transparent;
-
-    &--prev {
-      border-right: 8rem solid #E31C24;
-    }
-
-    &--next {
-      border-left: 8rem solid #E31C24;
-    }
+    border-left: 4rem solid var(--accent-color);
   }
 }

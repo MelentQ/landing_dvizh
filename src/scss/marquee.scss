@@ -1,0 +1,21 @@
+.marquee {
+
+  &__wrapper {
+    font-size: 3.6rem;
+    line-height: 1.2;
+    font-weight: 600;
+    @include titleFF;
+    text-transform: uppercase;
+  }
+
+  &__unit {
+    margin-right: 6.8rem;
+
+    &:nth-child(2n+1) {
+      color: white;
+    }
+    &:nth-child(2n) {
+      color: var(--accent-color);
+    }
+  }
+}

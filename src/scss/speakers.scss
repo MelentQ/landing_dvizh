@@ -63,6 +63,8 @@
 }
 
 .speaker {
+  display: flex;
+  flex-direction: column;
 
   &__image-wrapper {
     @include imageWrapper(1, 1);

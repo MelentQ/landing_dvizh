@@ -1,6 +1,7 @@
 /**
  * Назначает всем элементам одинаковую высоту, равную максимальной одного из элементов
  * Короче, выравнивает высоту элементов
+ * Следует применять после события 'load', т.к. необходимо загрузить стили
  * @param {String} parentSelector - селектор общего контейнера
  * @param {String} elementSelector - селектор элементов, которые нужно выровнять
  */
@@ -20,7 +21,7 @@
       // Обнуляем height, иначе при ресайзе будет баг
       elements[i].style.height = 'auto';
 
-      let currentHeight = elements[i].offsetHeight;
+      let currentHeight = elements[i].clientHeight;
       if(currentHeight > height) {
         height = currentHeight;
       }

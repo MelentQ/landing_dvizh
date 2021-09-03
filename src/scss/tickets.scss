@@ -2,9 +2,12 @@
   padding-top: 13.4rem;
   padding-bottom: 10.4rem;
 
-  background-color: linear-gradient(360deg, #A0B2E0 0.26%, #E1E0E7 100%);
+  background: linear-gradient(360deg, #A0B2E0 0.26%, #E1E0E7 100%);
 
   &__item {
+    border-radius: 0.4rem;
+    overflow: hidden;
+    
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -26,6 +29,7 @@
   &__header {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 
     margin-bottom: 5.2rem;
   }
@@ -47,7 +51,6 @@
 
   padding: 3.4rem 3rem 3.4rem 5.2rem;
 
-  border-radius: 0.4rem;
   background: linear-gradient(179.35deg, #A0B2E0 2.33%, rgba(225, 224, 231, 0.27) 98.11%);
 
   &__title {
