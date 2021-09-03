@@ -2,12 +2,12 @@
   position: relative;
   z-index: 2;
 
-  margin-top: 10rem;
-
   &__year {
-    display: inline-block;
+    position: absolute;
+    top: -4rem;
+    left: 0;
 
-    margin-bottom: 1.4rem;
+    display: inline-block;
 
     font-size: 2.4rem;
     font-weight: 600;
@@ -19,17 +19,8 @@
     overflow: hidden;
   }
 
-  &__list {
-  }
-
-  &__list-item {
-  }
-
   &__image-wrapper {
     @include imageWrapper(345, 211);
-  }
-
-  &__image {
   }
 }
 
@@ -38,7 +29,7 @@
   top: 0;
   left: -5.6rem;
 
-  width: 2px;
+  width: 0.2rem;
   height: 100%;
 
   background-color: #94A9D0;
