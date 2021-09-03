@@ -27,6 +27,9 @@ function setThematicSectionTabs() {
     desc.addEventListener('mouseleave', () => {
       desc.classList.remove('thematic-section__description_opened');
     })
+    desc.addEventListener('click', () => {
+      desc.classList.remove('thematic-section__description_opened');
+    })
   })
 }
 

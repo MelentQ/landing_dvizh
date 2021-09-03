@@ -12,7 +12,7 @@
   }
   @include breakpoint(mobile) {
     padding-top: 4rem;
-    padding-bottom: 20rem;
+    padding-bottom: 16rem;
   }
 
   &__inner {
@@ -67,8 +67,6 @@
 
   &__content {
     position: relative;
-
-    margin-left: 5rem;
   }
 
   &__two-columns {
@@ -82,11 +80,11 @@
     }
     @include breakpoint(small-tablet) {
       grid-template-columns: 1fr;
-      row-gap: 4rem;
+      row-gap: 3rem;
     }
     @include breakpoint(mobile) {
       grid-template-columns: 1fr;
-      row-gap: 3rem;
+      row-gap: 2.5rem;
     }
   }
 
@@ -131,6 +129,13 @@
     min-height: 40rem;
 
     pointer-events: none;
+
+    @include breakpoint(mobile) {
+      min-height: 30rem;
+    }
+    @include breakpoint(supersmall-mobile) {
+      min-height: 25rem;
+    }
   }
 
   &__megaphone-image {
@@ -160,10 +165,21 @@
     &:nth-child(2) {
       transform: rotate(-17.28deg) translateY(-50%);
     }
+
+    @include breakpoint(mobile) {
+      left: -100%;
+    }
   }
 
   &__footer {
     margin-top: 6.9rem;
+
+    @include breakpoint(mobile) {
+      margin-top: 4rem;
+    }
+    @include breakpoint(supersmall-mobile) {
+      margin-top: 3rem;
+    }
   }
 
   &__footer-title {
@@ -174,6 +190,12 @@
 
     @include breakpoint(tablet) {
       font-size: 2.8rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 2rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
     }
   }
 
@@ -187,6 +209,9 @@
     @include breakpoint(tablet) {
       font-size: 1.7rem;
     }
+    @include breakpoint(mobile) {
+      font-size: 1.4rem;
+    }
   }
 
   &__bg-iamge {
@@ -196,5 +221,9 @@
 
     object-fit: contain;
     width: 100%;
+
+    @include breakpoint(mobile) {
+      bottom: 7rem;
+    }
   }
 }

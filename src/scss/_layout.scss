@@ -67,13 +67,14 @@
     pointer-events: none;
 
     @include breakpoint(tablet) {
+      right: 0;
+      
       width: 8.85rem;
       height: 5.7rem;
     }
     @include breakpoint(small-tablet) {
       width: 5.9rem;
       height: 3.8rem;
-      right: 0rem;
     }
   }
 

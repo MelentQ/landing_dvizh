@@ -2,6 +2,10 @@
   position: relative;
   z-index: 2;
 
+  @include breakpoint(tablet) {
+    margin-left: 5rem;
+  }
+
   &__year {
     position: absolute;
     top: -4rem;
@@ -13,6 +17,22 @@
     font-weight: 600;
     line-height: 1.2;
     @include titleFF;
+
+    @include breakpoint(tablet) {
+      top: -3.6rem;
+
+      font-size: 2rem;
+    }
+    @include breakpoint(small-tablet) {
+      top: -3.2rem;
+
+      font-size: 1.6rem;
+    }
+    @include breakpoint(mobile) {
+      top: -2.8rem;
+
+      font-size: 1.2rem;
+    }
   }
 
   &__slider {
@@ -26,25 +46,7 @@
   }
 
   &__image-wrapper {
-    height: 35.5rem;
-
-    @include breakpoint(tablet) {
-      height: 32.5rem;
-    }
-    @include breakpoint(small-tablet) {
-      height: 27.5rem;
-    }
-    @include breakpoint(mobile) {
-      height: 24.5rem;
-    }
-
-    img {
-      width: 100%;
-      min-width: 100%;
-
-      height: 100%;
-      object-fit: cover;
-    }
+    @include imageWrapper(16, 9);
   }
 }
 
@@ -96,6 +98,12 @@
 
       background-size: 1.8rem 1.2rem;
     }
+    @include breakpoint(mobile) {
+      width: 2.5rem;
+      height: 2.5rem;
+
+      background-size: 1.2rem 1.2rem;
+    }
   }
 
   &__label {
@@ -113,5 +121,10 @@
     font-weight: 600;
     color: #94A9D0;
     @include titleFF;
+
+    @include breakpoint(mobile) {
+      left: -2rem;
+      font-size: 1.2rem;
+    }
   }
 }

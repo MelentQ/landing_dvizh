@@ -13,6 +13,9 @@
   @include breakpoint(tablet) {
     padding: 1.5rem 0;
   }
+  @include breakpoint(small-tablet) {
+    padding: 1rem 0;
+  }
 
   &_fixed {
     position: fixed;
@@ -25,6 +28,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  &__text-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__text {
@@ -35,6 +53,12 @@
 
     @include breakpoint(tablet) {
       font-size: 2.2rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 1.6rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.4rem;
     }
   }
 
@@ -48,6 +72,10 @@
       margin-left: 5rem;
       margin-right: 6rem;
     }
+    @include breakpoint(mobile) {
+      margin-right: 0;
+      margin-left: 2rem;
+    }
   }
 
   &__time {
@@ -59,6 +87,9 @@
 
     @include breakpoint(tablet) {
       font-size: 2.2rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 1.4rem;
     }
   }
 
@@ -78,6 +109,10 @@
     @include breakpoint(tablet) {
       margin: 0 0.8rem;
       font-size: 0.8rem;
+    }
+    @include breakpoint(small-tablet) {
+      margin: 0 0.5rem;
+      font-size: 0.6rem;
     }
   }
 
@@ -103,6 +138,11 @@
       padding: 1.5rem 4rem;
 
       font-size: 1.4rem;
+    }
+    @include breakpoint(small-tablet) {
+      padding: 1rem 3rem;
+
+      font-size: 1.2rem;
     }
   }
 }

@@ -33,7 +33,6 @@ function toggleStickyHeader() {
   toggle();
 
   window.addEventListener('scroll', toggle);
-  window.addEventListener('load', toggle);
   window.addEventListener('resize', toggle);
 }
 

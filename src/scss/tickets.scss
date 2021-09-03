@@ -4,6 +4,63 @@
 
   background: linear-gradient(360deg, #A0B2E0 0.26%, #E1E0E7 100%);
 
+  @include breakpoint(tablet) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  @include breakpoint(small-tablet) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-bottom: 5.2rem;
+
+    @include breakpoint(small-tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__header-text {
+    flex: 0 1 50%;
+
+    margin-left: 2rem;
+
+    font-size: 2.8rem;
+    line-height: 1.2;
+    font-weight: 600;
+    @include titleFF;
+    color: var(--content-color);
+
+    @include breakpoint(tablet) {
+      margin-left: 0;
+
+      font-size: 2.4rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 2rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__slider {
+    @include breakpoint(tablet) {
+      margin: 0 3rem;
+    }
+  }
+
   &__item {
     border-radius: 0.4rem;
     overflow: hidden;
@@ -25,26 +82,6 @@
       background-image: url(../img/icons/tickets/ticket-4.svg);
     }
   }
-
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    margin-bottom: 5.2rem;
-  }
-
-  &__header-text {
-    flex: 0 1 50%;
-
-    margin-left: 2rem;
-
-    font-size: 2.8rem;
-    line-height: 1.2;
-    font-weight: 600;
-    @include titleFF;
-    color: var(--content-color);
-  }
 }
 
 .ticket {
@@ -53,6 +90,16 @@
 
   background: linear-gradient(179.35deg, #A0B2E0 2.33%, rgba(225, 224, 231, 0.27) 98.11%);
 
+  @include breakpoint(tablet) {
+    padding: 3rem;
+  }
+  @include breakpoint(small-tablet) {
+    padding: 2.4rem;
+  }
+  @include breakpoint(mobile) {
+    padding: 2rem;
+  }
+
   &__title {
     margin-bottom: 3.3rem;
 
@@ -60,6 +107,22 @@
     line-height: 1.2;
     font-weight: 600;
     @include titleFF;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.6rem;
+
+      font-size: 3rem;
+    }
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2rem;
+
+      font-size: 2.6rem;
+    }
+    @include breakpoint(mobile) {
+      margin-bottom: 1.6rem;
+
+      font-size: 2rem;
+    }
   }
 
   &__list {
@@ -69,10 +132,30 @@
     font-size: 1.6rem;
     line-height: 1.2;
     color: var(--content-color);
+
+    @include breakpoint(tablet) {
+      font-size: 1.4rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 1.2rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1rem;
+    }
   }
 
   &__list-item {
     @include flexRowGap(2.8rem);
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2rem;
+    }
+    @include breakpoint(small-tablet) {
+      margin-bottom: 1.6rem;
+    }
+    @include breakpoint(mobile) {
+      margin-bottom: 0.8rem;
+    }
   }
 
   &__price-block {
@@ -103,6 +186,16 @@
     line-height: 1.2;
     font-weight: 600;
     @include titleFF;
+
+    @include breakpoint(tablet) {
+      font-size: 3rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 2.6rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 2rem;
+    }
   }
 
   &__price-label {
@@ -111,5 +204,15 @@
     font-size: 1.4rem;
     line-height: 1.2;
     color: white;
+
+    @include breakpoint(tablet) {
+      font-size: 1.2rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 1rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 0.8rem;
+    }
   }
 }
