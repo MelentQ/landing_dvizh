@@ -1,0 +1,35 @@
+// Адаптивная флекс сетка с выравниванием по правому краю
+.gridCards {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  padding-left: 20%;
+  margin: -10px;
+
+  @include breakpoint(tablet) {
+    padding-left: 0;
+  }
+  @include breakpoint(mobile) {
+    margin: -5px;
+  }
+
+  &__item {
+    flex: 0 0 auto;
+
+    width: calc(25% - 20px);
+    
+    margin: 10px;
+    
+    @include breakpoint(small-tablet) {
+      width: calc(33.333% - 20px);
+    }
+    @include breakpoint(mobile) {
+      margin: 5px;
+      width: calc(50% - 10px);
+    }
+  }
+}

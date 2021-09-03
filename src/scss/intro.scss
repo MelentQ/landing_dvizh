@@ -76,12 +76,55 @@
     }
   }
 
-  &__title {
+  &__title-container {
     position: relative;
-    z-index: 2;
 
     margin-right: 10rem;
     padding-left: 27.5rem;
+
+    @include breakpoint(tablet) {
+      margin-right: 0;
+      margin-bottom: 3rem;
+      margin-top: 3rem;
+      padding-left: 0;
+    }
+  }
+
+  &__title-image {
+    position: absolute;
+    left: -9rem;
+    top: -25rem;
+    z-index: 2;
+
+    position: absolute;
+
+    width: 84.7rem;
+    height: 44.1rem;
+
+    background-image: url('../img/3d.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left top;
+
+    @include breakpoint(tablet) {
+      left: -3rem;
+      top: -34rem;
+
+      width: 63.5rem;
+      height: 33rem;
+    }
+    @include breakpoint(mobile) {
+      left: -2rem;
+      top: -20rem;
+
+      width: 31.76rem;
+      height: 16.55rem;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
 
     font-size: 7.2rem;
     line-height: 1.1;
@@ -90,49 +133,10 @@
     @include titleFF;
 
     @include breakpoint(tablet) {
-      margin-right: 0;
-      margin-bottom: 3rem;
-      margin-top: 3rem;
-      padding-left: 0;
-
       font-size: 5.2rem;
     }
     @include breakpoint(mobile) {
       font-size: 2.8rem;
-    }
-
-    &::before {
-      content: '';
-
-      position: absolute;
-      left: -9rem;
-      top: -25rem;
-      z-index: -1;
-
-      position: absolute;
-
-      width: 84.7rem;
-      height: 44.1rem;
-
-      background-image: url('../img/3d.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: left top;
-
-      @include breakpoint(tablet) {
-        left: -3rem;
-        top: -34rem;
-
-        width: 63.5rem;
-        height: 33rem;
-      }
-      @include breakpoint(mobile) {
-        left: -2rem;
-        top: -20rem;
-
-        width: 31.76rem;
-        height: 16.55rem;
-      }
     }
   }
 

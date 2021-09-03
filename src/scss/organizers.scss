@@ -70,46 +70,26 @@
     }
 
     @include breakpoint(small-tablet) {
-      content: none;
+      width: 50rem;
+      height: 50rem;
+      left: -5.9rem;
     }
-  }
-}
-
-.organizers__grid-wrapper {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 2rem;
-
-  @include breakpoint(small-tablet) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  @include breakpoint(small-mobile) {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-  }
-
-  @include breakpoint(xx-mobile) {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 .organizers__item {
-  @include breakpointMF(small-tablet) {
-    &:nth-child(1) {
-      grid-column: 2 / 3;
-    }
+  cursor: pointer;
+}
+
+.organizers__item:hover,
+.organizers__item:focus {
+  .organizers__item-overlay {
+    opacity: 1;
+    visibility: visible;
   }
 
-
-  &:nth-child(5) {
-    @include breakpointMF(small-tablet) {
-      grid-column: 3 / 4;
-    }
-
-    @include breakpointMF(small-mobile) {
-      grid-column: 2 / 3;
-    }
+  .organizers__item-image-wrapper::before {
+    opacity: 0;
   }
 }
 
@@ -122,12 +102,18 @@
     right: 0;
     bottom: 0;
     border: 3.7rem solid transparent;
+
+    transition: opacity 0.3s ease;
   }
 
   &--type-1 {
     &:before {
       border-right: 3.7rem solid #EC8B24;
       border-bottom: 3.7rem solid #EC8B24;
+    }
+
+    .organizers__item-overlay {
+      background: linear-gradient(178.62deg, rgba(235, 137, 42, 0) -37.6%, rgba(232, 135, 40, 0.338958) 44.85%, #E38224 87.13%);
     }
   }
 
@@ -136,6 +122,10 @@
       border-right: 3.7rem solid #009F93;
       border-bottom: 3.7rem solid #009F93;
     }
+
+    .organizers__item-overlay {
+      background: linear-gradient(181.59deg, rgba(0, 159, 147, 0) 1.35%, #009F93 101.15%);
+    }
   }
 
   &--type-3 {
@@ -143,31 +133,121 @@
       border-right: 3.7rem solid #662D87;
       border-bottom: 3.7rem solid #662D87;
     }
+
+    .organizers__item-overlay {
+      background: linear-gradient(181.59deg, rgba(102, 45, 135, 0) 1.35%, #662D87 101.15%);
+    }
   }
 }
 
 .organizers__item-image {
   width: 100%;
   object-fit: cover;
+
+  pointer-events: none;
 }
 
 .organizers__item-title {
   font-size: 2.8rem;
-  line-height: 3.4rem;
+  line-height: 1.2;
   color: #0F347C;
   margin-top: 2rem;
 
   @include breakpoint(small-tablet) {
     font-size: 1.8rem;
-    line-height: 2.4rem;
-    margin-top: 1rem;
+    margin-top: 0.7rem;
   }
 
   @include breakpoint(small-mobile) {
     font-size: 1.5rem;
-    line-height: 2.2rem;
   }
 }
+
+.organizers__item-overlay {
+  opacity: 0;
+  visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  padding: 2.6rem 2.6rem 1rem;
+
+  color: white;
+
+  transition: opacity 0.3s, visibility 0.3s ease;
+
+  @include breakpoint(mobile) {
+    padding: 1rem;
+  }
+}
+
+.organizers__item-socials {
+  display: flex;
+
+  margin-bottom: 0.9rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 0.6rem;
+  }
+}
+
+.organizers__item-social {
+  margin-right: 2rem;
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  @include breakpoint(mobile) {
+    margin-right: 1rem;
+  }
+}
+
+.organizers__item-social-link {
+  &:hover,
+  &:focus {
+    .organizers__item-social-icon {
+      fill: var(--accent-color);
+    }
+  }
+}
+
+.organizers__item-social-icon {
+  width: 2rem;
+  height: 2rem;
+
+  fill: white;
+  transition: fill 0.3s ease;
+}
+
+.organizers__item-post {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 0.6rem;
+    font-size: 1.2rem;
+  }
+}
+
+.organizers__item-about {
+  font-size: 1.2rem;
+  line-height: 1.2;
+
+  @include breakpoint(mobile) {
+    font-size: 0.8rem;
+  }
+}
+
 
 .organizers__partners-container {
   margin-top: 12rem;
@@ -190,6 +270,9 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 6rem;
   margin-top: 6rem;
+
+  align-items: center;
+  justify-items: center;
 
   @include breakpoint(tablet) {
     grid-template-columns: repeat(3, 1fr);
