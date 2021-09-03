@@ -6,17 +6,18 @@ export default function aboutPast() {
   const hostElem = document.getElementById('about-past');
   if (!hostElem) return;
 
-  new Swiper(hostElem.querySelector('.about-past__slider-wrapper'), {
-    slidesPerView: 2,
+  new Swiper(hostElem.querySelector('.about-past__slider-container'), {
+    slidesPerView: 1,
     spaceBetween: 20,
-    mousewheel: true,
-    grabCursor: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-      768: {
+      769: {
+        slidesPerView: 2
+      },
+      1025: {
         slidesPerView: 3
       }
     }
