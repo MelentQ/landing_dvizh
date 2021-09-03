@@ -132,13 +132,13 @@
 
 .map__sponsors-list {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 3rem;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 2rem;
   align-items: center;
   margin-top: 3rem;
 
   @include breakpoint(tablet) {
-    grid-gap: 0 4rem;
+    grid-gap: 0 2rem;
   }
 
   @include breakpoint(small-tablet) {
@@ -187,6 +187,14 @@
         width: auto;
         height: 2.1rem;
       }
+    }
+  }
+
+  &:nth-child(7) {
+    .map__sponsor-image {
+      height: 6rem;
+      width: 5rem;
+      object-fit: contain;
     }
   }
 }
