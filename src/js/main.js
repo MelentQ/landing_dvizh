@@ -11,7 +11,6 @@ import mediaPlayer from './mediaPlayer';
 import datepicker from './datepicker';
 import accordions from './accordions';
 import modals from './modals';
-import Marquee3k from 'marquee3000';
 
 import toggleStickyHeader from './components/toggleStickyHeader';
 import initAlbumSlider from './components/initAlbumSlider';
