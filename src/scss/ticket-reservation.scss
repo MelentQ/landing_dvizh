@@ -1,0 +1,55 @@
+.ticket-reservation {
+
+  padding: 9rem 0;
+  height: 100vh;
+  background: linear-gradient(1.2deg, #A0B2E0 -0.77%, #E1E0E7 98.95%);
+
+  &__inner {
+  }
+
+  &__title {
+    margin-bottom: 6.7rem;
+  }
+
+  &__form {
+    max-width: 58rem;
+  }
+
+  &__form-inputs {
+    margin-bottom: 2.2rem;
+  }
+
+  &__form-input {
+    @include flexRowGap(1.8rem);
+  }
+
+  &__form-submit-btn {
+    margin-bottom: 0.9rem;
+
+    margin-right: 1.4rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 600;
+    @include titleFF;
+    text-transform: uppercase;
+
+    overflow: hidden;
+  }
+
+  &__btn-text {
+    display: inline-block;
+
+    margin: 0 0.4rem;
+
+    &:nth-child(odd) {
+      color: white;
+    }
+    &:nth-child(even) {
+      color: var(--accent-color);
+    }
+  }
+
+  &__form-btn-label {
+    
+  }
+}

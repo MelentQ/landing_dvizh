@@ -11,7 +11,6 @@ import mediaPlayer from './mediaPlayer';
 import datepicker from './datepicker';
 import accordions from './accordions';
 import modals from './modals';
-import Marquee3k from 'marquee3000';
 
 import toggleStickyHeader from './components/toggleStickyHeader';
 import initAlbumSlider from './components/initAlbumSlider';
@@ -22,6 +21,7 @@ import setThematicSectionTabs from './components/setThematicSectionTabs';
 import initTicketsSlider from './components/initTicketsSlider';
 import initPromisesSlider from './components/initPromisesSlider';
 import initVanillaTilt from './components/initIntroTilt';
+import initMarquee from './components/initMarquee';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
     setThematicSectionTabs();
     initTicketsSlider();
     initPromisesSlider();
+    initMarquee();
 
-    Marquee3k.init();
     initVanillaTilt();
 });
 
