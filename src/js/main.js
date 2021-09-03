@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
     modals();
     datepicker();
 
-    initAlbumSlider();
     toggleStickyHeader();
     aboutPast();
     initThematicSectionsSlider();
@@ -51,6 +50,7 @@ window.addEventListener('load', function() {
     document.body.classList.add('loaded');
     setTimeout(() => document.body.classList.add('animatable'), 300);
 
+    initAlbumSlider();
     alignHeights('.thematic-sections__list', '.thematic-section__title');
     alignHeights('.speakers__inner', '.speaker__name');
     alignHeights('.tickets__list', '.ticket__title');

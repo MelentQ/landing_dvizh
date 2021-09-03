@@ -7,6 +7,13 @@
 
   color: white;
 
+  @include breakpoint(tablet) {
+    padding-top: 3rem;
+  }
+  @include breakpoint(mobile) {
+    padding-top: 2rem;
+  }
+
   &__logo {
     @include defaultHoverEffect(0.6);
 
@@ -15,12 +22,30 @@
         flex: 0 0 17.4rem;
 
         height: 6.6rem;
+
+        @include breakpoint(tablet) {
+          flex-basis: 14rem;
+          height: auto;
+        }
+        @include breakpoint(mobile) {
+          flex-basis: 10rem;
+          height: auto;
+        }
       }
 
       &_devision {
         flex: 0 0 20.5rem;
 
         height: 5.5rem;
+
+        @include breakpoint(tablet) {
+          flex-basis: 16rem;
+          height: auto;
+        }
+        @include breakpoint(mobile) {
+          flex-basis: 12rem;
+          height: auto;
+        }
       }
     }
   }
@@ -28,12 +53,20 @@
   &__menu {
     margin: 0 7.6rem;
     width: 100%;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
   }
 
   &__menu-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include breakpoint(tablet) {
+      justify-content: center;
+    }
   }
 
   &__menu-item {
@@ -51,5 +84,9 @@
     font-weight: 700;
 
     @include defaultHoverEffect(0.6);
+
+    @include breakpoint(tablet) {
+      font-size: 1.4rem;
+    }
   }
 }
