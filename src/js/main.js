@@ -40,9 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initThematicSectionsSlider();
     setThematicSectionTabs();
     initTicketsSlider();
-    initPromisesSlider();
-
-    Marquee3k.init();
 });
 
 window.addEventListener('load', function() {
@@ -54,4 +51,5 @@ window.addEventListener('load', function() {
     alignHeights('.speakers__inner', '.speaker__name');
     alignHeights('.tickets__list', '.ticket__title');
     alignHeights('.tickets__list', '.ticket__list');
+    initPromisesSlider();
 })
