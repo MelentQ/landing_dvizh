@@ -1,0 +1,89 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    background: linear-gradient(1.2deg, #A0B2E0 0%, #E1E0E7 100%);
+    opacity: 0.7;
+  }
+
+  &__content {
+    position: relative;
+
+    background: #DDE0ED;
+    border-radius: 0.4rem;
+    padding: 4rem;
+
+    overflow: hidden;
+
+    @include breakpoint(tablet) {
+      padding: 3rem;
+    }
+    @include breakpoint(mobile) {
+      padding: 2rem;
+    }
+  }
+
+  &__close {
+    width: unset;
+    height: unset;
+
+    right: 1rem;
+    top: 1rem;
+
+    background: none;
+  
+    &:focus {
+      outline: none;
+    }
+
+    &:focus,
+    &:hover {
+      .modal__close-icon {
+        stroke: var(--accent-color);
+      }
+    }
+
+    @include breakpoint(mobile) {
+      right: 0.5rem;
+      top: 0.5rem;
+    }
+  }
+
+  &__close-icon {
+    fill: none;
+    stroke: var(--text-color);
+
+    width: 2.1rem;
+    height: 2.1rem;
+
+    transition: stroke 0.3s ease;
+
+    @include breakpoint(tablet) {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+    @include breakpoint(mobile) {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+}
