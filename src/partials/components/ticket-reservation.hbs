@@ -3,16 +3,20 @@
     <div class="ticket-reservation__inner">
       <h2 class="ticket-reservation__title section-title">Забронировать билет</h2>
 
-      <form class="ticket-reservation__form form" method="POST" name="reservation">
+      <img class="ticket-reservation__bg-image" src="img/form-bg.png" alt="Фон" loading="lazy">
+
+      <form class="ticket-reservation__form form" method="POST" name="reservation" data-need-validation>
         <fieldset class="ticket-reservation__form-inputs form__inputs">
-          <input class="ticket-reservation__form-input form__input" type="text" placeholder="Имя, фамилия" required>
-          <input class="ticket-reservation__form-input form__input" type="text" placeholder="Компания" required>
-          <input class="ticket-reservation__form-input form__input" type="text" placeholder="Должность" required>
-          <input class="ticket-reservation__form-input form__input" type="email" placeholder="E-mail" required>
+          <input class="ticket-reservation__form-input form__input" name="name" type="text" placeholder="Имя, фамилия" required>
+          <input class="ticket-reservation__form-input form__input" name="firm" type="text" placeholder="Компания" required>
+          <input class="ticket-reservation__form-input form__input" name="position" type="text" placeholder="Должность" required>
+          <input class="ticket-reservation__form-input form__input" name="email" type="email" placeholder="E-mail" required>
         </fieldset>
 
         <button class="marquee3k ticket-reservation__form-submit-btn form__submit-btn" data-speed="0.5" type="submit">
-          <div>
+          <div class="ticket-reservation__btn-content">
+            <span class="ticket-reservation__btn-text">Отправить</span>
+            <span class="ticket-reservation__btn-text">Отправить</span>
             <span class="ticket-reservation__btn-text">Отправить</span>
             <span class="ticket-reservation__btn-text">Отправить</span>
             <span class="ticket-reservation__btn-text">Отправить</span>

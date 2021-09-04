@@ -3,7 +3,7 @@
   padding-top: 9rem;
   padding-bottom: 16rem;
 
-  background: linear-gradient(360deg, #A0B2E0 0.26%, #E1E0E7 100%);
+  background: linear-gradient(360deg, #A0B2E0 0%, #E1E0E7 100%);
 
   @include breakpoint(tablet) {
     padding-top: 6rem;
@@ -53,7 +53,7 @@
 
   padding: 2rem;
 
-  background: linear-gradient(350.76deg, #A0B2E0 -26.11%, rgba(225, 224, 231, 0) 167.92%);
+  background: linear-gradient(350.76deg, #A0B2E0 0%, rgba(225, 224, 231, 0) 100%);
   box-shadow: 0 0.4rem 1.5rem #92a2ca;
 
   @include breakpoint(small-tablet) {
@@ -170,6 +170,39 @@
     &_opened {
       opacity: 1;
       visibility: visible;
+    }
+  }
+
+  &__description-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    &:focus,
+    &:hover {
+      .thematic-section__description-close-icon {
+        stroke: var(--accent-color);
+      }
+    }
+
+    @include breakpoint(small-tablet) {
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+  }
+
+  &__description-close-icon {
+    width: 2.1rem;
+    height: 2.1rem;
+
+    fill: none;
+    stroke: var(--text-color);
+    
+    transition: stroke 0.3s ease;
+
+    @include breakpoint(small-tablet) {
+      width: 1.5rem;
+      height: 1.5rem;
     }
   }
 

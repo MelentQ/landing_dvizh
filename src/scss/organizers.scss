@@ -1,5 +1,5 @@
 .organizers {
-  background: linear-gradient(180.66deg, #A0B2E0 1.45%, #FFFFFF 80.39%);
+  background: linear-gradient(180.66deg, #A0B2E0 0%, #FFFFFF 100%);
   overflow: hidden;
   padding-top: 7rem;
   padding-bottom: 10.2rem;
@@ -113,7 +113,7 @@
     }
 
     .organizers__item-overlay {
-      background: linear-gradient(178.62deg, rgba(235, 137, 42, 0) -37.6%, rgba(232, 135, 40, 0.338958) 44.85%, #E38224 87.13%);
+      background: linear-gradient(178.62deg, rgba(235, 137, 42, 0) 0%, rgba(232, 135, 40, 0.338958) 44.85%, #E38224 100%);
     }
   }
 
@@ -124,7 +124,7 @@
     }
 
     .organizers__item-overlay {
-      background: linear-gradient(181.59deg, rgba(0, 159, 147, 0) 1.35%, #009F93 101.15%);
+      background: linear-gradient(181.59deg, rgba(0, 159, 147, 0) 0%, #009F93 100%);
     }
   }
 
@@ -135,7 +135,7 @@
     }
 
     .organizers__item-overlay {
-      background: linear-gradient(181.59deg, rgba(102, 45, 135, 0) 1.35%, #662D87 101.15%);
+      background: linear-gradient(181.59deg, rgba(102, 45, 135, 0) 0%, #662D87 100%);
     }
   }
 }

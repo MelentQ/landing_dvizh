@@ -87,4 +87,7 @@
   @include breakpoint(mobile) {
     font-size: 2.8rem;
   }
+  @include breakpoint(supersmall-mobile) {
+    font-size: 2.4rem;
+  }
 }

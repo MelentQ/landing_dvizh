@@ -51,8 +51,8 @@ window.addEventListener('load', function() {
     document.body.classList.add('loaded');
     setTimeout(() => document.body.classList.add('animatable'), 300);
 
-    toggleStickyHeader();
-    initAlbumSlider();
+    // toggleStickyHeader(); // Не работает из-за GSAP Wrapper'а
+    // initAlbumSlider(); // Включить до лучших времен
     alignHeights('.thematic-sections__list', '.thematic-section__title');
     alignHeights('.speakers__inner', '.speaker__name');
     alignHeights('.tickets__list', '.ticket__title');

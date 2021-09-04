@@ -1,3 +1,5 @@
+import { hide } from "../../../node_modules/dom7/dom7";
+
 /**
  * Включает кнопки "Подробнее" на секции "5 тематических секций"
  */
@@ -18,6 +20,7 @@ function setThematicSectionTabs() {
   cards.forEach((card) => {
     const btn = card.querySelector('.thematic-section__btn');
     const desc = card.querySelector('.thematic-section__description');
+    const closeBtn = card.querySelector('.thematic-section__description-close');
 
     btn.addEventListener('click', () => {
       btn.blur();
@@ -28,12 +31,16 @@ function setThematicSectionTabs() {
       desc.classList.remove('thematic-section__description_opened');
     })
 
-    document.addEventListener('click', (evt) => {
-      if (evt.target.classList.contains('thematic-sections__item')) {
-        console.log('a');
-      }
-      // desc.classList.remove('thematic-section__description_opened');
+    closeBtn.addEventListener('click', () => {
+      desc.classList.remove('thematic-section__description_opened');
     })
+  })
+
+  document.addEventListener('click', (evt) => {
+    // Клик по оверлею
+    if (!evt.target.closest('.thematic-section__description_opened') && !evt.target.classList.contains('thematic-section__btn')) {
+      hideAll();
+    }
   })
 }
 

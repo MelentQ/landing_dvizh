@@ -45,6 +45,16 @@
     // }
   }
 
+  // >>> Убрать, если будет слайдер
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__list-item {
+    @include flexRowGap(2.2rem);
+  }
+  // <<< Убрать, если будет слайдер
+
   &__image-wrapper {
     @include imageWrapper(16, 9);
   }

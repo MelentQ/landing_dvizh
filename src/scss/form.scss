@@ -6,12 +6,36 @@
 
   &__input {
     padding: 3rem 1.8rem;
-    background: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     border-bottom: 2px solid #A0B2E0;
 
     font-size: 1.4rem;
     line-height: 1.2;
     color: var(--text-color);
+
+    transition: border-bottom-color 0.3s, background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    &:focus {
+      border-bottom-color: var(--accent-color);
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 1.2rem;
+      padding: 2rem 1.6rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 1.1rem;
+      padding: 1.5rem 1.2rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1rem;
+      padding: 1rem 1rem;
+    }
 
     &::placeholder {
       color: inherit;
@@ -27,7 +51,27 @@
     width: 100%;
     padding: 2.4rem 0;
 
-    border: 4px solid #FFFFFF;
+    border: 0.4rem solid #FFFFFF;
+
+    transition: border-color 0.3s, transform 0.3s ease;
+
+    &:hover,
+    &:focus {
+      border-color: var(--accent-color);
+      transform: scaleX(1.01);
+    }
+
+    @include breakpoint(tablet) {
+      padding: 2rem 0;
+      border-width: 0.3rem;
+    }
+    @include breakpoint(small-tablet) {
+      padding: 1.5rem 0;
+      border-width: 0.2rem;
+    }
+    @include breakpoint(mobile) {
+      padding: 1rem 0;
+    }
   }
 
   &__btn-label {
@@ -39,5 +83,37 @@
     font-weight: 500;
 
     color: white;
+
+    @include breakpoint(small-tablet) {
+      font-size: 0.8rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+// Модуль с валидацией
+.form .parsley-errors-list {
+  margin-top: 0.6rem;
+
+  padding: 0 1.8rem;
+
+  color: var(--accent-color);
+  font-size: 1rem;
+  line-height: 1.1;
+  font-weight: 500;
+
+  @include breakpoint(tablet) {
+    padding: 0 1.6rem;
+  }
+  @include breakpoint(small-tablet) {
+    padding: 0 1.2rem;
+  }
+  @include breakpoint(mobile) {
+    margin-top: 0.4rem;
+
+    font-size: 0.8rem;
+    padding: 0 1rem;
   }
 }
