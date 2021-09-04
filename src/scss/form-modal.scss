@@ -1,0 +1,80 @@
+.form-modal {
+  &__content {
+    padding: 10rem 4rem 6rem;
+    max-width: 58rem;
+
+    @include titleFF;
+    font-weight: 600;
+    text-align: center;
+
+    @include breakpoint(small-tablet) {
+      max-width: unset;
+      width: calc(100% - 6rem);
+    }
+    @include breakpoint(mobile) {
+      padding: 4rem;
+    }
+  }
+
+  &__title {
+    font-size: 3.6rem;
+
+    margin-bottom: 4rem;
+
+    @include breakpoint(small-tablet) {
+      font-size: 3rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__label {
+    display: block;
+
+    font-size: 2.8rem;
+
+    @include breakpoint(small-tablet) {
+      font-size: 2.4rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 2rem;
+    }
+  }
+
+  &__bg-image {
+    position: absolute;
+    z-index: -1;
+
+    pointer-events: none;
+
+    &_top {
+      top: -12rem;
+      right: -12rem;
+
+      width: 95rem;
+      height: 95rem;
+
+      @include breakpoint(mobile) {
+        top: -8rem;
+        right: -8rem;
+
+        width: 60rem;
+        height: 60rem;
+      }
+    }
+
+    &_bottom {
+      bottom: -7.5rem;
+      left: -2.6rem;
+      
+      width: 51rem;
+      height: 51rem;
+
+      @include breakpoint(mobile) {
+        width: 35rem;
+        height: 35rem;
+      }
+    }
+  }
+}

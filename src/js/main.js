@@ -22,6 +22,7 @@ import initTicketsSlider from './components/initTicketsSlider';
 import initPromisesSlider from './components/initPromisesSlider';
 import initVanillaTilt from './components/initIntroTilt';
 import initMarquee from './components/initMarquee';
+import submitForm from './components/submitFrom';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -45,6 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initMarquee();
 
     initVanillaTilt();
+
+    submitForm();
 });
 
 window.addEventListener('load', function() {
