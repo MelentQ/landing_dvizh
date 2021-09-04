@@ -1,26 +1,92 @@
 .ticket-reservation {
 
-  padding: 9rem 0;
-  height: 100vh;
-  background: linear-gradient(1.2deg, #A0B2E0 -0.77%, #E1E0E7 98.95%);
+  padding-top: 9rem;
+  padding-bottom: 25rem;
+  background: linear-gradient(1.2deg, #A0B2E0 0%, #E1E0E7 100%);
 
-  &__inner {
+  @include breakpoint(tablet) {
+    padding-top: 8rem;
+    padding-bottom: 16rem;
+  }
+  @include breakpoint(small-tablet) {
+    padding-top: 4rem;
+    padding-bottom: 12rem;
+  }
+  @include breakpoint(mobile) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  &__bg-image {
+    position: absolute;
+    right: 6rem;
+    top: 5rem;
+
+    width: 88.4rem;
+    height: auto;
+
+    pointer-events: none;
+
+    @include breakpoint(tablet) {
+      right: 3rem;
+      width: 60.4rem;
+    }
+    @include breakpoint(mobile) {
+      right: 2rem;
+      width: 30.4rem;
+    }
   }
 
   &__title {
     margin-bottom: 6.7rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 4rem;
+    }
+    @include breakpoint(small-tablet) {
+      margin-bottom: 3rem;
+    }
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__form {
+    position: relative;
+    z-index: 2;
+
     max-width: 58rem;
   }
 
   &__form-inputs {
     margin-bottom: 2.2rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 1.8rem;
+    }
+    @include breakpoint(small-tablet) {
+      margin-bottom: 1.4rem;
+    }
+    @include breakpoint(mobile) {
+      margin-bottom: 1rem;
+    }
   }
 
   &__form-input {
-    @include flexRowGap(1.8rem);
+    margin-top: 1.8rem;
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @include breakpoint(tablet) {
+      margin-top: 1.6rem;
+    }
+    @include breakpoint(small-tablet) {
+      margin-top: 1.4rem;
+    }
+    @include breakpoint(mobile) {
+      margin-top: 1rem;
+    }
   }
 
   &__form-submit-btn {
@@ -34,6 +100,20 @@
     text-transform: uppercase;
 
     overflow: hidden;
+
+    @include breakpoint(tablet) {
+      font-size: 1.6rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 1.4rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__btn-content {
+    width: auto;
   }
 
   &__btn-text {
@@ -47,9 +127,5 @@
     &:nth-child(even) {
       color: var(--accent-color);
     }
-  }
-
-  &__form-btn-label {
-    
   }
 }

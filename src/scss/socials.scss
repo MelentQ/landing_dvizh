@@ -1,0 +1,42 @@
+.socials {
+  &__item {
+    display: inline-block;
+
+    margin-right: 4.6rem;
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @include breakpoint(tablet) {
+      margin-right: 3.8rem;
+    }
+    @include breakpoint(small-tablet) {
+      margin-right: 3rem;
+    }
+    @include breakpoint(mobile) {
+      margin-right: 2.2rem;
+    }
+  }
+
+  &__link {
+    @include defaultHoverEffect(0.6);
+  }
+
+  &__link-icon {
+    width: 3.3rem;
+    height: 3.3rem;
+
+    @include breakpoint(tablet) {
+      width: 3rem;
+      height: 3rem;
+    }
+    @include breakpoint(small-tablet) {
+      width: 2.7rem;
+      height: 2.7rem;
+    }
+    @include breakpoint(mobile) {
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+  }
+}

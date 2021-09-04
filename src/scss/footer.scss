@@ -1,0 +1,75 @@
+.footer {
+  position: relative;
+
+  padding-top: 10.4rem;
+  padding-bottom: 10.4rem;
+  height: 100vh;
+
+  background: radial-gradient(115.74% 115.74% at 50% 115.74%, #E93939 0%, #A0B2E0 100%);
+  color: white;
+
+  @include breakpoint(tablet) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  @include breakpoint(small-tablet) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  @include breakpoint(mobile) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  &__bg-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+    min-height: 50%;
+    object-fit: cover;
+
+    mix-blend-mode: screen;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 4.8rem;
+    line-height: 1.2;
+    font-weight: 600;
+    @include titleFF;
+    text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+      font-size: 4.2rem;
+    }
+    @include breakpoint(small-tablet) {
+      font-size: 3.6rem;
+    } 
+    @include breakpoint(small-mobile) {
+      font-size: 3rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__email {
+    display: block;
+
+    @include defaultHoverEffect(0.6);
+  }
+
+  &__tel {
+    display: block;
+
+    margin-bottom: 2.7rem;
+
+    @include defaultHoverEffect(0.6);
+  }
+}

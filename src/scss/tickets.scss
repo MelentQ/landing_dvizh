@@ -2,7 +2,7 @@
   padding-top: 13.4rem;
   padding-bottom: 10.4rem;
 
-  background: linear-gradient(360deg, #A0B2E0 0.26%, #E1E0E7 100%);
+  background: linear-gradient(360deg, #A0B2E0 0%, #E1E0E7 100%);
 
   @include breakpoint(tablet) {
     padding-top: 6rem;
@@ -88,7 +88,9 @@
 
   padding: 3.4rem 3rem 3.4rem 5.2rem;
 
-  background: linear-gradient(179.35deg, #A0B2E0 2.33%, rgba(225, 224, 231, 0.27) 98.11%);
+  background: linear-gradient(179.35deg, #A0B2E0 0%, rgba(225, 224, 231, 0.27) 100%);
+
+  @include defaultHoverEffect(0.6);
 
   @include breakpoint(tablet) {
     padding: 3rem;
