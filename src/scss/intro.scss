@@ -34,11 +34,11 @@
 
     height: 100%;
 
-    padding-top: 15rem;
+    padding-top: 30rem;
     padding-bottom: 7rem;
 
     @include breakpoint(tablet) {
-      padding-top: 10rem;
+      padding-top: 24rem;
       padding-bottom: 4rem;
     }
     @include breakpoint(mobile) {
@@ -68,9 +68,8 @@
     }
   }
 
-  &__title-container {
+  &__title-block {
     display: flex;
-
     @include breakpoint(tablet) {
       flex-direction: column;
     }
@@ -79,14 +78,20 @@
   &__title-container {
     position: relative;
 
+    display: flex;
+
     margin-right: 10rem;
     padding-left: 27.5rem;
 
     @include breakpoint(tablet) {
+      flex-direction: column;
+
       margin-right: 0;
-      margin-bottom: 3rem;
-      margin-top: 3rem;
+      margin-bottom: 4rem;
       padding-left: 0;
+    }
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2rem;
     }
   }
 
@@ -143,7 +148,7 @@
   &__btn {
     flex-shrink: 0;
 
-    align-self: flex-end;
+    align-self: flex-start;
 
     padding: 2.5rem 10rem;
 
@@ -160,6 +165,8 @@
     @include defaultHoverEffect(0.6);
 
     @include breakpoint(tablet) {
+      align-self: flex-end;
+
       padding: 1.8rem 7rem;
 
       font-size: 1.6rem;
@@ -174,12 +181,35 @@
   &__slogan {
     position: relative;
     z-index: 10;
+    display: flex;
   }
 
   &__slogan-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    min-width: 40rem;
+
+    margin-right: 4.1rem;
+
+    @include breakpoint(tablet) {
+      min-width: 30rem;
+
+      margin-right: 3.1rem;
+    }
+  
+    @include breakpoint(small-tablet) {
+      min-width: 20rem;
+
+      margin-right: 2.1rem;
+    }
+  
+    @include breakpoint(mobile) {
+      min-width: 10rem;
+
+      margin-right: 1.6rem;
+    }
   }
 
   &__slogan-text {
@@ -189,6 +219,7 @@
     line-height: 1.2;
     font-weight: 600;
     @include titleFF;
+    color: white;
 
     @include breakpoint(tablet) {
       font-size: 2.6rem;
@@ -212,6 +243,8 @@
     background-color: white;
 
     @include breakpoint(mobile) {
+      top: 0.1rem;
+
       min-width: 2rem;
       height: 0.1rem;
       margin: 0 0.4rem;
@@ -223,38 +256,83 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include breakpoint(tablet) {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+    }
+  }
+
+  &__partners-list {
+    display: flex;
+    align-items: flex-end;
+
+    margin-right: 4rem;
+
+    @include breakpoint(tablet) {
+      margin-right: 0;
+    }
+
+    @include breakpoint(small-tablet) {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__partner-item {
+    margin-right: 10rem;
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @include breakpoint(tablet) {
+      margin-right: 4rem;
+    }
+    @include breakpoint(mobile) {
+      margin-right: 2rem;
+    }
   }
 
   &__place {
-    font-size: 6.4rem;
+    align-self: flex-end;
+
+    font-size: 4.8rem;
     line-height: 1.2;
     font-weight: 600;
     @include titleFF;
     text-transform: uppercase;
 
     @include breakpoint(tablet) {
-      font-size: 4rem;
+      margin-bottom: 4rem;
+      
+      font-size: 3rem;
     }
     @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+      
       font-size: 2rem;
     }
   }
 
   &__partner {
+    display: block;
+
     @include defaultHoverEffect(0.7);
   }
 
   &__partner-image {
-    width: 18.1rem;
-    height: auto;
+    height: 5.6rem;
+    width: auto;
 
-    margin-bottom: 0.7rem;
+    margin-top: 1rem;
+
+    object-fit: contain;
 
     @include breakpoint(tablet) {
-      width: 14rem;
+      height: 4rem;
     }
     @include breakpoint(mobile) {
-      width: 10rem;
+      height: 3rem;
     }
   }
 

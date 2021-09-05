@@ -200,7 +200,7 @@
   }
 
   &__footer-subtitle {
-    align-self: flex-end;
+    align-self: flex-start;
 
     font-size: 2.4rem;
     font-weight: 500;
@@ -221,9 +221,5 @@
 
     object-fit: contain;
     width: 100%;
-
-    @include breakpoint(mobile) {
-      bottom: 7rem;
-    }
   }
 }

@@ -23,6 +23,8 @@ import initPromisesSlider from './components/initPromisesSlider';
 import initVanillaTilt from './components/initIntroTilt';
 import initMarquee from './components/initMarquee';
 import submitForm from './components/submitFrom';
+import initSponsorsSlider from './components/initSponsorsSlider';
+import openYouTubeModal from './components/openYouTubeModal';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -48,6 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initVanillaTilt();
 
     submitForm();
+
+    initSponsorsSlider();
+    openYouTubeModal();
 });
 
 window.addEventListener('load', function() {
