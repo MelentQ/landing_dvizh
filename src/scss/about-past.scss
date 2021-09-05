@@ -22,8 +22,12 @@
   position: relative;
   margin-top: 13rem;
 
+  margin-right: 10rem;
+
   @include breakpoint(tablet) {
     margin-top: 8rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
   }
 
   @include breakpoint(small-mobile) {
@@ -32,17 +36,14 @@
 }
 
 .about-past__slider-container {
-
-  @include breakpoint(tablet) {
-    margin: 0 2rem;
-  }
-
   @include breakpoint(small-tablet) {
     overflow: initial;
   }
 }
 
 .about-past__slide-item {
+  align-self: flex-start;
+  
   padding: 4rem 2.4rem;
   display: flex;
   flex-direction: column;
@@ -209,20 +210,20 @@
   z-index: 1;
 
   &:nth-child(1) {
-    left: -7rem;
+    left: -5rem;
   }
 
   &:nth-child(2) {
-    right: -7rem;
+    right: -5rem;
   }
 
   @include breakpoint(tablet) {
     &:nth-child(1) {
-      left: -3.4rem;
+      left: -4.2rem;
     }
 
     &:nth-child(2) {
-      right: -3.4rem;
+      right: -4.2rem;
     }
   }
 
@@ -232,34 +233,23 @@
 }
 
 .about-past__btn {
+  position: relative !important;
+  top: 1rem;
+
   width: 0;
   height: 0;
-  border-top: 4rem solid transparent;
-  border-bottom: 4rem solid transparent;
-  position: relative !important;
+  border-top: 2.5rem solid transparent;
+  border-bottom: 2.5rem solid transparent;
 
   &:after {
     content: none !important;
   }
 
   &--prev {
-    border-right: 4rem solid var(--accent-color);
+    border-right: 2.5rem solid var(--accent-color);
   }
 
   &--next {
-    border-left: 4rem solid var(--accent-color);
-  }
-
-  @include breakpoint(tablet) {
-    border-top: 3rem solid transparent;
-    border-bottom: 3rem solid transparent;
-
-    &--prev {
-      border-right: 3rem solid var(--accent-color);
-    }
-
-    &--next {
-      border-left: 3rem solid var(--accent-color);
-    }
+    border-left: 2.5rem solid var(--accent-color);
   }
 }
