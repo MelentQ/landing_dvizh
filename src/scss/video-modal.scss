@@ -10,6 +10,14 @@
     }
   }
 
+  &__label {
+    @include centeredAbsolute();
+
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
   &__iframe {
     position: absolute;
     top: 4rem;

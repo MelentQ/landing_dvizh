@@ -25,6 +25,7 @@ import initMarquee from './components/initMarquee';
 import submitForm from './components/submitFrom';
 import initSponsorsSlider from './components/initSponsorsSlider';
 import openYouTubeModal from './components/openYouTubeModal';
+import {timer} from './components/timer';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -53,6 +54,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     initSponsorsSlider();
     openYouTubeModal();
+
+    timer.init('.sticky-header__time');
 });
 
 window.addEventListener('load', function() {
