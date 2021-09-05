@@ -26,19 +26,39 @@ export default function aboutPast() {
   const cardTextElems = document.querySelectorAll('.about-past__slide-title');
   const btnsReadCompletely = document.querySelectorAll('.about-past__bnt-read-completely');
 
+  // Здесь будем собирать только обрезанные тексты
+  const croppedElems = [];
+  const realBtn = [];
+
   cardTextElems.forEach((text, i) => {
     const fullTextHeight = text.clientHeight;
     const visibleText = window.getComputedStyle(text).lineHeight.split('px')[0]  * 4
     if (fullTextHeight > visibleText) {
-      text.classList.add('mod-crop')
+      text.classList.add('mod-crop');
+      croppedElems.push(text);
+      realBtn.push(btnsReadCompletely[i]);
     } else {
       btnsReadCompletely[i].remove();
     }
   })
 
+  /**
+   * Скрывает все раскрытые элементы
+   */
+  const hideAll = () => {
+    croppedElems.forEach(elem => {
+      elem.classList.add('mod-crop');
+    })
+    realBtn.forEach(btn => {
+      btn.innerText = 'Читать полностью';
+    })
+  }
+
   btnsReadCompletely.forEach((btn, i) => {
     btn.onclick = () => {
       if (cardTextElems[i].className.includes('mod-crop')) {
+        // Скрываем все открытые
+        hideAll();
         cardTextElems[i].classList.remove('mod-crop');
         btn.innerText = 'Скрыть';
       } else {

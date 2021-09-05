@@ -1,0 +1,26 @@
+.slogan-marquee {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  padding-top: 8.3rem;
+  padding-bottom: 6rem;
+
+  background: linear-gradient(0deg, #0F347C -37.18%, rgba(160, 178, 224, 0) 100%);
+
+  @include breakpoint(tablet) {
+    padding-top: 6.3rem;
+    padding-bottom: 4rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-top: 3.3rem;
+    padding-bottom: 3rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
