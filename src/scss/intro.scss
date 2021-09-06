@@ -107,6 +107,8 @@
     width: 84.7rem;
     height: auto;
 
+    mix-blend-mode: screen;
+
     @include breakpoint(tablet) {
       left: -26rem;
       top: -19rem;
