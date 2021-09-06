@@ -42,38 +42,36 @@
   @include breakpoint(small-mobile) {
     margin-top: 3rem;
   }
+}
 
-  &:before {
-    position: absolute;
-    content: '';
-    width: 88rem;
-    height: 88rem;
-    bottom: -24.6rem;
-    left: -10.4rem;
-    background-image: url('../img/content/organizers/building.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+.organizers__bg-image {
+  position: absolute;
+  content: '';
+  width: 88rem;
+  height: 88rem;
+  bottom: -24.6rem;
+  left: -10.4rem;
 
-    @include breakpoint(laptop) {
-      width: 68rem;
-      height: 68rem;
-      bottom: -19.1rem;
-      left: -8rem;
-    }
+  pointer-events: none;
 
-    @include breakpoint(tablet) {
-      width: 58rem;
-      height: 58rem;
-      bottom: -16.3rem;
-      left: -6.8rem;
-    }
+  @include breakpoint(laptop) {
+    width: 68rem;
+    height: 68rem;
+    bottom: -19.1rem;
+    left: -8rem;
+  }
 
-    @include breakpoint(small-tablet) {
-      width: 50rem;
-      height: 50rem;
-      left: -5.9rem;
-    }
+  @include breakpoint(tablet) {
+    width: 58rem;
+    height: 58rem;
+    bottom: -16.3rem;
+    left: -6.8rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    width: 50rem;
+    height: 50rem;
+    left: -5.9rem;
   }
 }
 
