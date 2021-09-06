@@ -1,5 +1,8 @@
 <section class="about">
-  <img class="about__bg-iamge" src="img/about-rock-bg.png" alt="Горы" loading="lazy">
+  <picture>
+    <source srcset="img/about-rock-bg.webp" type="image/webp">
+    <img class="about__bg-iamge" src="img/about-rock-bg.png" alt="Горы" loading="lazy">
+  </picture>
 
   {{> slogan-marquee }}
 
@@ -27,7 +30,10 @@
             </div>
 
             <div class="about__megaphone">
-              <img class="about__megaphone-image" src="img/about-bg.png" alt="About image" loading="lazy">
+              <picture>
+                <source srcset="img/about-bg.webp" type="image/webp">
+                <img class="about__megaphone-image" src="img/about-bg.png" alt="About image" loading="lazy">
+              </picture>
 
               <div class="about__marquee">
                 {{> marquee }}
