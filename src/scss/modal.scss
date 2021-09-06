@@ -58,7 +58,7 @@
     &:focus,
     &:hover {
       .modal__close-icon {
-        stroke: var(--accent-color);
+        stroke: var(--text-color);
       }
     }
 
@@ -75,7 +75,7 @@
 
   &__close-icon {
     fill: none;
-    stroke: var(--text-color);
+    stroke: var(--accent-color);
 
     width: 2.1rem;
     height: 2.1rem;

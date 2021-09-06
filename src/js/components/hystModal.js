@@ -1,8 +1,13 @@
 import '../vendor/hystmodal.min.js';
 
-const hystModal = new HystModal({
+window.hystModal = new HystModal({
   linkAttributeName: "data-hystmodal",
-  //настройки, см. API
+  afterClose: function(modal){
+            
+    //If Youtube video inside Modal, close it on modal closing
+    let videoframe = modal.openedWindow.querySelector('iframe');
+    if(videoframe){
+        videoframe.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+    }
+  }
 });
-
-export default hystModal;

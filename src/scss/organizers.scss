@@ -48,7 +48,7 @@
   position: absolute;
   content: '';
   width: 88rem;
-  height: 88rem;
+  height: auto;
   bottom: -24.6rem;
   left: -10.4rem;
 
@@ -56,14 +56,12 @@
 
   @include breakpoint(laptop) {
     width: 68rem;
-    height: 68rem;
     bottom: -19.1rem;
     left: -8rem;
   }
 
   @include breakpoint(tablet) {
     width: 58rem;
-    height: 58rem;
     bottom: -16.3rem;
     left: -6.8rem;
   }

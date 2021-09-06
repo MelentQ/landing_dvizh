@@ -1,5 +1,3 @@
-import hystModal from './hystModal';
-
 /**
  * Логика работы открытия модалки с видео на клик по видео в галереи
  * Блок "album"
@@ -22,7 +20,7 @@ function openYouTubeModal() {
     const src = videoElement.dataset.src;
 
     openBtn.addEventListener('click', () => {
-      hystModal.open('#videoModal');
+      window.hystModal.open('#videoModal');
       iframe.src = src;
     })
   })

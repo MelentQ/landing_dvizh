@@ -1,5 +1,6 @@
 import validation from './validation';
 
+import './components/hystModal';
 import toggleStickyHeader from './components/toggleStickyHeader';
 import initAlbumSlider from './components/initAlbumSlider';
 import alignHeights from './components/alignHeights';
@@ -9,7 +10,6 @@ import initTicketsSlider from './components/initTicketsSlider';
 import initPromisesSlider from './components/initPromisesSlider';
 import initVanillaTilt from './components/initIntroTilt';
 import initMarquee from './components/initMarquee';
-import submitForm from './components/submitFrom';
 import initSponsorsSlider from './components/initSponsorsSlider';
 import openYouTubeModal from './components/openYouTubeModal';
 import {timer} from './components/timer';
@@ -24,8 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initMarquee();
 
     initVanillaTilt();
-
-    submitForm();
 
     initSponsorsSlider();
     openYouTubeModal();

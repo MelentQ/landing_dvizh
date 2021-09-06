@@ -72,6 +72,17 @@
     @include breakpoint(mobile) {
       padding: 1rem 0;
     }
+
+    &_disabled {
+      opacity: 0.6;
+      cursor: default;
+
+      &:hover,
+      &:focus {
+        border-color: #FFFFFF;
+        transform: scaleX(1);
+      }
+    }
   }
 
   &__btn-label {
