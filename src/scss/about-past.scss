@@ -188,6 +188,7 @@
   font-size: 2.4rem;
   line-height: 1.2;
   color: var(--content-color);
+  @include titleFF;
 
   @include breakpoint(tablet) {
     font-size: 2rem;
