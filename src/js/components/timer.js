@@ -8,6 +8,44 @@ function init(textSelector) {
   const element = document.querySelector(textSelector);
   if (!element) return;
 
+  const labelsContainer = document.querySelector('.sticky-header__time-labels');
+  const daysLabel = labelsContainer.querySelector('.sticky-header__time-label_days');
+  const hoursLabel = labelsContainer.querySelector('.sticky-header__time-label_hours');
+
+  /**
+   * Склоняет слово "День"
+   * @param {Number} num - номер дня
+   * @returns {String} - слово
+   */
+  function getDaysLabel(num) {
+    if (num % 10 === 0 || num % 10 === 5 || num % 10 === 6 || num % 10 === 7 || num % 10 === 8 || num % 10 === 9) {
+      return "дней";
+    }
+    if (num % 10 === 1) {
+      return "день";
+    }
+    if (num % 10 === 2 || num % 10 === 3 || num % 10 === 4) {
+      return "дня";
+    }
+  }
+
+  /**
+   * Склоняет слово "Час"
+   * @param {Number} num - номер часа
+   * @returns {String} - слово
+   */
+   function getHoursLabel(num) {
+    if (num % 100 === 11 || num % 10 === 0 || num % 10 === 5 || num % 10 === 6 || num % 10 === 7 || num % 10 === 8 || num % 10 === 9) {
+      return "часов";
+    }
+    if (num % 10 === 1) {
+      return "час";
+    }
+    if (num % 10 === 2 || num % 10 === 3 || num % 10 === 4) {
+      return "часа";
+    }
+  }
+
   // Разбираем строку, создаем из нее объект Date
   const stringEndTime = element.dataset.time;
 
@@ -35,16 +73,21 @@ function init(textSelector) {
       element.textContent = "00:00:00";
     }
 
-    // Получаем секунды
-    const seconds = div(diff, 1000) % 60;
-
     // Получаем минуты
-    const minutes = div(diff, 60000) % 60;
+    let minutes = div(diff, 60000) % 60;
+    if (minutes === 0) minutes = "00";
 
     // Получаем часы
-    const hours = div(div(diff, 3600000), 24);
+    let hours = div(diff, 3600000) % 60;
+    if (hours === 0) hours = "00";
+    hoursLabel.textContent = getHoursLabel(hours);
 
-    const res = `${hours}:${minutes}:${seconds}`;
+    // Получаем дни
+    let days = div(div(diff, 3600000), 24);
+    if (days === 0) days = "00";
+    daysLabel.textContent = getDaysLabel(days);
+
+    const res = `${days}:${hours}:${minutes}`;
 
     element.textContent = res;
   }, 1000)

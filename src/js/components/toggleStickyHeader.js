@@ -12,10 +12,18 @@ function toggleStickyHeader() {
   let isOpen = false;
 
   const toggle = () => {
+    // Непонятная логика:
+    // Программно позиционируем хедер между двумя блоками.
+    // Это нельзя сделать с помощью CSS, т.к. мешает обертка GSAP.
+    // Делаем это через margin-bottom для секции и абсолютного позиционирования для хедера.
     const introHeight = introElement.clientHeight;
     const aboutHeight = aboutElement.clientHeight;
     const stickyHeaderHeight = stickyHeader.clientHeight;
-    const togglePositon = introHeight + aboutHeight - stickyHeaderHeight;
+    const togglePositon = introHeight + aboutHeight;
+
+    // Задаем секции margin-bottom, равный высоте хедера
+    aboutElement.style.marginBottom = stickyHeaderHeight + 'px';
+    stickyHeader.style.top = togglePositon + 'px';
 
     const scrollPos = window.pageYOffset;
 

@@ -6,7 +6,7 @@ export default function aboutPast() {
   const hostElem = document.getElementById('about-past');
   if (!hostElem) return;
 
-  new Swiper(hostElem.querySelector('.about-past__slider-container'), {
+  const swiper = new Swiper(hostElem.querySelector('.about-past__slider-container'), {
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
@@ -32,6 +32,11 @@ export default function aboutPast() {
       desc.classList.remove('about-past__slide-full_opened');
     })
   }
+
+  // Скрываем все табы при свайпе
+  swiper.on('slideChange', function () {
+    hideAll();
+  });
 
   // Чтобы карточки не накладывались, у активной z-index должен быть больше, чем у остальных.
   // Ниже по коду активной карточке выставляется z-index: 10, остальным z-index: 2
