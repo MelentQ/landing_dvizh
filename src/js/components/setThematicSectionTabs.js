@@ -17,6 +17,14 @@ function setThematicSectionTabs() {
     })
   }
 
+  // Чтобы карточки не накладывались, у активной z-index должен быть больше, чем у остальных.
+  // Ниже по коду активной карточке выставляется z-index: 10, остальным z-index: 2
+  const removeZIndex = () => {
+    cards.forEach(card => {
+      card.style.zIndex = "2";
+    })
+  }
+
   cards.forEach((card) => {
     const btn = card.querySelector('.thematic-section__btn');
     const desc = card.querySelector('.thematic-section__description');
@@ -25,10 +33,9 @@ function setThematicSectionTabs() {
     btn.addEventListener('click', () => {
       btn.blur();
       hideAll();
+      removeZIndex();
+      card.style.zIndex = "10";
       desc.classList.add('thematic-section__description_opened');
-    })
-    desc.addEventListener('mouseleave', () => {
-      desc.classList.remove('thematic-section__description_opened');
     })
 
     closeBtn.addEventListener('click', () => {

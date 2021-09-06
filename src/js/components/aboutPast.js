@@ -23,48 +23,46 @@ export default function aboutPast() {
     }
   });
 
-  const cardTextElems = document.querySelectorAll('.about-past__slide-title');
-  const btnsReadCompletely = document.querySelectorAll('.about-past__bnt-read-completely');
+  // Дальше логика работы табов
+  const cards = hostElem.querySelectorAll('.about-past__item');
+  const descriptions = hostElem.querySelectorAll('.about-past__slide-full');
 
-  // Здесь будем собирать только обрезанные тексты
-  const croppedElems = [];
-  const realBtn = [];
-
-  cardTextElems.forEach((text, i) => {
-    const fullTextHeight = text.clientHeight;
-    const visibleText = window.getComputedStyle(text).lineHeight.split('px')[0]  * 4
-    if (fullTextHeight > visibleText) {
-      text.classList.add('mod-crop');
-      croppedElems.push(text);
-      realBtn.push(btnsReadCompletely[i]);
-    } else {
-      btnsReadCompletely[i].remove();
-    }
-  })
-
-  /**
-   * Скрывает все раскрытые элементы
-   */
   const hideAll = () => {
-    croppedElems.forEach(elem => {
-      elem.classList.add('mod-crop');
-    })
-    realBtn.forEach(btn => {
-      btn.innerText = 'Читать полностью';
+    descriptions.forEach(desc => {
+      desc.classList.remove('about-past__slide-full_opened');
     })
   }
 
-  btnsReadCompletely.forEach((btn, i) => {
-    btn.onclick = () => {
-      if (cardTextElems[i].className.includes('mod-crop')) {
-        // Скрываем все открытые
-        hideAll();
-        cardTextElems[i].classList.remove('mod-crop');
-        btn.innerText = 'Скрыть';
-      } else {
-        cardTextElems[i].classList.add('mod-crop');
-        btn.innerText = 'Читать полностью';
-      }
+  // Чтобы карточки не накладывались, у активной z-index должен быть больше, чем у остальных.
+  // Ниже по коду активной карточке выставляется z-index: 10, остальным z-index: 2
+  const removeZIndex = () => {
+    cards.forEach(card => {
+      card.style.zIndex = "2";
+    })
+  }
+
+  cards.forEach((card) => {
+    const btn = card.querySelector('.about-past__bnt-read-completely');
+    const desc = card.querySelector('.about-past__slide-full');
+    const closeBtn = card.querySelector('.about-past__slide-full-close');
+
+    btn.addEventListener('click', () => {
+      btn.blur();
+      hideAll();
+      removeZIndex();
+      card.style.zIndex = "10";
+      desc.classList.add('about-past__slide-full_opened');
+    })
+
+    closeBtn.addEventListener('click', () => {
+      desc.classList.remove('about-past__slide-full_opened');
+    })
+  })
+
+  document.addEventListener('click', (evt) => {
+    // Клик по оверлею
+    if (!evt.target.closest('.about-past__slide-full_opened') && !evt.target.classList.contains('about-past__bnt-read-completely')) {
+      hideAll();
     }
   })
 }

@@ -27,6 +27,13 @@
   }
 
   &__slider {
+    .swiper-slide-active {
+      .thematic-section__description {
+        left: 0;
+        right: unset;
+      }
+    }
+
     @include breakpoint(tablet) {
       margin: 0 2rem;
     }
@@ -34,13 +41,7 @@
 
   &__item {
     position: relative;
-
-    &:last-of-type {
-      .thematic-section__description {
-        left: unset;
-        right: 0;
-      }
-    }
+    z-index: 2;
   }
 }
 
@@ -136,10 +137,11 @@
   &__description {
     opacity: 0;
     visibility: hidden;
+    z-index: 10;
 
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
 
     display: flex;
     flex-direction: column;
@@ -147,10 +149,9 @@
     align-items: flex-start;
 
     padding: 4.4rem 3.2rem 4.4rem 5.6rem;
-    width: calc(200% + 1.5rem);
+    width: calc(200% + 15px);
     height: 100%;
     background-color: white;
-    z-index: 2;
 
     transition: visibility 0.3s, opacity 0.3s ease;
 

@@ -1,4 +1,6 @@
-import Swiper, {Autoplay} from "swiper";
+import {Swiper, Autoplay} from "swiper";
+
+Swiper.use([Autoplay]);
 
 function initSponsorsSlider() {
   const container = document.querySelector('.map__slider');
@@ -6,7 +8,6 @@ function initSponsorsSlider() {
   if (!container) return;
 
   new Swiper('.map__slider', {
-    modules: [Autoplay],
     slidesPerView: 7,
     spaceBetween: 20,
     loop: true,
