@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Nekst';
+    src: url('Nekst-Bold.eot');
+    src: url('Nekst-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Nekst-Bold.woff2') format('woff2'),
+        url('Nekst-Bold.woff') format('woff'),
+        url('Nekst-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nekst';
+    src: url('Nekst-Light.eot');
+    src: url('Nekst-Light.eot?#iefix') format('embedded-opentype'),
+        url('Nekst-Light.woff2') format('woff2'),
+        url('Nekst-Light.woff') format('woff'),
+        url('Nekst-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nekst';
+    src: url('Nekst-Black.eot');
+    src: url('Nekst-Black.eot?#iefix') format('embedded-opentype'),
+        url('Nekst-Black.woff2') format('woff2'),
+        url('Nekst-Black.woff') format('woff'),
+        url('Nekst-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nekst';
+    src: url('Nekst-SemiBold.eot');
+    src: url('Nekst-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Nekst-SemiBold.woff2') format('woff2'),
+        url('Nekst-SemiBold.woff') format('woff'),
+        url('Nekst-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nekst';
+    src: url('Nekst-Medium.eot');
+    src: url('Nekst-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Nekst-Medium.woff2') format('woff2'),
+        url('Nekst-Medium.woff') format('woff'),
+        url('Nekst-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nekst';
+    src: url('Nekst-SemiBold_1.eot');
+    src: url('Nekst-SemiBold_1.eot?#iefix') format('embedded-opentype'),
+        url('Nekst-SemiBold_1.woff2') format('woff2'),
+        url('Nekst-SemiBold_1.woff') format('woff'),
+        url('Nekst-SemiBold_1.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
