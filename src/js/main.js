@@ -16,7 +16,6 @@ import toggleStickyHeader from './components/toggleStickyHeader';
 import initAlbumSlider from './components/initAlbumSlider';
 import alignHeights from './components/alignHeights';
 import aboutPast from './components/aboutPast';
-import initThematicSectionsSlider from './components/initThematicSectionsSlider';
 import setThematicSectionTabs from './components/setThematicSectionTabs';
 import initTicketsSlider from './components/initTicketsSlider';
 import initPromisesSlider from './components/initPromisesSlider';
@@ -42,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
     datepicker();
 
     aboutPast();
-    initThematicSectionsSlider();
     setThematicSectionTabs();
     initTicketsSlider();
     initPromisesSlider();
@@ -62,7 +60,7 @@ window.addEventListener('load', function() {
     document.body.classList.add('loaded');
     setTimeout(() => document.body.classList.add('animatable'), 300);
 
-    // toggleStickyHeader(); // Не работает из-за GSAP Wrapper'а
+    toggleStickyHeader();
     // initAlbumSlider(); // Включить до лучших времен
     alignHeights('.thematic-sections__list', '.thematic-section__title');
     alignHeights('.speakers__inner', '.speaker__name');

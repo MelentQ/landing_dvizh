@@ -103,33 +103,35 @@
 
     position: absolute;
 
+    max-width: unset;
     width: 84.7rem;
-    height: 44.1rem;
-
-    background-image: url('../img/3d.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left top;
+    height: auto;
 
     @include breakpoint(tablet) {
-      left: -3rem;
-      top: -34rem;
+      left: -26rem;
+      top: -19rem;
 
       width: 63.5rem;
-      height: 33rem;
     }
-    @include breakpoint(mobile) {
-      left: -2rem;
+    @include breakpoint(small-tablet) {
+      left: -9rem;
       top: -20rem;
 
+      width: 43.5rem;
+    }
+    @include breakpoint(mobile) {
+      left: -3rem;
+      top: -17rem;
+
       width: 31.76rem;
-      height: 16.55rem;
     }
   }
 
   &__title {
     position: relative;
     z-index: 2;
+
+    width: min-content;
 
     font-size: 7.2rem;
     line-height: 1.1;
@@ -257,7 +259,7 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    @include breakpoint(tablet) {
+    @media screen and (max-width: 800px) {
       flex-direction: column-reverse;
       align-items: flex-end;
     }
