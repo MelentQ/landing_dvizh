@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/styles.min.css" />
@@ -56,7 +56,10 @@
         </header>        <main class="page-main">
 
 <section class="intro">
-    <img class="intro__bg-image" src="img/content/intro-bg.jpg" alt="Фон" loading="lazy">
+    <picture>
+        <source srcset="img/content/intro-bg.webp" type="image/webp">
+        <img class="intro__bg-image" src="img/content/intro-bg.jpg" alt="Фон" loading="lazy">
+    </picture>
     <div class="intro__bg-overlay"></div>
     <div class="container">
         <div class="intro__inner">
@@ -64,7 +67,10 @@
                 <div class="intro__title-block">
                     <div class="intro__title-container">
                         <h1 class="intro__title">форум в&nbsp;новом&nbsp;объеме</h1>
-                        <img class="intro__title-image" src="img/3d.png" alt="3 Движение" loading="lazy">
+                        <picture>
+                            <source srcset="img/3d.webp" type="image/webp">
+                            <img class="intro__title-image" src="img/3d.png" alt="3 Движение" loading="lazy">
+                        </picture>
                     </div>
                     <a class="intro__btn" href="#">Купить билет</a>
                 </div>
@@ -99,7 +105,10 @@
     </div>
 </section>
 <section class="about">
-  <img class="about__bg-iamge" src="img/about-rock-bg.png" alt="Горы" loading="lazy">
+  <picture>
+    <source srcset="img/about-rock-bg.webp" type="image/webp">
+    <img class="about__bg-iamge" src="img/about-rock-bg.png" alt="Горы" loading="lazy">
+  </picture>
 
   <div class="marquee3k slogan-marquee" data-speed="0.5">
     <div class="slogan-marquee__content">
@@ -187,7 +196,10 @@
             </div>
 
             <div class="about__megaphone">
-              <img class="about__megaphone-image" src="img/about-bg.png" alt="About image" loading="lazy">
+              <picture>
+                <source srcset="img/about-bg.webp" type="image/webp">
+                <img class="about__megaphone-image" src="img/about-bg.png" alt="About image" loading="lazy">
+              </picture>
 
               <div class="about__marquee">
                 <div class="marquee3k marquee" data-speed="0.5">
@@ -1201,7 +1213,11 @@
     </div>
 
     <div class="map__map-wrapper">
-      <img src="img/content/map/map.png" alt="" class="map__image">
+      <picture>
+        <source srcset="img/content/map/map.webp" type="image/webp">
+        <img src="img/content/map/map.png" alt="" class="map__image">
+      </picture>
+      
       <div class="container map__map-title-container">
         К нам едут коллеги
         <div class="map__map-title-part-wrapper">
@@ -1265,7 +1281,10 @@
     <div class="ticket-reservation__inner">
       <h2 class="ticket-reservation__title section-title">Забронировать билет</h2>
 
-      <img class="ticket-reservation__bg-image" src="img/form-bg.png" alt="Фон" loading="lazy">
+      <picture>
+        <source srcset="img/form-bg.webp" type="image/webp">
+        <img class="ticket-reservation__bg-image" src="img/form-bg.png" alt="Фон" loading="lazy">
+      </picture>
 
       <form class="ticket-reservation__form form" method="POST" name="reservation" data-need-validation>
         <fieldset class="ticket-reservation__form-inputs form__inputs">
@@ -1354,7 +1373,10 @@
 </section>
         </main>
         <footer class="page-footer footer">
-            <img class="footer__bg-image" src="img/footer-bg.png" alt="Фон" loading="lazy">
+            <picture>
+                <source srcset="img/footer-bg.webp" type="image/webp">
+                <img class="footer__bg-image" src="img/footer-bg.png" alt="Фон" loading="lazy">
+            </picture>
             <div class="container">
                 <div class="footer__inner">
                     <a class="footer__email" href="mailto:hello@dvizh.ru">hello@dvizh.ru</a>
