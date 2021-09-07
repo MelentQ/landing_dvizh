@@ -8,10 +8,6 @@
   background: radial-gradient(115.74% 115.74% at 50% 115.74%, #E93939 0%, #A0B2E0 100%);
   color: white;
 
-  @media  screen and (max-width: 1024px) and (orientation: landscape) {
-    height: 200vh;
-  }
-
   @include breakpoint(tablet) {
     padding-top: 8rem;
     padding-bottom: 8rem;
