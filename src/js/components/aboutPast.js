@@ -26,10 +26,18 @@ export default function aboutPast() {
   // Дальше логика работы табов
   const cards = hostElem.querySelectorAll('.about-past__item');
   const descriptions = hostElem.querySelectorAll('.about-past__slide-full');
+  const overlays = hostElem.querySelectorAll('.about-past__slide-overlay');
+  const contents = hostElem.querySelectorAll('.about-past__slide-full-content');
 
   const hideAll = () => {
     descriptions.forEach(desc => {
       desc.classList.remove('about-past__slide-full_opened');
+    })
+    overlays.forEach(overlay => {
+      overlay.classList.remove('animated')
+    })
+    contents.forEach(content => {
+      content.classList.remove('visible')
     })
   }
 
@@ -46,9 +54,8 @@ export default function aboutPast() {
     })
   }
 
-  cards.forEach((card) => {
+  cards.forEach((card, i) => {
     const btn = card.querySelector('.about-past__bnt-read-completely');
-    const desc = card.querySelector('.about-past__slide-full');
     const closeBtn = card.querySelector('.about-past__slide-full-close');
 
     btn.addEventListener('click', () => {
@@ -56,11 +63,13 @@ export default function aboutPast() {
       hideAll();
       removeZIndex();
       card.style.zIndex = "10";
-      desc.classList.add('about-past__slide-full_opened');
+      descriptions[i].classList.add('about-past__slide-full_opened');
+      overlays[i].classList.add('animated');
+      contents[i].classList.add('visible');
     })
 
     closeBtn.addEventListener('click', () => {
-      desc.classList.remove('about-past__slide-full_opened');
+      descriptions[i].classList.remove('about-past__slide-full_opened');
     })
   })
 
