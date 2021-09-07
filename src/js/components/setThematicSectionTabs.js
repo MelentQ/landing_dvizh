@@ -1,3 +1,4 @@
+import { over } from 'lodash';
 import Swiper from 'swiper';
 
 /**
@@ -34,10 +35,18 @@ function setThematicSectionTabs() {
 
   const cards = container.querySelectorAll('.thematic-sections__item');
   const descriptions = container.querySelectorAll('.thematic-section__description');
+  const overlays = container.querySelectorAll('.thematic-section__description-overlay');
+  const contents = container.querySelectorAll('.thematic-section__description-content');
 
   const hideAll = () => {
     descriptions.forEach(desc => {
       desc.classList.remove('thematic-section__description_opened');
+    })
+    overlays.forEach(overlay => {
+      overlay.classList.remove('animated')
+    })
+    contents.forEach(content => {
+      content.classList.remove('visible')
     })
   }
 
@@ -54,9 +63,8 @@ function setThematicSectionTabs() {
     })
   }
 
-  cards.forEach((card) => {
+  cards.forEach((card, i) => {
     const btn = card.querySelector('.thematic-section__btn');
-    const desc = card.querySelector('.thematic-section__description');
     const closeBtn = card.querySelector('.thematic-section__description-close');
 
     btn.addEventListener('click', () => {
@@ -64,11 +72,13 @@ function setThematicSectionTabs() {
       hideAll();
       removeZIndex();
       card.style.zIndex = "10";
-      desc.classList.add('thematic-section__description_opened');
+      descriptions[i].classList.add('thematic-section__description_opened');
+      overlays[i].classList.add('animated');
+      contents[i].classList.add('visible');
     })
 
     closeBtn.addEventListener('click', () => {
-      desc.classList.remove('thematic-section__description_opened');
+      descriptions[i].classList.remove('thematic-section__description_opened');
     })
   })
 
