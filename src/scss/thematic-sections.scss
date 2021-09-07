@@ -207,15 +207,30 @@
     }
   }
 
+  &__description-container {
+    overflow-y: scroll;
+    margin-bottom: 2rem;
+
+    @include customScrollbar();
+  }
+
   &__description-text {
+    padding-right: 2rem;
+
     font-size: 1.8rem;
     line-height: 1.2;
     color: black;
 
+    @include flexRowGap(0.6rem);
+
     @include breakpoint(tablet) {
+      padding-right: 1.5rem;
+
       font-size: 1.6rem;
     }
     @include breakpoint(small-tablet) {
+      padding-right: 1rem;
+
       font-size: 1.4rem;
     }
     @include breakpoint(mobile) {

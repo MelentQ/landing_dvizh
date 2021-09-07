@@ -74,17 +74,19 @@
 
 @mixin customScrollbar {
   scrollbar-width: none;
+
   &::-webkit-scrollbar {
     background-color: white;
     width: 0.6rem;
+
+    @include breakpoint(mobile) {
+      width: 0.3rem;
+    }
   }
 
   &::-webkit-scrollbar-thumb {
     background-color: var(--text-color);
-
-    &:hover {
-      background-color: var(--accent-color);
-    }
+    border-radius: 0.2rem;
   }
 
   &::-webkit-scrollbar-button {
@@ -92,7 +94,8 @@
   }
 
   &::-webkit-scrollbar-track {
-    background-color: #f5f5f5;
+    border-radius: 0.2rem;
+    background-color: rgba(0,0,0,0.18);
   }
 }
 
