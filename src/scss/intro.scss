@@ -5,6 +5,10 @@
 
   color: white;
 
+  @media  screen and (max-width: 1024px) and (orientation: landscape) {
+    height: auto;
+  }
+
   &__bg-image {
     position: absolute;
     top: 0;
