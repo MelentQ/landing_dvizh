@@ -156,7 +156,7 @@
     transition: visibility 0.3s, opacity 0.3s ease;
 
     @include breakpoint(tablet) {
-      padding: 3rem;
+      padding: 4rem 4rem 3rem 3rem;
     }
     @include breakpoint(small-tablet) {
       padding: 2.4rem;
@@ -190,6 +190,10 @@
       top: 0.5rem;
       right: 0.5rem;
     }
+    @include breakpoint(mobile) {
+      top: 0.5rem;
+      right: 0.5rem;
+    }
   }
 
   &__description-close-icon {
@@ -204,6 +208,10 @@
     @include breakpoint(small-tablet) {
       width: 1.5rem;
       height: 1.5rem;
+    }
+    @include breakpoint(mobile) {
+      width: 1.2rem;
+      height: 1.2rem;
     }
   }
 

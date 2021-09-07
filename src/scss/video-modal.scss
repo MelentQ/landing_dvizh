@@ -3,7 +3,7 @@
   &__content {
     width: 80vw;
     height: 0;
-    padding-bottom: 45vw;
+    padding-bottom: 40vw;
 
     @include breakpoint(tablet) {
       width: calc(100% - var(--content-padding-left) - var(--content-padding-right));
