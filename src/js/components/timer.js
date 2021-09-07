@@ -75,18 +75,15 @@ function init(textSelector) {
 
     // Получаем минуты
     let minutes = div(diff, 60000) % 60;
-    if (minutes === 0) minutes = "00";
     if (minutes < 10) minutes = "0" + minutes;
 
     // Получаем часы
     let hours = div(diff, 3600000) % 60;
-    if (hours === 0) hours = "00";
     if (hours < 10) hours = "0" + hours;
     hoursLabel.textContent = getHoursLabel(hours);
 
     // Получаем дни
     let days = div(div(diff, 3600000), 24);
-    if (days === 0) days = "00";
     if (days < 10) days = "0" + days;
     daysLabel.textContent = getDaysLabel(days);
 

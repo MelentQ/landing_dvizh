@@ -13,6 +13,9 @@ import initMarquee from './components/initMarquee';
 import initSponsorsSlider from './components/initSponsorsSlider';
 import openYouTubeModal from './components/openYouTubeModal';
 import {timer} from './components/timer';
+import smoothScroll from './components/smoothScroll';
+import toggleTopBtn from './components/toggleTopBtn';
+import toggleBurgerMenu from './components/toggleBurgerMenu';
 
 document.addEventListener('DOMContentLoaded', function() {
     validation();
@@ -29,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     openYouTubeModal();
 
     timer.init('.sticky-header__time');
+    smoothScroll();
 });
 
 window.addEventListener('load', function() {
@@ -36,6 +40,8 @@ window.addEventListener('load', function() {
     setTimeout(() => document.body.classList.add('animatable'), 300);
 
     toggleStickyHeader();
+    toggleTopBtn();
+    toggleBurgerMenu();
     // initAlbumSlider(); // Включить до лучших времен
     alignHeights('.thematic-sections__list', '.thematic-section__title');
     alignHeights('.speakers__inner', '.speaker__name');
