@@ -1,7 +1,16 @@
 <section class="intro">
     <picture>
-        <source srcset="img/content/intro-bg.webp" type="image/webp">
-        <source srcset="img/content/intro-bg.jpg" type="image/jpg">
+        <source srcset="img/content/intro-bg.webp" type="image/webp" media="(min-width: 1025px)">
+        <source srcset="img/content/intro-bg.jpg" type="image/jpg" media="(min-width: 1025px)">
+        <source srcset="img/content/intro-bg-tablet.webp" type="image/webp" media="(min-width: 769px)">
+        <source srcset="img/content/intro-bg-tablet.jpg" type="image/jpg" media="(min-width: 769px)">
+        <source srcset="img/content/intro-bg-small-tablet.webp" type="image/webp" media="(min-width: 641px)">
+        <source srcset="img/content/intro-bg-small-tablet.jpg" type="image/jpg" media="(min-width: 641px)">
+        <source srcset="img/content/intro-bg-mobile.webp" type="image/webp" media="(min-width: 577px)">
+        <source srcset="img/content/intro-bg-mobile.jpg" type="image/jpg" media="(min-width: 577px)">
+        <source srcset="img/content/intro-bg-supersmall-mobile.webp" type="image/webp" media="(min-width: 376px)">
+        <source srcset="img/content/intro-bg-supersmall-mobile.jpg" type="image/jpg" media="(min-width: 376px)">
+
         <img class="intro__bg-image" src="img/content/intro-bg.jpg" alt="Фон">
     </picture>
     <div class="intro__bg-overlay"></div>
@@ -14,6 +23,7 @@
                         <picture>
                             <source srcset="img/3d.webp" type="image/webp">
                             <source srcset="img/3d.png" type="image/png">
+                            
                             <img class="intro__title-image" src="img/3d.png" alt="3 Движение">
                         </picture>
                     </div>

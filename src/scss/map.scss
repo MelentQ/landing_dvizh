@@ -54,18 +54,19 @@
 }
 
 .map__map-wrapper {
-  margin: 0 1rem;
+  @include imageWrapper(16, 9);
 }
 
 .map__map-title-container {
+  position: absolute;
+  left: 0;
+  top: -10rem;
+  width: 100%;
+
   font-weight: 600;
   font-size: 8.2rem;
   line-height: 1.2;
   color: var(--text-color);
-  position: absolute;
-  left: 0;
-  top: -2.1rem;
-  width: 100%;
 
   @include breakpoint(laptop) {
     font-size: 5.2rem;
@@ -97,6 +98,9 @@
 }
 
 .map__map-title-dash {
+  position: relative;
+  top: 0.2rem;
+  
   width: 100%;
   height: .4rem;
   background-color: var(--accent-color);
