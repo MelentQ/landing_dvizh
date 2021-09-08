@@ -122,6 +122,12 @@
       width: 43.5rem;
     }
     @include breakpoint(mobile) {
+      left: -11rem;
+      top: -6rem;
+
+      width: 100%;
+    }
+    @media screen and (max-width: 399px) {
       left: 0rem;
       top: -13rem;
       width: 100%;
