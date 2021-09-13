@@ -42,7 +42,7 @@ window.addEventListener('load', function() {
     toggleStickyHeader();
     toggleTopBtn();
     toggleBurgerMenu();
-    // initAlbumSlider(); // Включить до лучших времен
+    initAlbumSlider();
     alignHeights('.thematic-sections__list', '.thematic-section__title');
     alignHeights('.speakers__inner', '.speaker__name');
     alignHeights('.tickets__list', '.ticket__title');

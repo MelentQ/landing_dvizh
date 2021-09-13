@@ -12,7 +12,7 @@ function initSponsorsSlider() {
     spaceBetween: 20,
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 3000,
     },
     breakpoints: {
       320: {

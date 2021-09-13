@@ -20,6 +20,10 @@
   }
 
   &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     margin-bottom: 8.6rem;
 
     @include breakpoint(tablet) {
@@ -31,36 +35,75 @@
   }
 
   &__title {
-    flex-shrink: 0;
-  }
+    position: relative;
 
-  &__second-title {
-    margin-bottom: 16.1rem;
+    margin-bottom: 10rem;
+
+    font-size: 2.4rem;
+    font-weight: 600;
+    @include titleFF;
+    text-transform: uppercase;
 
     @include breakpoint(tablet) {
-      margin-bottom: 8rem;
+      margin-bottom: 6rem;
     }
     @include breakpoint(small-tablet) {
-      margin-bottom: 6rem;
+      margin-bottom: 4rem;
+    }
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: -1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 6rem;
+      height: 0.3rem;
+
+      background: linear-gradient(90deg, rgba(#E31C24, 0) 0%, #E31C24 100%);
+
+      @include breakpoint(small-tablet) {
+        bottom: -1rem;
+      }
+      @include breakpoint(mobile) {
+        bottom: -0.7rem;
+      }
     }
   }
 
   &__subtitle {
-    flex-basis: 50%;
+    max-width: 54rem;
 
-    font-size: 4.1rem;
-    font-weight: 600;
+    font-size: 2.4rem;
+    font-weight: 400;
     line-height: 1.2;
-    @include titleFF;
+    text-align: center;
 
     @include breakpoint(tablet) {
-      font-size: 2.8rem;
-    }
-    @include breakpoint(small-tablet) {
       font-size: 2rem;
     }
-    @include breakpoint(mobile) {
+    @include breakpoint(small-tablet) {
       font-size: 1.6rem;
+    }
+    @include breakpoint(mobile) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__title-iamge {
+    display: block;
+    margin: 2rem auto 8rem;
+
+    max-width: 83rem;
+
+    @include breakpoint(tablet) {
+      max-width: 80%;
+      margin: 2rem auto 5rem;
     }
   }
 
@@ -152,13 +195,14 @@
   &__marquee {
     position: absolute;
     top: 50%;
+    left: -84%;
 
-    width: 117rem;
+    width: 300%;
 
-    transform: rotate(16.56deg) translateY(-50%);
+    transform: rotate(16.56deg) translate(-20%, -50%);
 
     &:nth-child(2) {
-      transform: rotate(-17.28deg) translateY(-50%);
+      transform: rotate(-13.28deg) translate(-20%, -50%);
     }
 
     @include breakpoint(mobile) {

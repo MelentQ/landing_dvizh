@@ -76,6 +76,10 @@ ol {
   }
 }
 
+svg {
+  display: block;
+}
+
 input,
 textarea {
   border: none;
@@ -231,5 +235,5 @@ select:-webkit-autofill:focus {
 }
 
 .gradient--type-1 {
-  background: linear-gradient(180deg, #E1E0E7 100%, #FFFFFF 5.76%, #E1E0E7 100%);
+  background: linear-gradient(180deg, #E1E0E7 100%, #FFFFFF 0%, #E1E0E7 100%);
 }
