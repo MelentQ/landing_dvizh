@@ -11,11 +11,10 @@ function setThematicSectionTabs() {
   const swiper = new Swiper('.thematic-sections__slider', {
     slidesPerView: 5,
     spaceBetween: 15,
-    simulateTouch: false,
+    resistanceRatio: 0.4,
     breakpoints: {
       320: {
         slidesPerView: 1,
-        simulateTouch: true
       },
       371: {
         slidesPerView: 2
@@ -28,7 +27,7 @@ function setThematicSectionTabs() {
       },
       1025: {
         slidesPerView: 5,
-        simulateTouch: false
+        resistanceRatio: 0
       }
     }
   })
@@ -63,6 +62,12 @@ function setThematicSectionTabs() {
     })
   }
 
+  function openDescription(index) {
+    descriptions[index].classList.add('thematic-section__description_opened');
+    overlays[index].classList.add('animated');
+    contents[index].classList.add('visible');
+  }
+
   cards.forEach((card, i) => {
     const btn = card.querySelector('.thematic-section__btn');
     const closeBtn = card.querySelector('.thematic-section__description-close');
@@ -72,9 +77,18 @@ function setThematicSectionTabs() {
       hideAll();
       removeZIndex();
       card.style.zIndex = "10";
-      descriptions[i].classList.add('thematic-section__description_opened');
-      overlays[i].classList.add('animated');
-      contents[i].classList.add('visible');
+      openDescription(i);
+    })
+
+    card.addEventListener('mouseover', () => {
+      hideAll();
+      removeZIndex();
+      card.style.zIndex = "10";
+      openDescription(i);
+    })
+
+    descriptions[i].addEventListener('mouseleave', () => {
+      hideAll();
     })
 
     closeBtn.addEventListener('click', () => {

@@ -1,6 +1,6 @@
 .program {
   padding-top: 11.4rem;
-  padding-bottom: 27.5rem;
+  padding-bottom: 12rem;
 
   background: linear-gradient(180.01deg, #A0B2E0 0%, #E1E0E7 100%);
 
@@ -125,6 +125,11 @@
   }
 
   &__bg-image {
+    // animations
+    transition: transform 0.8s, opacity 0.8s ease;
+    transform: translate(50%, 50%);
+    opacity: 0;
+    // /animations
     position: absolute;
     top: -2.8rem;
     left: -3.3rem;
@@ -141,6 +146,11 @@
 
       width: 40.5rem;
       height: 40.5rem;
+    }
+
+    &.animated {
+      transform: translate(0, 0);
+      opacity: 1;
     }
   }
 

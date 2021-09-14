@@ -78,7 +78,7 @@ function init(textSelector) {
     if (minutes < 10) minutes = "0" + minutes;
 
     // Получаем часы
-    let hours = div(diff, 3600000) % 60;
+    let hours = div(diff, 3600000) % 24;
     if (hours < 10) hours = "0" + hours;
     hoursLabel.textContent = getHoursLabel(hours);
 

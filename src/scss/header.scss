@@ -88,11 +88,38 @@
   }
 
   &__menu-link {
+    position: relative;
+
+    display: block;
+
     font-size: 1.4rem;
     line-height: 1.2;
     font-weight: 400;
 
-    @include defaultHoverEffect(0.6);
+    transition: opacity 0.3s ease;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: -0.4rem;
+      left: 0;
+
+      width: 0%;
+      height: 0.2rem;
+
+      transition: width 0.3s ease;
+      background: linear-gradient(90deg, rgba(#E31C24, 0) 0%, #E31C24 100%);
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+
+      &::after {
+        width: 100%;
+      }
+    }
 
     @include breakpoint(tablet) {
       font-size: 1.2rem;

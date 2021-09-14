@@ -18,6 +18,12 @@
   }
 
   &__bg-image {
+    // animations
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    transition: transform 0.8s, opacity 0.8s ease;
+    // /animations
+
     position: absolute;
     right: 6rem;
     top: 5rem;
@@ -34,6 +40,11 @@
     @include breakpoint(mobile) {
       right: 2rem;
       width: 30.4rem;
+    }
+
+    &.animated {
+      transform: translate(0, 0);
+      opacity: 1;
     }
   }
 
