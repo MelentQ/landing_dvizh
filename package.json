@@ -42,6 +42,7 @@
     "lodash": "^4.17.21",
     "marquee3000": "^1.1.1",
     "moment": "^2.24.0",
+    "nouislider": "^15.4.0",
     "parsleyjs": "^2.9.2",
     "plyr": "^3.6.8",
     "smoothscroll-polyfill": "^0.4.4",

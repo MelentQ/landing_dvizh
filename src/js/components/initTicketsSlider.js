@@ -11,11 +11,10 @@ function initTicketsSlider() {
   new Swiper('.tickets__slider', {
     slidesPerView: 4,
     spaceBetween: 20,
-    simulateTouch: false,
+    resistanceRatio: 0.4,
     breakpoints: {
       320: {
         slidesPerView: 1,
-        simulateTouch: true
       },
       577: {
         slidesPerView: 2
@@ -25,9 +24,37 @@ function initTicketsSlider() {
       },
       1025: {
         slidesPerView: 4,
-        simulateTouch: false
+        resistanceRatio: 0
       }
     }
+  })
+
+  const cards = container.querySelectorAll('.tickets__item');
+
+  const focus = (index) => {
+    cards.forEach((card, i) => {
+      if (index != i) {
+        card.style.opacity = 0.6;
+      }
+      else {
+        card.style.opacity = 1;
+      }
+    })
+  }
+
+  const unfocusAll = () => {
+    cards.forEach((card, i) => {
+      card.style.opacity = 1;
+    })
+  }
+
+  cards.forEach((card, i) => {
+    card.addEventListener('mouseover', () => {
+      focus(i);
+    })
+    card.addEventListener('mouseleave', () => {
+      unfocusAll();
+    })
   })
 }
 

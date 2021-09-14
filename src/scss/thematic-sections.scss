@@ -27,6 +27,12 @@
   }
 
   &__slider {
+    // animations
+      opacity: 0;
+      transform: translateX(100%);
+      transition: opacity 0.8s, transform 0.8s ease;
+    // animations
+
     .swiper-slide-active {
       .thematic-section__description {
         left: 0;
@@ -39,6 +45,11 @@
 
     @include breakpoint(tablet) {
       margin: 0 2rem;
+    }
+
+    &.animated {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 

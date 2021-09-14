@@ -19,6 +19,12 @@
 }
 
 .about-past__slider {
+  // animations
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.8s, transform 0.8s ease;
+  // animations
+  
   position: relative;
   margin-top: 13rem;
 
@@ -26,16 +32,22 @@
 
   @include breakpoint(tablet) {
     margin-top: 8rem;
-    margin-right: 2rem;
-    margin-left: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
   }
 
   @include breakpoint(small-mobile) {
     margin-top: 5rem;
   }
+
+  &.animated {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .about-past__slider-container {
+  padding: 1rem;
   @include breakpoint(small-tablet) {
     overflow: initial;
   }
@@ -69,6 +81,7 @@
 
   background: #FFFFFF;
   border-radius: .4rem;
+  box-shadow: 0 0.4rem 1rem #92a2ca;
 
   @include breakpoint(tablet) {
     padding: 3rem;

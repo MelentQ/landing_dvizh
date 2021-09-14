@@ -9,16 +9,18 @@ export default function aboutPast() {
   const swiper = new Swiper(hostElem.querySelector('.about-past__slider-container'), {
     slidesPerView: 1,
     spaceBetween: 20,
+    resistanceRatio: 0.4,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
       769: {
-        slidesPerView: 2
+        slidesPerView: 2,
       },
       1025: {
-        slidesPerView: 3
+        slidesPerView: 3,
+        resistanceRatio: 0
       }
     }
   });
@@ -54,6 +56,12 @@ export default function aboutPast() {
     })
   }
 
+  function openDescription(index) {
+    descriptions[index].classList.add('about-past__slide-full_opened');
+    overlays[index].classList.add('animated');
+    contents[index].classList.add('visible');
+  }
+
   cards.forEach((card, i) => {
     const btn = card.querySelector('.about-past__bnt-read-completely');
     const closeBtn = card.querySelector('.about-past__slide-full-close');
@@ -63,9 +71,18 @@ export default function aboutPast() {
       hideAll();
       removeZIndex();
       card.style.zIndex = "10";
-      descriptions[i].classList.add('about-past__slide-full_opened');
-      overlays[i].classList.add('animated');
-      contents[i].classList.add('visible');
+      openDescription(i)
+    })
+
+    // card.addEventListener('mouseover', () => {
+    //   hideAll();
+    //   removeZIndex();
+    //   card.style.zIndex = "10";
+    //   openDescription(i);
+    // })
+
+    descriptions[i].addEventListener('mouseleave', () => {
+      hideAll();
     })
 
     closeBtn.addEventListener('click', () => {

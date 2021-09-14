@@ -16,6 +16,7 @@ import {timer} from './components/timer';
 import smoothScroll from './components/smoothScroll';
 import toggleTopBtn from './components/toggleTopBtn';
 import toggleBurgerMenu from './components/toggleBurgerMenu';
+import animations from './components/animations';
 
 document.addEventListener('DOMContentLoaded', function() {
     validation();
@@ -47,4 +48,5 @@ window.addEventListener('load', function() {
     alignHeights('.speakers__inner', '.speaker__name');
     alignHeights('.tickets__list', '.ticket__title');
     alignHeights('.tickets__list', '.ticket__list');
+    animations();
 })

@@ -163,39 +163,33 @@
 }
 
 .album-scroll {
-  position: absolute;
-  top: 0;
-  left: -5.6rem;
-  z-index: 25;
 
-  width: 0.2rem;
-  height: 100%;
+  &.noUi-target {
+    width: 0.2rem;
 
-  background-color: #94A9D0;
-
-  @include breakpoint(tablet) {
-    left: -3.6rem;
+    background-color: #94A9D0;
+    box-shadow: none;
+    border: none;
   }
 
-  &__btn {
-    position: absolute;
-    left: 50%;
-    top: 0%;
-    transform: translateX(-50%);
-    z-index: 26;
+  .noUi-handle {
+    top: -2.25rem;
+    right: -2.25rem;
 
     width: 4.5rem;
     height: 4.5rem;
 
     border-radius: 50%;
     background-color: #C82030;
+    border: none;
+    box-shadow: none;
 
     cursor: pointer;
 
     background-image: url(../img/icons/burger.svg);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 2.4rem 1.7rem;
+    background-size: 1.5rem 2.8rem;
     
     transition: background-color 0.3s ease;
 
@@ -204,18 +198,41 @@
       background-color: var(--accent-color);
     }
 
+    &::before,
+    &::after {
+      content: none;
+    }
+
     @include breakpoint(tablet) {
+      top: -1.75rem;
+      right: -1.75rem;
+
       width: 3.5rem;
       height: 3.5rem;
 
-      background-size: 1.8rem 1.2rem;
+      background-size: 1.2rem 2rem;
     }
     @include breakpoint(mobile) {
+      top: -1.25rem;
+      right: -1.25rem;
+
       width: 2.5rem;
       height: 2.5rem;
 
-      background-size: 1.2rem 1.2rem;
+      background-size: 1rem 1.8rem;
     }
+  }
+  position: absolute;
+  top: 0;
+  left: -5.6rem;
+  z-index: 25;
+
+  height: 100%;
+
+  // background-color: #94A9D0;
+
+  @include breakpoint(tablet) {
+    left: -3.6rem;
   }
 
   &__label {

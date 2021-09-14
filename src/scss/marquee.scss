@@ -1,6 +1,8 @@
 .marquee {
 
   &__wrapper {
+    display: flex !important;
+
     font-size: 3.6rem;
     line-height: 1.2;
     font-weight: 600;
@@ -19,14 +21,11 @@
   }
 
   &__unit {
-    margin-right: 6.8rem;
+    display: flex;
+    align-items: center;
 
-    &:nth-child(2n+1) {
-      color: white;
-    }
-    &:nth-child(2n) {
-      color: var(--accent-color);
-    }
+    min-width: 30rem;
+    margin-right: 6.8rem;
 
     @include breakpoint(tablet) {
       margin-right: 4.8rem;
@@ -38,4 +37,42 @@
       margin-right: 2.2rem;
     }
   }
+
+  &__unit-text {
+    flex: 0 0 auto;
+
+    &--default {
+      color: white !important;
+    }
+    &--accent {
+      color: var(--accent-color) !important;
+    }
+  }
+
+  &__unit-slash {
+    display: block;
+
+    margin: 0 0.8rem;
+    min-width: 6rem;
+    width: 100%;
+    height: 0.3rem;
+
+    background-color: white;
+
+    @include breakpoint(mobile) {
+      top: 0.1rem;
+
+      min-width: 2rem;
+      height: 0.1rem;
+      margin: 0 0.4rem;
+    }
+  }
+}
+
+.marquee3k__copy {
+  display: flex !important;
+}
+
+.marquee3k__wrapper {
+  display: flex !important;
 }

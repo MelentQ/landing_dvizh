@@ -116,9 +116,13 @@
   }
 
   &__btn {
+    display: block;
+    position: relative;
+    overflow: hidden;
+
     flex-shrink: 0;
 
-    padding: 2rem 7rem;
+    padding: 1.2rem 7rem;
 
     color: var(--accent-color) !important;
 
@@ -127,14 +131,38 @@
     line-height: 1.1;
     @include titleFF;
 
-    background-image: url(../img/btn-border.svg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    border: 0.2rem solid transparent;
+    border-image: linear-gradient(90deg, rgba(#E31C24, 0) 0%, #E31C24 100%);
+    border-image-slice: 1;
 
-    @include defaultHoverEffect(0.7);
+    transition: color 0.3s ease;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: -100%;
+      z-index: -1;
+
+      width: 100%;
+      height: 100%;
+
+      background: linear-gradient(90deg, rgba(#E31C24, 0) 0%, #E31C24 100%);
+
+      transition: left 0.3s ease;
+    }
+
+    &:hover,
+    &:focus {
+      color: white !important;
+      &::before {
+        left: 0%;
+      }
+    }
 
     @include breakpoint(tablet) {
-      padding: 1.5rem 4rem;
+      padding: 1.2rem 4rem;
 
       font-size: 1.4rem;
     }

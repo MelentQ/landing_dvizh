@@ -1,11 +1,27 @@
-import Swiper from 'swiper';
+import {Swiper} from 'swiper';
+import noUiSlider from 'nouislider';
 
 export default function initAlbumSlider() {
   const container = document.querySelector('#albumSwiper');
   if (!container) return;
 
+  // Стартовый слайдер считывается из data-атрибута
+  const startSliderIndex = +container.dataset.start || 0;
+
   const slides = Array.from(container.querySelectorAll('.swiper-slide'));
   const slidesCount = slides.length;
+
+  // Настройки noUiSlider
+  const scrollContainer = document.querySelector('.album-scroll');
+  let customScroll = noUiSlider.create(scrollContainer, {
+    orientation: "vertical",
+    start: startSliderIndex,
+    range: {
+      'min': 0,
+      'max': slidesCount - 3
+    },
+    step: 1
+  });
 
   // Для корректной работы рассчитываем высоту слайдера
   // Сумма высот трёх карточек
@@ -15,12 +31,12 @@ export default function initAlbumSlider() {
 
   container.style.height = containerHeight + 'px';
 
-  new Swiper('#albumSwiper', {
+  const slider = new Swiper(container, {
     direction: "vertical",
     slidesPerView: 3,
     spaceBetween: spaceBetween,
-    mousewheel: true,
-    grabCursor: true
+    simulateTouch: false,
+    initialSlide: startSliderIndex,
   });
 
   window.addEventListener('resize', () => {
@@ -31,50 +47,13 @@ export default function initAlbumSlider() {
     container.style.height = containerHeight + 'px';
   })
 
-  albumScroll(slidesCount);
-}
+  // Связываем noUiSlider и Swiper
+  customScroll.on('change', (values) => {
+    slider.slideTo(Math.round(values))
+  })
 
-function albumScroll(slidesCount) {
-  const track = document.querySelector('.album-scroll');
-  const thumb = track.querySelector('.album-scroll__btn');
-
-  const trackHeight = track.clientHeight;
-  const thumbHeight = thumb.clientHeight;
-
-  const toggleSize = track.offsetHeight / slidesCount
-
-  const trackYPosition = track.pageYOffset;
-
-  function mouseDownFunction(e) {
-  }
-
-  function mouseMoveFunction(e) {
-    const mouseYPosition = e.clientY;
-
-    console.log("mouseYPosition: " + mouseYPosition, "trackYPosition: " + trackYPosition)
-
-    if (mouseYPosition >= trackYPosition && mouseYPosition <= trackYPosition + trackHeight) {
-      const diff = mouseYPosition - trackYPosition;
-      const percentageDiff = diff/trackHeight * 100;
-
-      thumb.style.top = percentageDiff + "%";
-    }
-  }
-
-  thumb.addEventListener("mousedown", function(e){
-    mouseDownFunction(e); 
-
-    thumb.onmousemove = function(e) {
-      mouseMoveFunction(e);
-    }
+  // А теперь связываем Swiper с noUiSlider
+  slider.on('slideChange', (swiper) => {
+    customScroll.set(swiper.realIndex);
   });
-
-  thumb.addEventListener("mouseout", function(e){
-    thumb.onmousemove = null
-  });
-
-  function moveThumb(i) {
-    const movePosition = toggleSize * i;
-    thumb.style.top = movePosition + 'px';
-  }
 }

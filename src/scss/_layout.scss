@@ -40,6 +40,12 @@
 }
 
 .section-title {
+  // animations
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.8s, opacity 0.8s ease;
+  // animations
+
   position: relative;
 
   display: inline-block;
@@ -55,6 +61,12 @@
   z-index: 2;
 
   &::before {
+    // animations
+    opacity: 0;
+    transform: translate(-100%, 100%);
+    transition: transform 0.8s 0.8s, opacity 0.8s 0.8s ease;
+    // animations
+
     content: '';
     position: absolute;
     top: 0;
@@ -79,6 +91,16 @@
     @include breakpoint(small-tablet) {
       width: 5.9rem;
       height: 3.8rem;
+    }
+  }
+
+  &.animated {
+    transform: translateX(0);
+    opacity: 1;
+
+    &::before {
+      transform: translate(0, 0);
+      opacity: 1;
     }
   }
 
