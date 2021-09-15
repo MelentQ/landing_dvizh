@@ -1,0 +1,65 @@
+@mixin animation-to-bottom-left {
+  opacity: 0;
+  transform: translate(50%, -50%);
+  transition: opacity 0.8s, transform 0.8s ease;
+
+  &.animated {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@mixin animation-to-top-right {
+  opacity: 0;
+  transform: translate(-50%, 50%);
+  transition: opacity 0.8s, transform 0.8s ease;
+
+  &.animated {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@mixin animation-to-top-left {
+  opacity: 0;
+  transform: translate(50%, 50%);
+  transition: opacity 0.8s, transform 0.8s ease;
+
+  &.animated {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@mixin animation-to-bottom-right {
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.8s, transform 0.8s ease;
+
+  &.animated {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@mixin animation-to-right {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: opacity 0.8s, transform 0.8s ease;
+
+  &.animated {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@mixin animation-to-left {
+  opacity: 0;
+  transform: translateX(50%);
+  transition: opacity 0.8s, transform 0.8s ease;
+
+  &.animated {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

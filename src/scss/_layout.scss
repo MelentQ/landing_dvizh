@@ -12,6 +12,11 @@
     padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding-left));
     padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding-right));
   }
+
+  &--wide {
+    padding-left: var(--wide-content-padding-left);
+    padding-right: var(--wide-content-padding-right);
+  }
 }
 
 .page-content {
@@ -52,7 +57,7 @@
 
   width: fit-content;
 
-  font-size: var(--fs-h1);
+  font-size: var(--fs-h2);
   line-height: 1.2;
   font-weight: 500;
   @include titleFF;
@@ -83,7 +88,7 @@
     pointer-events: none;
 
     @include breakpoint(tablet) {
-      right: 0;
+      right: -1rem;
     }
   }
 

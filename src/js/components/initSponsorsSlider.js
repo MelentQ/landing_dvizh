@@ -12,8 +12,11 @@ function initSponsorsSlider() {
     spaceBetween: 20,
     loop: true,
     autoplay: {
-      delay: 3000,
+      delay: 1,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
     },
+    speed: 1000,
     breakpoints: {
       320: {
         slidesPerView: 2,

@@ -3,11 +3,17 @@
     <div class="ticket-reservation__inner">
       <h2 class="ticket-reservation__title section-title js-animation">Забронировать билет</h2>
 
-      <picture>
-        <source srcset="img/form-bg.webp" type="image/webp">
-        <source srcset="img/form-bg.png" type="image/png">
-        <img class="ticket-reservation__bg-image js-animation" src="img/form-bg.png" alt="Фон">
-      </picture>
+      <div class="ticket-reservation__coin">
+        <img class="ticket-reservation__coin-arr-bottom js-animation" src="img/content/background/coin-arr-bottom.svg" alt="Фон">
+
+        <img class="ticket-reservation__coin-arr-top js-animation" src="img/content/background/coin-arr-top.svg" alt="Фон">
+
+        <picture>
+          <source srcset="img/content/background/coin.webp" type="image/webp">
+          <source srcset="img/content/background/coin.png" type="image/png">
+          <img class="ticket-reservation__bg-image js-animation" src="img/content/background/coin.png" alt="Фон">
+        </picture>
+      </div>
 
       <form class="ticket-reservation__form form" method="POST" name="reservation" data-need-validation>
         <fieldset class="ticket-reservation__form-inputs form__inputs">

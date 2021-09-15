@@ -14,9 +14,12 @@
 
   background-color: var(--text-color);
 
-  transition: visibility 0.3s, opacity 0.3s ease;
+  transition: visibility 0.3s, opacity 0.3s, box-shadow 0.3s ease;
 
-  @include defaultHoverEffect(0.8);
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 1rem var(--text-color);
+  }
 
   &.visible {
     opacity: 1;
@@ -29,8 +32,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 2.1rem;
-    height: 3.1rem;
+    width: 1.8rem;
+    height: 2.8rem;
 
     fill: var(--accent-color);
     stroke: none;

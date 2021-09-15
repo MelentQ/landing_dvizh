@@ -1,9 +1,16 @@
 <section class="about" id="about">
-  <picture>
-    <source srcset="img/about-rock-bg.webp" type="image/webp">
-    <source srcset="img/about-rock-bg.png" type="image/png">
-    <img class="about__bg-iamge" src="img/about-rock-bg.png" alt="Горы">
-  </picture>
+  
+  <div class="about__rock">
+    <img class="about__rock-circles-back js-animation" src="img/content/background/rock-circles-back.svg" alt="Фон">
+
+    <picture>
+      <source srcset="img/content/background/rock.webp" type="image/webp">
+      <source srcset="img/content/background/rock.png" type="image/png">
+      <img class="about__bg-iamge" src="img/content/background/rock.png" alt="Горы">
+    </picture>
+
+    <img class="about__rock-circles-front js-animation" src="img/content/background/rock-circles-front.svg" alt="Фон">
+  </div>
 
   {{> slogan-marquee }}
 
@@ -35,17 +42,19 @@
               <p class="about__paragraph">Мы переходим от двухмерного измерения к трехмерному, от плоского — к объемному, от квадратных метров — к пространству и глубине. Поэтому в секциях будем обсуждать среду в жилых комплексах, культуру проживания, атмосферу в компании и отделе продаж, управление командой и мотивацию сотрудников девелоперских компаний.</p>
             </div>
 
-            <div class="about__megaphone js-animation">
+            <div class="about__megaphone">
+              <img class="about__megaphone-arr-top js-animation" src="img/content/background/megaphone-arr-top.svg" alt="About image">
+              
               <picture>
-                <source srcset="img/about-bg.webp" type="image/webp">
-                <img class="about__megaphone-image" src="img/about-bg.png" alt="About image">
+                <source srcset="img/content/background/megaphone.webp" type="image/webp">
+                <img class="about__megaphone-image js-animation" src="img/content/background/megaphone.png" alt="About image">
               </picture>
 
-              <div class="about__marquee js-animation">
+              <div class="about__marquee about__marquee--1 js-animation">
                 {{> marquee }}
               </div>
 
-              <div class="about__marquee js-animation">
+              <div class="about__marquee about__marquee--2 js-animation">
                 {{> marquee }}
               </div>
               

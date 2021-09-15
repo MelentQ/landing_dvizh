@@ -17,6 +17,7 @@ import smoothScroll from './components/smoothScroll';
 import toggleTopBtn from './components/toggleTopBtn';
 import toggleBurgerMenu from './components/toggleBurgerMenu';
 import animations from './components/animations';
+import easyParallax from './components/easyParallax';
 
 document.addEventListener('DOMContentLoaded', function() {
     validation();
@@ -49,4 +50,6 @@ window.addEventListener('load', function() {
     alignHeights('.tickets__list', '.ticket__title');
     alignHeights('.tickets__list', '.ticket__list');
     animations();
+
+    easyParallax();
 })

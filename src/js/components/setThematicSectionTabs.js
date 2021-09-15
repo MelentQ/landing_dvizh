@@ -70,7 +70,7 @@ function setThematicSectionTabs() {
 
   cards.forEach((card, i) => {
     const btn = card.querySelector('.thematic-section__btn');
-    const closeBtn = card.querySelector('.thematic-section__description-close');
+    // const closeBtn = card.querySelector('.thematic-section__description-close');
 
     btn.addEventListener('click', () => {
       btn.blur();
@@ -91,9 +91,9 @@ function setThematicSectionTabs() {
       hideAll();
     })
 
-    closeBtn.addEventListener('click', () => {
-      descriptions[i].classList.remove('thematic-section__description_opened');
-    })
+    // closeBtn.addEventListener('click', () => {
+    //   descriptions[i].classList.remove('thematic-section__description_opened');
+    // })
   })
 
   document.addEventListener('click', (evt) => {

@@ -18,21 +18,24 @@ h1, h2, h3, h4, h5, h6 {
   --max-container-width: 145rem;
   --content-padding-left: 15rem;
   --content-padding-right: 6rem;
+  --wide-content-padding-left: 5rem;
+  --wide-content-padding-right: 5rem;
+
   --primary-color: #13b17c;
   --text-color: #0F347C;
   --accent-color: #E31C24;
   --content-color: black;
 
   --fs-h1: 6.4rem; // Заголовки
-  --fs-h2: 6.4rem; // Подзаголовки (секции)
+  --fs-h2: 4.8rem; // Подзаголовки (секции)
   --fs-h3: 3.6rem; // Заголовки карточек
-  --fs-h4: 2.8rem;
+  --fs-h4: 2.4rem;
 
-  --fs-t1: 2.6rem; // t1-tX акцентный для основного текста
-  --fs-t2: 2.4rem;
+  --fs-t1: 2rem; // t1-tX акцентный для основного текста
+  --fs-t2: 1.8rem;
 
-  --fs-tx1: 1.8rem; // Основной текст на странице
-  --fs-tx2: 1.6rem;
+  --fs-tx1: 16px; // Основной текст на странице
+  --fs-tx2: 15px;
   --fs-tx3: 14px;
 
   --fs-label: 9px; // Подпись
@@ -40,29 +43,16 @@ h1, h2, h3, h4, h5, h6 {
   @include breakpoint(tablet) {
     --content-padding-left: 3rem;
     --content-padding-right: 3rem;
+    --wide-content-padding-left: 3rem;
+    --wide-content-padding-right: 3rem;
 
     --fs-h1: 4.4rem;
-    --fs-h2: 4.4rem;
+    --fs-h2: 4rem;
     --fs-h3: 3rem;
-    --fs-h4: 2.2rem;
+    --fs-h4: 2rem;
 
-    --fs-t1: 2rem;
-    --fs-t2: 1.8rem;
-
-    --fs-tx1: 1.6rem;
-    --fs-tx2: 1.4rem;
-    --fs-tx3: 1.2rem;
-
-    --fs-label: 0.8rem;
-  }
-  @include breakpoint(small-tablet) {
-    --fs-h1: 3.6rem;
-    --fs-h2: 3.6rem;
-    --fs-h3: 2.4rem;
-    --fs-h4: 1.8rem;
-
-    --fs-t1: 1.6rem;
-    --fs-t2: 1.5rem;
+    --fs-t1: 1.8rem;
+    --fs-t2: 1.6rem;
 
     --fs-tx1: 1.4rem;
     --fs-tx2: 1.3rem;
@@ -70,32 +60,49 @@ h1, h2, h3, h4, h5, h6 {
 
     --fs-label: 0.8rem;
   }
-  @include breakpoint(mobile) {
-    --content-padding-left: 2rem;
-    --content-padding-right: 2rem;
+  @include breakpoint(small-tablet) {
+    --fs-h1: 3.6rem;
+    --fs-h2: 3.2rem;
+    --fs-h3: 2.4rem;
+    --fs-h4: 1.7rem;
 
-    --fs-h1: 2.8rem;
-    --fs-h2: 2.8rem;
-    --fs-h3: 2rem;
-    --fs-h4: 1.5rem;
+    --fs-t1: 1.6rem;
+    --fs-t2: 1.4rem;
 
-    --fs-t1: 1.4rem;
-    --fs-t2: 1.3rem;
-
-    --fs-tx1: 1.2rem;
+    --fs-tx1: 1.3rem;
     --fs-tx2: 1.2rem;
     --fs-tx3: 1.2rem;
 
     --fs-label: 0.8rem;
   }
-  @include breakpoint(supersmall-mobile) {
-    --fs-h1: 2.4rem;
+  @include breakpoint(mobile) {
+    --content-padding-left: 2rem;
+    --content-padding-right: 2rem;
+    --wide-content-padding-left: 2rem;
+    --wide-content-padding-right: 2rem;
+
+    --fs-h1: 2.8rem;
     --fs-h2: 2.4rem;
     --fs-h3: 2rem;
-    --fs-h4: 1.4rem;
+    --fs-h4: 1.5rem;
+
+    --fs-t1: 1.4rem;
+    --fs-t2: 1.2rem;
+
+    --fs-tx1: 1.2rem;
+    --fs-tx2: 1.2rem;
+    --fs-tx3: 1rem;
+
+    --fs-label: 0.8rem;
+  }
+  @include breakpoint(supersmall-mobile) {
+    --fs-h1: 2.4rem;
+    --fs-h2: 2.2rem;
+    --fs-h3: 2rem;
+    --fs-h4: 1.3rem;
 
     --fs-t1: 1.2rem;
-    --fs-t2: 1.2rem;
+    --fs-t2: 1.1rem;
 
     --fs-tx1: 1rem;
     --fs-tx2: 1rem;

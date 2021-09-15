@@ -34,8 +34,8 @@
     justify-content: space-between;
 
     height: 100%;
-    padding-top: 16rem;
-    padding-bottom: 6rem;
+    padding-top: 28rem;
+    padding-bottom: 8.8rem;
 
     @include breakpoint(tablet) {
       padding-top: 12rem;
@@ -56,7 +56,7 @@
     column-gap: 8rem;
 
     margin-bottom: 10rem;
-    margin-right: 10rem;
+    margin-right: 6rem;
 
     @include breakpoint(tablet) {
       margin-bottom: 4rem;
@@ -66,7 +66,6 @@
     @media screen and (max-width: 900px) {
       grid-template-columns: 1fr;
       row-gap: 4rem;
-      justify-items: flex-end;
     }
     @include breakpoint(mobile) {
       margin-bottom: 2rem;
@@ -79,6 +78,8 @@
     opacity: 0;
     transition: transform 0.8s, opacity 0.8s ease;
     // /animations
+
+    justify-self: flex-end;
 
     position: relative;
 
@@ -95,6 +96,7 @@
   &__subtitle-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     @include breakpoint(mobile) {
       flex-direction: column;
@@ -110,7 +112,14 @@
     mix-blend-mode: screen;
 
     @media screen and (max-width: 900px) {
+
+      position: relative;
+      top: 17rem;
+
       max-width: 60rem;
+    }
+    @media screen and (max-width: 520px) {
+      top: 0;
     }
   }
 
@@ -119,10 +128,10 @@
     z-index: 2;
 
     width: min-content;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 
     font-size: var(--fs-h1);
-    line-height: 1.1;
+    line-height: 1.2;
     font-weight: 600;
     text-transform: uppercase;
     @include titleFF;
@@ -133,11 +142,11 @@
   }
 
   &__place {
-    align-self: flex-end;
-
-    font-size: var(--fs-tx1);
+    font-size: var(--fs-t2);
     line-height: 1.2;
-    font-weight: 400;
+    font-weight: 500;
+    text-transform: uppercase;
+    @include titleFF;
 
     @include breakpoint(mobile) {
       margin-bottom: 2rem;
@@ -263,7 +272,8 @@
   &__footer {
     flex-shrink: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    // justify-content: space-between; // Поставить, если вернутся иконки партнеров
     align-items: flex-start;
 
     @media screen and (max-width: 900px) {
@@ -283,10 +293,8 @@
   }
 
   &__partner-image {
-    height: 5.6rem;
+    height: 4.6rem;
     width: auto;
-
-    margin-top: 1rem;
 
     object-fit: contain;
 
@@ -366,6 +374,13 @@
   }
 
   &__organizer-image {
-
+    &_name {
+      &_sber {
+        height: 3.3rem;
+      }
+      &_profitbase {
+        height: 2.5rem;
+      }
+    }
   }
 }
