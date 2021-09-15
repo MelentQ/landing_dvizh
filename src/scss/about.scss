@@ -265,41 +265,46 @@
     left: 0;
 
     width: 100%;
-    height: 35rem;
+    height: 0;
+    padding-bottom: 21.42857%;
 
     pointer-events: none;
   }
 
   &__rock-circles-back {
     // animations
-    top: 70%;
+    bottom: 0%;
     opacity: 0;
-    transition: top 0.8s, opacity 0.8s ease;
+    transition: bottom 0.8s, opacity 0.8s ease;
     // /animations
 
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
 
+    width: 35.714%;
+
     &.animated {
-      top: 10%;
+      bottom: 40%;
       opacity: 1;
     }
   }
 
   &__rock-circles-front {
     // animations
-    top: 70%;
+    bottom: 0%;
     opacity: 0;
-    transition: top 0.8s, opacity 0.8s ease;
+    transition: bottom 0.8s, opacity 0.8s ease;
     // /animations
 
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
 
+    width: 23.69%;
+
     &.animated {
-      top: 25%;
+      bottom: 20%;
       opacity: 1;
     }
   }
