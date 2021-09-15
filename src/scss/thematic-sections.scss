@@ -94,25 +94,19 @@
     margin-bottom: 2rem;
 
     text-align: center;
-    font-size: 2.8rem;
+    font-size: var(--fs-h4);
     line-height: 1.2;
     font-weight: 600;
     @include titleFF;
 
     @include breakpoint(tablet) {
       margin-bottom: 1.8rem;
-
-      font-size: 2.4rem;
     }
     @include breakpoint(small-tablet) {
       margin-bottom: 1.6rem;
-
-      font-size: 2rem;
     }
     @include breakpoint(mobile) {
       margin-bottom: 1.4rem;
-
-      font-size: 1.6rem;
     }
   }
 
@@ -124,7 +118,7 @@
 
     transition: background-color 0.3s ease;
 
-    font-size: 1.4rem;
+    font-size: var(--fs-tx3);
     line-height: 1.2;
     font-weight: 600;
     @include titleFF;
@@ -136,13 +130,9 @@
 
     @include breakpoint(tablet) {
       padding: 1rem 2.3rem;
-
-      font-size: 1.2rem;
     }
     @include breakpoint(small-tablet) {
       padding: 0.8rem 2rem;
-
-      font-size: 1rem;
     }
     @include breakpoint(mobile) {
       padding: 0.7rem 1.8rem;
@@ -277,7 +267,7 @@
   &__description-text {
     padding-right: 2rem;
 
-    font-size: 1.8rem;
+    font-size: var(--fs-tx1);
     line-height: 1.2;
     color: black;
 
@@ -285,34 +275,17 @@
 
     @include breakpoint(tablet) {
       padding-right: 1.5rem;
-
-      font-size: 1.6rem;
     }
     @include breakpoint(small-tablet) {
       padding-right: 1rem;
-
-      font-size: 1.4rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 1rem;
     }
   }
 
   &__description-title {
     text-align: center;
-    font-size: 2.8rem;
+    font-size: var(--fs-h4);
     line-height: 1.2;
     font-weight: 600;
     @include titleFF;
-
-    @include breakpoint(tablet) {
-      font-size: 2.4rem;
-    }
-    @include breakpoint(small-tablet) {
-      font-size: 2rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 1.6rem;
-    }
   }
 }

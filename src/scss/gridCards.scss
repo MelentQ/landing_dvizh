@@ -8,28 +8,28 @@
   justify-content: flex-end;
 
   padding-left: 20%;
-  margin: -20px -10px;
+  margin: -2rem -1rem;
 
   @include breakpoint(tablet) {
     padding-left: 0;
   }
   @include breakpoint(mobile) {
-    margin: -5px;
+    margin: -0.5rem;
   }
 
   &__item {
     flex: 0 0 auto;
 
-    width: calc(25% - 20px);
+    width: calc(25% - 2rem);
     
-    margin: 20px 10px;
+    margin: 2rem 1rem;
     
     @include breakpoint(small-tablet) {
-      width: calc(33.333% - 20px);
+      width: calc(33.333% - 2rem);
     }
     @include breakpoint(mobile) {
-      margin: 5px;
-      width: calc(50% - 10px);
+      margin: 0.5rem;
+      width: calc(50% - 1rem);
     }
   }
 }

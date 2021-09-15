@@ -121,36 +121,26 @@
     width: min-content;
     margin-bottom: 3rem;
 
-    font-size: 7.2rem;
+    font-size: var(--fs-h1);
     line-height: 1.1;
     font-weight: 600;
     text-transform: uppercase;
     @include titleFF;
 
-    @include breakpoint(tablet) {
-      font-size: 5.2rem;
-    }
     @include breakpoint(mobile) {
       margin-bottom: 2rem;
-
-      font-size: 2.8rem;
     }
   }
 
   &__place {
     align-self: flex-end;
 
-    font-size: 2.4rem;
+    font-size: var(--fs-tx1);
     line-height: 1.2;
     font-weight: 400;
 
-    @include breakpoint(tablet) {
-      font-size: 1.8rem;
-    }
     @include breakpoint(mobile) {
       margin-bottom: 2rem;
-
-      font-size: 1.4rem;
     }
   }
 
@@ -167,7 +157,7 @@
     background: linear-gradient(86.67deg, rgba(227, 28, 36, 0) -27.1%, rgba(227, 28, 36, 0.415053) 46.93%, #e31c24 100%);
     border-radius: 0.2rem;
 
-    font-size: 1.8rem;
+    font-size: var(--fs-tx1);
     line-height: 1.2;
     font-weight: 400;
 
@@ -198,13 +188,9 @@
       align-self: flex-end;
 
       padding: 1.2rem 5.5rem;
-
-      font-size: 1.6rem;
     }
     @include breakpoint(mobile) {
       padding: 1.2rem 5rem;
-
-      font-size: 1.4rem;
     }
   }
 
@@ -245,18 +231,11 @@
   &__slogan-text {
     flex: 0 0 auto;
 
-    font-size: 3.6rem;
+    font-size: var(--fs-h3);
     line-height: 1.2;
     font-weight: 600;
     @include titleFF;
     color: white;
-
-    @include breakpoint(tablet) {
-      font-size: 2.6rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 1.4rem;
-    }
   }
 
   &__slogan-separator {
@@ -324,16 +303,9 @@
 
     margin-right: 3rem;
 
-    font-size: 1.8rem;
+    font-size: var(--fs-tx3);
     line-height: 1.2;
     letter-spacing: 2%;
-
-    @include breakpoint(tablet) {
-      font-size: 1.4rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 1rem;
-    }
   }
 
   &__next-slide-btn {
@@ -383,18 +355,13 @@
 
     margin-bottom: 1.4rem;
 
-    font-size: 1.4rem;
+    font-size: var(--fs-label);
     line-height: 1.2;
     letter-spacing: 2%;
     opacity: 0.5;
 
     @include breakpoint(tablet) {
       margin-bottom: 0.8rem;
-
-      font-size: 1.2rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 0.8rem;
     }
   }
 

@@ -92,7 +92,7 @@
 
     display: block;
 
-    font-size: 1.4rem;
+    font-size: var(--fs-tx3);
     line-height: 1.2;
     font-weight: 400;
 
@@ -119,10 +119,6 @@
       &::after {
         width: 100%;
       }
-    }
-
-    @include breakpoint(tablet) {
-      font-size: 1.2rem;
     }
   }
 

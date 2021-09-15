@@ -13,25 +13,19 @@
 
     display: inline-block;
 
-    font-size: 2.4rem;
+    font-size: var(--fs-t2);
     font-weight: 600;
     line-height: 1.2;
     @include titleFF;
 
     @include breakpoint(tablet) {
       top: -3.6rem;
-
-      font-size: 2rem;
     }
     @include breakpoint(small-tablet) {
       top: -3.2rem;
-
-      font-size: 1.6rem;
     }
     @include breakpoint(mobile) {
       top: -2.8rem;
-
-      font-size: 1.2rem;
     }
   }
 
@@ -245,7 +239,7 @@
 
     width: max-content;
 
-    font-size: 1.6rem;
+    font-size: var(--fs-tx2);
     line-height: 1.2;
     font-weight: 600;
     color: #94A9D0;
@@ -253,7 +247,6 @@
 
     @include breakpoint(mobile) {
       left: -2rem;
-      font-size: 1.2rem;
     }
   }
 }

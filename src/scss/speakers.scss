@@ -70,7 +70,7 @@
     background-position: top right;
 
     font-weight: 600;
-    font-size: 1.8rem;
+    font-size: var(--fs-tx1);
     line-height: 1.2;
     color: white !important;
 
@@ -84,20 +84,14 @@
 
       width: 24.5rem;
       height: 5.1rem;
-
-      font-size: 1.6rem;
     }
     @include breakpoint(small-tablet) {
       width: 19.5rem;
       height: 4.1rem;
-
-      font-size: 1.4rem;
     }
     @include breakpoint(mobile) {
       width: 14.5rem;
       height: 3.1rem;
-
-      font-size: 1.2rem;
     }
   }
 }
@@ -146,33 +140,16 @@
     margin-bottom: 0.7rem;
 
     font-weight: 500;
-    font-size: 2.8rem;
+    font-size: var(--fs-h4);
     line-height: 1;
     @include titleFF;
-
-    @include breakpoint(tablet) {
-      font-size: 2.8rem;
-    }
-    @include breakpoint(small-tablet) {
-      font-size: 2rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 1.6rem;
-    }
   }
 
   &__post {
     display: block;
 
-    font-size: 1.4rem;
+    font-size: var(--fs-tx3);
     line-height: 1.2;
     color: black;
-
-    @include breakpoint(tablet) {
-      font-size: 1.2rem;
-    }
-    @include breakpoint(small-tablet) {
-      font-size: 1rem;
-    }
   }
 }

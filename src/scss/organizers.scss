@@ -149,23 +149,16 @@
 }
 
 .organizers__item-title {
-  font-size: 2.8rem;
+  font-size: var(--fs-h4);
   line-height: 1.2;
   color: #0F347C;
   margin-top: 2rem;
 
   @include breakpoint(tablet) {
-    font-size: 2rem;
     margin-top: 0.8rem;
   }
-
   @include breakpoint(small-tablet) {
-    font-size: 1.8rem;
     margin-top: 0.7rem;
-  }
-
-  @include breakpoint(small-mobile) {
-    font-size: 1.5rem;
   }
 }
 
@@ -234,24 +227,18 @@
 }
 
 .organizers__item-post {
-  font-size: 1.4rem;
+  font-size: var(--fs-tx3);
   line-height: 1.2;
   font-weight: 500;
   margin-bottom: 1.6rem;
 
   @include breakpoint(mobile) {
     margin-bottom: 0.6rem;
-    font-size: 1.2rem;
   }
 }
 
 .organizers__item-about {
-  font-size: 1.2rem;
   line-height: 1.2;
-
-  @include breakpoint(mobile) {
-    font-size: 0.8rem;
-  }
 }
 
 

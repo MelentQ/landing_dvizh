@@ -87,30 +87,15 @@
   width: 100%;
 
   font-weight: 600;
-  font-size: 8.2rem;
+  font-size: var(--fs-h1);
   line-height: 1.2;
   color: var(--text-color);
 
-  @include breakpoint(laptop) {
-    font-size: 5.2rem;
-  }
-
   @include breakpoint(tablet) {
-    font-size: 4.2rem;
     top: 0;
   }
-
-  @include breakpoint(small-tablet) {
-    font-size: 3.2rem;
-  }
-
   @include breakpoint(small-mobile) {
-    font-size: 2.2rem;
     top: 100%;
-  }
-
-  @include breakpoint(xx-mobile) {
-    font-size: 1.6rem;
   }
 }
 

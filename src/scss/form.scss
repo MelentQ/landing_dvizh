@@ -7,9 +7,9 @@
   &__input {
     padding: 3rem 1.8rem;
     background-color: rgba(255, 255, 255, 0.3);
-    border-bottom: 2px solid #A0B2E0;
+    border-bottom: 0.2rem solid #A0B2E0;
 
-    font-size: 1.4rem;
+    font-size: var(--fs-tx3);
     line-height: 1.2;
     color: var(--text-color);
 
@@ -25,15 +25,12 @@
     }
 
     @include breakpoint(tablet) {
-      font-size: 1.2rem;
       padding: 2rem 1.6rem;
     }
     @include breakpoint(small-tablet) {
-      font-size: 1.1rem;
       padding: 1.5rem 1.2rem;
     }
     @include breakpoint(mobile) {
-      font-size: 1rem;
       padding: 1rem 1rem;
     }
 
@@ -89,18 +86,11 @@
     display: block;
     text-align: center;
 
-    font-size: 1rem;
+    font-size: var(--fs-label);
     line-height: 1.2;
     font-weight: 500;
 
     color: white;
-
-    @include breakpoint(small-tablet) {
-      font-size: 0.8rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 0.7rem;
-    }
   }
 }
 
@@ -111,7 +101,7 @@
   padding: 0 1.8rem;
 
   color: var(--accent-color);
-  font-size: 1rem;
+  font-size: var(--fs-label);
   line-height: 1.1;
   font-weight: 500;
 
@@ -123,8 +113,6 @@
   }
   @include breakpoint(mobile) {
     margin-top: 0.4rem;
-
-    font-size: 0.8rem;
     padding: 0 1rem;
   }
 }

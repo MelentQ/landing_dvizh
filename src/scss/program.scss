@@ -4,13 +4,30 @@
 
   background: linear-gradient(180.01deg, #A0B2E0 0%, #E1E0E7 100%);
 
+  --fs-date-day: 18.8rem;
+  --fs-date-month: 3.6rem;
+  --fs-time: 2.4rem;
+
   @include breakpoint(tablet) {
     padding-top: 6rem;
     padding-bottom: 6rem;
+
+    --fs-date-day: 6rem;
+    --fs-date-month: 1.6rem;
+    --fs-time: 1.6rem;
   }
   @include breakpoint(small-tablet) {
     padding-top: 4rem;
     padding-bottom: 4rem;
+
+    --fs-date-day: 10rem;
+    --fs-date-month: 2rem;
+    --fs-time: 1.6rem;
+  }
+  @include breakpoint(mobile) {
+    --fs-date-day: 6rem;
+    --fs-date-month: 1.6rem;
+    --fs-time: 2rem;
   }
 
   &__title {
@@ -70,39 +87,19 @@
   &__date-day {
     display: block;
 
-    font-size: 18.8rem;
+    font-size: var(--fs-date-day);
     font-weight: 600;
     line-height: 1.1;
 
     @include titleFF;
-
-    @include breakpoint(tablet) {
-      font-size: 6rem;
-    }
-    @include breakpoint(small-tablet) {
-      font-size: 10rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 6rem;
-    }
   }
 
   &__date-month {
     display: block;
 
-    font-size: 3.6rem;
+    font-size: var(--fs-date-month);
     font-weight: 700;
     line-height: 1.2;
-
-    @include breakpoint(tablet) {
-      font-size: 1.6rem;
-    }
-    @include breakpoint(small-tablet) {
-      font-size: 2rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 1.6rem;
-    }
   }
 
   &__description-block {
@@ -190,48 +187,28 @@
     width: min-content;
 
     color: var(--text-color);
-    font-size: 2.4rem;
+    font-size: var(--fs-time);
     line-height: 1.2;
     font-weight: 500;
 
     @include breakpoint(tablet) {
       left: -8rem;
-
-      font-size: 1.6rem;
     }
     @include breakpoint(mobile) {
       left: -6rem;
-      font-size: 1.2rem;
     }
   }
 
   &__title {
     display: block;
 
-    font-size: 3.6rem;
+    font-size: var(--fs-h3);
     line-height: 1.2;
     font-weight: 700;
-
-    @include breakpoint(tablet) {
-      font-size: 2.2rem;
-    }
-    @include breakpoint(small-tablet) {
-      font-size: 1.8rem;
-    }
   }
 
   &__desc {
-    font-size: 1.9rem;
-
-    @include breakpoint(tablet) {
-      font-size: 1.6rem;
-    }
-    @include breakpoint(small-tablet) {
-      font-size: 1.2rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 1rem;
-    }
+    font-size: var(--fs-tx1);
   }
 
   &__image-block {

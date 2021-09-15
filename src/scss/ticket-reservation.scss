@@ -104,23 +104,13 @@
     margin-bottom: 0.9rem;
 
     margin-right: 1.4rem;
-    font-size: 1.8rem;
+    font-size: var(--fs-tx1);
     line-height: 1.2;
     font-weight: 600;
     @include titleFF;
     text-transform: uppercase;
 
     overflow: hidden;
-
-    @include breakpoint(tablet) {
-      font-size: 1.6rem;
-    }
-    @include breakpoint(small-tablet) {
-      font-size: 1.4rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 1.2rem;
-    }
   }
 
   &__btn-content {
