@@ -237,20 +237,10 @@
 
 .about-past__slide-title {
   font-weight: 600;
-  font-size: 2.4rem;
+  font-size: var(--fs-t2);
   line-height: 1.2;
   color: var(--content-color);
   @include titleFF;
-
-  @include breakpoint(tablet) {
-    font-size: 2rem;
-  }
-  @include breakpoint(small-tablet) {
-    font-size: 1.6rem;
-  }
-  @include breakpoint(mobile) {
-    font-size: 1.2rem;
-  }
 }
 
 .about-past__slide-description {
@@ -262,7 +252,7 @@
 
 .about-past__slide-description-text {
   padding-right: 2rem;
-  font-size: 1.8rem;
+  font-size: var(--fs-tx2);
   line-height: 1.1;
   color: var(--content-color);
 
@@ -270,22 +260,15 @@
 
   @include breakpoint(tablet) {
     padding-right: 1.5rem;
-
-    font-size: 1.6rem;
   }
   @include breakpoint(small-tablet) {
     padding-right: 1rem;
-
-    font-size: 1.4rem;
-  }
-  @include breakpoint(mobile) {
-    font-size: 1.2rem;
   }
 }
 
 .about-past__bnt-read-completely {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: var(--fs-label);
   line-height: 1.2;
   text-transform: uppercase;
   padding: 1.8rem 0;
@@ -296,14 +279,6 @@
   &:hover,
   &:focus {
     color: var(--accent-color);
-  }
-
-  @include breakpoint(tablet) {
-    font-size: 0.8rem;
-  }
-
-  @include breakpoint(small-mobile) {
-    font-size: 0.7rem;
   }
 }
 
@@ -336,7 +311,7 @@
 .about-past__slide-content-title {
   display: block;
 
-  font-size: 2.8rem;
+  font-size: var(--fs-t1);
   line-height: 1.2;
   color: var(--content-color);
   margin-bottom: 1rem;
@@ -345,36 +320,18 @@
 
   @include breakpoint(tablet) {
     margin-bottom: 0.8rem;
-
-    font-size: 2rem;
   }
   @include breakpoint(small-tablet) {
     margin-bottom: 0.6rem;
-
-    font-size: 1.6rem;
-  }
-  @include breakpoint(mobile) {
-    font-size: 1.3rem;
   }
 }
 
 .about-past__slide-content-subtitle {
   display: block;
 
-  font-size: 1.4rem;
+  font-size: var(--fs-tx3);
   line-height: 1.2;
   color: var(--content-color);
-
-  @include breakpoint(tablet) {
-    font-size: 1.2rem;
-  }
-
-  @include breakpoint(small-tablet) {
-    font-size: 1rem;
-  }
-  @include breakpoint(mobile) {
-    font-size: 0.8rem;
-  }
 }
 
 .about-past__btn-wrapper {

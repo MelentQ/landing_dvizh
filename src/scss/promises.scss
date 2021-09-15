@@ -105,20 +105,10 @@
   &__title-wrapper {
     position: relative;
 
-    font-size: 4.1rem;
+    font-size: var(--fs-h3);
     line-height: 1.2;
     font-weight: 600;
     @include titleFF;
-
-    @include breakpoint(tablet) {
-      font-size: 3.2rem;
-    }
-    @include breakpoint(small-tablet) {
-      font-size: 2.6rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 2rem;
-    }
   }
 
   &__title-number {
@@ -148,19 +138,9 @@
   }
 
   &__description {
-    font-size: 1.9rem;
+    font-size: var(--fs-tx1);
     line-height: 1.2;
     color: var(--content-color);
-
-    @include breakpoint(tablet) {
-      font-size: 1.6rem;
-    }
-    @include breakpoint(small-tablet) {
-      font-size: 1.4rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 1.2rem;
-    }
   }
 
   &__image-block {

@@ -35,14 +35,9 @@
   }
 
   &__title {
-    position: relative;
-
     margin-bottom: 10rem;
 
-    font-size: 2.4rem;
-    font-weight: 600;
-    @include titleFF;
-    text-transform: uppercase;
+    font-size: var(--fs-h3);
 
     @include breakpoint(tablet) {
       margin-bottom: 6rem;
@@ -53,46 +48,16 @@
     @include breakpoint(mobile) {
       margin-bottom: 2rem;
     }
-
-    &::after {
-      content: '';
-
-      position: absolute;
-      bottom: -1.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-
-      width: 6rem;
-      height: 0.3rem;
-
-      background: linear-gradient(90deg, rgba(#E31C24, 0) 0%, #E31C24 100%);
-
-      @include breakpoint(small-tablet) {
-        bottom: -1rem;
-      }
-      @include breakpoint(mobile) {
-        bottom: -0.7rem;
-      }
-    }
   }
 
   &__subtitle {
     max-width: 54rem;
 
-    font-size: 2.4rem;
-    font-weight: 400;
+    font-size: var(--fs-t2);
+    font-weight: 500;
     line-height: 1.2;
+    @include titleFF;
     text-align: center;
-
-    @include breakpoint(tablet) {
-      font-size: 2rem;
-    }
-    @include breakpoint(small-tablet) {
-      font-size: 1.6rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 1.4rem;
-    }
   }
 
   &__title-iamge {
@@ -140,19 +105,12 @@
 
     max-width: 60rem;
 
-    font-size: 2.3rem;
+    font-size: var(--fs-t1);
     font-weight: 400;
     line-height: 1.1;
     color: var(--text-color);
 
     z-index: 2;
-
-    @include breakpoint(tablet) {
-      font-size: 1.7rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 1.4rem;
-    }
   }
 
   &__paragraph {
@@ -248,20 +206,10 @@
     transition: transform 0.8s, opacity 0.8s ease;
     // animations
 
-    font-size: 4.1rem;
+    font-size: var(--fs-h3);
     font-weight: 600;
     line-height: 1.2;
     @include titleFF;
-
-    @include breakpoint(tablet) {
-      font-size: 2.8rem;
-    }
-    @include breakpoint(small-tablet) {
-      font-size: 2rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 1.6rem;
-    }
 
     &.animated {
       transform: translateY(0);
@@ -278,16 +226,9 @@
 
     align-self: flex-start;
 
-    font-size: 2.4rem;
+    font-size: var(--fs-t2);
     font-weight: 500;
     line-height: 1.2;
-
-    @include breakpoint(tablet) {
-      font-size: 1.7rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 1.4rem;
-    }
 
     &.animated {
       transform: translateY(0);

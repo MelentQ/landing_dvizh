@@ -92,25 +92,19 @@
   &__title {
     margin-bottom: 3.3rem;
 
-    font-size: 3.9rem;
+    font-size: var(--fs-h3);
     line-height: 1.2;
     font-weight: 600;
     @include titleFF;
 
     @include breakpoint(tablet) {
       margin-bottom: 2.6rem;
-
-      font-size: 3rem;
     }
     @include breakpoint(small-tablet) {
       margin-bottom: 2rem;
-
-      font-size: 2.6rem;
     }
     @include breakpoint(mobile) {
       margin-bottom: 1.6rem;
-
-      font-size: 2rem;
     }
   }
 
@@ -118,19 +112,9 @@
     max-width: 22.2rem;
     margin-bottom: 2rem;
 
-    font-size: 1.6rem;
+    font-size: var(--fs-tx2);
     line-height: 1.2;
     color: var(--content-color);
-
-    @include breakpoint(tablet) {
-      font-size: 1.4rem;
-    }
-    @include breakpoint(small-tablet) {
-      font-size: 1.2rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 1rem;
-    }
   }
 
   &__list-item {
@@ -171,37 +155,17 @@
 
     margin-bottom: 0.6rem;
 
-    font-size: 3.9rem;
+    font-size: var(--fs-h3);
     line-height: 1.2;
     font-weight: 600;
     @include titleFF;
-
-    @include breakpoint(tablet) {
-      font-size: 3rem;
-    }
-    @include breakpoint(small-tablet) {
-      font-size: 2.6rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 2rem;
-    }
   }
 
   &__price-label {
     display: block;
 
-    font-size: 1.4rem;
+    font-size: var(--fs-tx3);
     line-height: 1.2;
     color: white;
-
-    @include breakpoint(tablet) {
-      font-size: 1.2rem;
-    }
-    @include breakpoint(small-tablet) {
-      font-size: 1rem;
-    }
-    @include breakpoint(mobile) {
-      font-size: 0.8rem;
-    }
   }
 }

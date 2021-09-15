@@ -52,7 +52,7 @@
 
   width: fit-content;
 
-  font-size: 7.2rem;
+  font-size: var(--fs-h1);
   line-height: 1.2;
   font-weight: 500;
   @include titleFF;
@@ -71,8 +71,8 @@
     position: absolute;
     top: 0;
     right: -2rem;
-    width: 11.8rem;
-    height: 7.6rem;
+    width: 1.58em;
+    height: 1em;
     z-index: -1;
 
     background-image: url(../img/icons/red-arrow.svg);
@@ -84,13 +84,6 @@
 
     @include breakpoint(tablet) {
       right: 0;
-      
-      width: 8.85rem;
-      height: 5.7rem;
-    }
-    @include breakpoint(small-tablet) {
-      width: 5.9rem;
-      height: 3.8rem;
     }
   }
 
@@ -102,18 +95,5 @@
       transform: translate(0, 0);
       opacity: 1;
     }
-  }
-
-  @include breakpoint(tablet) {
-    font-size: 5.2rem;
-  }
-  @include breakpoint(small-tablet) {
-    font-size: 3.7rem;
-  }
-  @include breakpoint(mobile) {
-    font-size: 2.8rem;
-  }
-  @include breakpoint(supersmall-mobile) {
-    font-size: 2.4rem;
   }
 }
