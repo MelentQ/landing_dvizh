@@ -18,7 +18,7 @@ function toggleStickyHeader() {
     // Делаем это через margin-bottom для секции и абсолютного позиционирования для хедера.
     const introHeight = introElement.clientHeight;
     const aboutHeight = aboutElement.clientHeight;
-    const stickyHeaderHeight = stickyHeader.clientHeight;
+    const stickyHeaderHeight = stickyHeader.clientHeight - 1;
     const togglePositon = introHeight + aboutHeight;
 
     // Задаем секции margin-bottom, равный высоте хедера

@@ -17,35 +17,61 @@
     padding-bottom: 3rem;
   }
 
-  &__bg-image {
-    // animations
-    transform: translate(-50%, 50%);
-    opacity: 0;
-    transition: transform 0.8s, opacity 0.8s ease;
-    // /animations
+  &__coin {
+    pointer-events: none;
 
     position: absolute;
     right: 6rem;
     top: 5rem;
 
-    width: 88.4rem;
-    height: auto;
+    width: 84.2rem;
+    height: 62.8rem;
 
-    pointer-events: none;
+    @include breakpoint(small-tablet) {
+      width: 56rem;
+      height: 41rem;
 
-    @include breakpoint(tablet) {
-      right: 3rem;
-      width: 60.4rem;
+      right: 0rem;
     }
     @include breakpoint(mobile) {
-      right: 2rem;
-      width: 30.4rem;
+      width: 37.3rem;
+      height: 27rem;
     }
+    @include breakpoint(small-mobile) {
+      width: 28rem;
+      height: 20rem;
+    }
+  }
 
-    &.animated {
-      transform: translate(0, 0);
-      opacity: 1;
-    }
+  &__coin-arr-bottom {
+    @include animation-to-bottom-left;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 45%;
+  }
+
+  &__coin-arr-top {
+    @include animation-to-top-right;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    width: 75%;
+  }
+
+  &__bg-image {
+    @include animation-to-left;
+    
+    position: absolute;
+    right: 6rem;
+    top: 6rem;
+
+    width: 45%;
+    height: auto;
   }
 
   &__title {

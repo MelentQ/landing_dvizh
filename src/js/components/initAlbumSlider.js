@@ -1,5 +1,7 @@
-import {Swiper} from 'swiper';
+import {Swiper, Mousewheel} from 'swiper';
 import noUiSlider from 'nouislider';
+
+Swiper.use([Mousewheel]);
 
 export default function initAlbumSlider() {
   const container = document.querySelector('#albumSwiper');
@@ -35,7 +37,9 @@ export default function initAlbumSlider() {
     direction: "vertical",
     slidesPerView: 3,
     spaceBetween: spaceBetween,
+    allowTouchMove: false,
     simulateTouch: false,
+    mousewheel: true,
     initialSlide: startSliderIndex,
   });
 

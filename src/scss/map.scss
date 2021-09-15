@@ -78,6 +78,10 @@
 
 .map__map-wrapper {
   @include imageWrapper(16, 9);
+
+  @include breakpoint(small-mobile) {
+    margin-bottom: 14rem;
+  }
 }
 
 .map__map-title-container {
@@ -99,21 +103,75 @@
   }
 }
 
+.map__map-title-top {
+  // animations
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.8s, opacity 0.8s ease;
+  // /animations
+
+  &.animated {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .map__map-title-part-wrapper {
   display: flex;
   align-items: center;
   white-space: nowrap;
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.map__map-title-part {
+  // animations
+  opacity: 0;
+
+  &--1 {
+    transition: opacity 0.8s 0.8s ease;
+  }
+  &--2 {
+    transition: opacity 0.8s 2s ease;
+  }
+
+  &.animated {
+    opacity: 1;
+  }
+  // /animations
 }
 
 .map__map-title-dash {
   position: relative;
   top: 0.2rem;
-  
+
   width: 100%;
   height: .4rem;
-  background-color: var(--accent-color);
+  background-color: transparent;
   flex: 1 1 100%;
   margin: 0 1rem;
+
+  overflow: hidden;
+
+  &::after {
+    // animations
+    transition: left 0.4s 1.6s ease;
+    // /animations
+
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--accent-color);
+  }
 
   @include breakpoint(small-tablet) {
     height: .3rem;
@@ -121,6 +179,12 @@
 
   @include breakpoint(small-mobile) {
     height: .2rem;
+  }
+
+  &.animated {
+    &::after {
+      left: 0%;
+    }
   }
 }
 

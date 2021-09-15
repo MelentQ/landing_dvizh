@@ -15,10 +15,6 @@
   }
 }
 
-.organizers__title {
-  max-width: 100rem;
-}
-
 .organizers__content {
   padding-bottom: 28rem;
   position: relative;
@@ -44,38 +40,59 @@
   }
 }
 
-.organizers__bg-image {
-  // animations
-  transform: translate(50%, 50%);
-  opacity: 0;
-  transition: transform 0.8s, opacity 0.8s ease;
-  // /animations
+.organizers__building {
+  pointer-events: none;
 
   position: absolute;
-  content: '';
-  width: 88rem;
-  height: auto;
   bottom: 0;
   left: 0;
 
-  pointer-events: none;
-
-  @include breakpoint(laptop) {
-    width: 68rem;
-  }
+  width: 60rem;
+  height: 60rem;
 
   @include breakpoint(tablet) {
-    width: 58rem;
-  }
-
-  @include breakpoint(small-tablet) {
+    height: 50rem;
     width: 50rem;
   }
 
-  &.animated {
-    transform: translate(0, 0);
-    opacity: 1;
+  @include breakpoint(small-tablet) {
+    height: 40rem;
+    width: 40rem;
   }
+}
+
+.organizers__bg-image {
+  @include animation-to-right;
+
+  position: absolute;
+  bottom: 2rem;
+  left: 5.5rem;
+
+  width: 66%;
+
+  @include breakpoint(tablet) {
+    left: 0;
+  }
+}
+
+.organizers__building-arr-top {
+  @include animation-to-top-left;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+}
+
+.organizers__building-arr-bottom {
+  @include animation-to-bottom-right;
+  
+  position: absolute;
+  right: 16rem;
+  bottom: 0;
+
+  width: 50%;
 }
 
 .organizers__item {
@@ -183,13 +200,17 @@
 
   transition: opacity 0.3s, visibility 0.3s ease;
 
-  @include breakpoint(mobile) {
+  @include breakpoint(tablet) {
     padding: 1rem;
+  }
+  @include breakpoint(mobile) {
+    padding: 0.5rem;
   }
 }
 
 .organizers__item-socials {
   display: flex;
+  align-items: center;
 
   margin-bottom: 0.9rem;
 
@@ -210,6 +231,8 @@
 }
 
 .organizers__item-social-link {
+  display: block;
+
   &:hover,
   &:focus {
     .organizers__item-social-icon {
@@ -224,6 +247,11 @@
 
   fill: white;
   transition: fill 0.3s ease;
+
+  &--email {
+    width: 3rem;
+    height: 2.5rem;
+  }
 }
 
 .organizers__item-post {
@@ -238,7 +266,12 @@
 }
 
 .organizers__item-about {
+  font-size: var(--fs-tx3);
   line-height: 1.2;
+
+  @include breakpoint(supersmall-mobile) {
+    font-size: 0.8rem;
+  }
 }
 
 
