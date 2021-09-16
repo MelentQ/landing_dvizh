@@ -1,7 +1,7 @@
 .about {
   position: relative;
 
-  background: linear-gradient(0deg, #E9F1F3 0%, #A0B2E0 30%, #E1E0E7 100%);
+  background: linear-gradient(180deg, #A0B2E0 0%, #E1E0E7 100%);
 
   padding-top: 9.2rem;
   padding-bottom: 34rem;
@@ -63,6 +63,11 @@
   }
 
   &__title-iamge {
+    animation-name: horizontal-skew;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
     display: block;
     margin: 2rem auto 8rem;
 
@@ -212,13 +217,16 @@
   }
 
   &__footer {
-    margin-top: 6.9rem;
+    margin-top: 17.9rem;
 
+    @include breakpoint(tablet) {
+      margin-top: 12rem;
+    }
     @include breakpoint(mobile) {
-      margin-top: 4rem;
+      margin-top: 8rem;
     }
     @include breakpoint(supersmall-mobile) {
-      margin-top: 3rem;
+      margin-top: 6rem;
     }
   }
 
