@@ -68,7 +68,7 @@ function initPromisesSlider() {
           pinSpacing: true,
           invalidateOnRefresh: true,
           scrub: true,
-          snap: directionalSnap(1 / (listItemElems.length - 1)),
+          // snap: directionalSnap(1 / (listItemElems.length - 1)),
         }
       });
 

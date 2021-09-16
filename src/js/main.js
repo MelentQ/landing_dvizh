@@ -1,4 +1,5 @@
 import validation from './validation';
+import masks from './masks';
 
 import './components/hystModal';
 import toggleStickyHeader from './components/toggleStickyHeader';
@@ -21,11 +22,11 @@ import easyParallax from './components/easyParallax';
 
 document.addEventListener('DOMContentLoaded', function() {
     validation();
+    masks();
 
     aboutPast();
     setThematicSectionTabs();
     initTicketsSlider();
-    initPromisesSlider();
     initMarquee();
 
     // initVanillaTilt();
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     timer.init('.sticky-header__time');
     smoothScroll();
+    initAlbumSlider();
 });
 
 window.addEventListener('load', function() {
@@ -44,12 +46,12 @@ window.addEventListener('load', function() {
     toggleStickyHeader();
     toggleTopBtn();
     toggleBurgerMenu();
-    initAlbumSlider();
     alignHeights('.thematic-sections__list', '.thematic-section__title');
     alignHeights('.speakers__inner', '.speaker__name');
     alignHeights('.tickets__list', '.ticket__title');
     alignHeights('.tickets__list', '.ticket__list');
     animations();
-
     easyParallax();
+
+    initPromisesSlider();
 })

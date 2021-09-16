@@ -73,6 +73,10 @@ function init(textSelector) {
       element.textContent = "00:00:00";
     }
 
+    // Получаем секунды
+    let seconds = div(diff, 1000) % 60;
+    if (seconds < 10) seconds = "0" + seconds;
+
     // Получаем минуты
     let minutes = div(diff, 60000) % 60;
     if (minutes < 10) minutes = "0" + minutes;
@@ -87,7 +91,7 @@ function init(textSelector) {
     if (days < 10) days = "0" + days;
     daysLabel.textContent = getDaysLabel(days);
 
-    const res = `${days}:${hours}:${minutes}`;
+    const res = `${days}:${hours}:${minutes}:${seconds}`;
 
     element.textContent = res;
   }, 1000)

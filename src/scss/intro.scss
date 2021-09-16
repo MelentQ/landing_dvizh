@@ -101,6 +101,9 @@
     @include breakpoint(mobile) {
       flex-direction: column;
       justify-content: flex-start;
+      width: fit-content;
+      margin-left: auto;
+      align-items: flex-start;
     }
   }
 
@@ -166,8 +169,6 @@
 
   &__time {
     display: block;
-
-    font-size: var(--fs-tx3);
   }
 
   &__btn {
