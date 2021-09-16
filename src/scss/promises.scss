@@ -55,10 +55,15 @@
     position: relative;
     width: 100%;
     flex: 0 0 100%;
-    margin-right: 10rem;
-
-    &:last-child {
-      margin-right: 0;
+    padding-right: 10rem;
+    @include breakpoint(tablet) {
+      padding-right: 6rem;
+    }
+    @include breakpoint(small-tablet) {
+      padding-right: 4rem;
+    }
+    @include breakpoint(mobile) {
+      padding-right: 2rem;
     }
   }
 

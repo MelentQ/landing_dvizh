@@ -44,8 +44,21 @@ function initPromisesSlider() {
         return totalWidth + listItemElems[0].offsetWidth;
       }
 
+      const settings = {
+        xPercent: -100 * (listItemElems.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".container",
+          pin: true,
+          scrub: 1,
+          snap: directionalSnap(1 / (listItemElems.length - 1)),
+          // base vertical scrolling on how wide the container is so it feels more natural.
+          end: "+=3500"
+        }
+      }
+
       gsap.to(thisAnimWrap, {
-        x: () => getToValue(),
+        xPercent: -100 * (listItemElems.length - 1),
         ease: "none",
         scrollTrigger: {
           trigger: document.querySelector('.promises__container'),
@@ -54,9 +67,19 @@ function initPromisesSlider() {
           pin: document.querySelector('.new-wrapper-gsap'),
           pinSpacing: true,
           invalidateOnRefresh: true,
-          scrub: true
+          scrub: true,
+          snap: directionalSnap(1 / (listItemElems.length - 1)),
         }
       });
+
+      // helper function for causing the sections to always snap in the direction of the scroll (next section) rather than whichever section is "closest" when scrolling stops.
+      function directionalSnap(increment) {
+        let snapFunc = gsap.utils.snap(increment);
+        return (raw, self) => {
+          let n = snapFunc(raw);
+          return Math.abs(n - raw) < 1e-4 || (n < raw) === self.direction < 0 ? n : self.direction < 0 ? n - increment : n + increment;
+        };
+      }
     });
   }
 
