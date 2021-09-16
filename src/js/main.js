@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initPromisesSlider();
     initMarquee();
 
-    initVanillaTilt();
+    // initVanillaTilt();
 
     initSponsorsSlider();
     openYouTubeModal();

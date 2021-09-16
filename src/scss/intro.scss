@@ -105,6 +105,11 @@
   }
 
   &__title-image {
+    animation-name: horizontal-skew;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
     max-width: unset;
     width: 100%;
     height: auto;
@@ -141,7 +146,7 @@
     }
   }
 
-  &__place {
+  &__place-and-time {
     font-size: var(--fs-t2);
     line-height: 1.2;
     font-weight: 500;
@@ -151,6 +156,18 @@
     @include breakpoint(mobile) {
       margin-bottom: 2rem;
     }
+  }
+
+  &__place {
+    display: block;
+
+    margin-bottom: 0.5rem;
+  }
+
+  &__time {
+    display: block;
+
+    font-size: var(--fs-tx3);
   }
 
   &__btn {
@@ -163,7 +180,7 @@
 
     padding: 1.5rem 7.5rem;
 
-    background: linear-gradient(86.67deg, rgba(227, 28, 36, 0) -27.1%, rgba(227, 28, 36, 0.415053) 46.93%, #e31c24 100%);
+    background: linear-gradient(90deg, rgba(227, 28, 36, 0) -27.1%, rgba(227, 28, 36, 0.415053) 46.93%, #e31c24 100%);
     border-radius: 0.2rem;
 
     font-size: var(--fs-tx1);
