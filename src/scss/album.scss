@@ -6,6 +6,14 @@
     margin-left: 5rem;
   }
 
+  @include breakpoint(small-tablet) {
+    margin-left: 0;
+    margin-right: 5rem;
+  }
+  @include breakpoint(mobile) {
+    margin-right: 3rem;
+  }
+
   &__year {
     position: absolute;
     top: -4rem;
@@ -216,6 +224,7 @@
       background-size: 1rem 1.8rem;
     }
   }
+
   position: absolute;
   top: 0;
   left: -5.6rem;
@@ -227,6 +236,13 @@
 
   @include breakpoint(tablet) {
     left: -3.6rem;
+  }
+  @include breakpoint(small-tablet) {
+    left: unset;
+    right: -3.6rem;
+  }
+  @include breakpoint(mobile) {
+    right: -2rem;
   }
 
   &__label {
@@ -245,7 +261,7 @@
     color: #94A9D0;
     @include titleFF;
 
-    @include breakpoint(mobile) {
+    @include breakpoint(small-tablet) {
       left: -2rem;
     }
   }
