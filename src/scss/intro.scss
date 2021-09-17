@@ -1,9 +1,19 @@
 .intro {
   position: relative;
 
-  height: 100vh;
+  height:100vh;
 
   color: white;
+
+  @media screen and (max-width: 900px) {
+    min-height: 80rem;
+  }
+  @media screen and (max-width: 812px) {
+    min-height: 75rem;
+  }
+  @media screen and (max-width: 736px) {
+    min-height: 72rem;
+  }
 
   &__bg-image {
     position: absolute;

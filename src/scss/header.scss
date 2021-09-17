@@ -15,8 +15,6 @@
     padding-bottom: 3rem;
   }
   @include breakpoint(mobile) {
-    justify-content: flex-end;
-
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
@@ -33,7 +31,7 @@
           flex-basis: 14rem;
         }
         @include breakpoint(mobile) {
-          flex-basis: 10rem;
+          flex-basis: 8rem;
         }
       }
 
@@ -49,13 +47,9 @@
           flex-basis: 20rem;
         }
         @include breakpoint(mobile) {
-          flex-basis: 16rem;
+          flex-basis: 8rem;
         }
       }
-    }
-
-    @include breakpoint(mobile) {
-      display: none;
     }
   }
 

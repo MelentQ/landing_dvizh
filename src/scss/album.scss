@@ -176,7 +176,7 @@
 
   .noUi-handle {
     top: -2.25rem;
-    right: -2.25rem;
+    right: -2.2rem;
 
     width: 4.5rem;
     height: 4.5rem;
@@ -187,11 +187,6 @@
     box-shadow: none;
 
     cursor: pointer;
-
-    background-image: url(../img/icons/burger.svg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 1.5rem 2.8rem;
     
     transition: background-color 0.3s ease;
 
@@ -207,7 +202,7 @@
 
     @include breakpoint(tablet) {
       top: -1.75rem;
-      right: -1.75rem;
+      right: -1.7rem;
 
       width: 3.5rem;
       height: 3.5rem;
@@ -216,12 +211,46 @@
     }
     @include breakpoint(mobile) {
       top: -1.25rem;
-      right: -1.25rem;
+      right: -1.2rem;
 
       width: 2.5rem;
       height: 2.5rem;
 
       background-size: 1rem 1.8rem;
+    }
+  }
+
+  .noUi-touch-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      transform: scale(1);
+
+      @include breakpoint(tablet) {
+        transform: scale(0.8);
+      }
+      @include breakpoint(mobile) {
+        transform: scale(0.6);
+      }
+    }
+
+    #arr-bottom,
+    #arr-top {
+      transition: transform 0.3s ease;
+    }
+
+    #arr-top {
+      &:hover {
+        transform: scale(1.02) translateY(-1px);
+      }
+    }
+
+    #arr-bottom {
+      &:hover {
+        transform: scale(1.02) translateY(1px);
+      }
     }
   }
 

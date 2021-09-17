@@ -7,7 +7,7 @@ window.hystModal = new HystModal({
     //If Youtube video inside Modal, close it on modal closing
     let videoframe = modal.openedWindow.querySelector('iframe');
     if(videoframe){
-        videoframe.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+      videoframe.src = "";
     }
   }
 });

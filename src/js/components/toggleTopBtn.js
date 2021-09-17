@@ -1,3 +1,8 @@
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+
+gsap.registerPlugin(ScrollToPlugin);
+
 /**
  * Управляет логикой хедера
  * Кастомный position: sticky
@@ -5,6 +10,11 @@
  function toggleTopBtn() {
   const topBtn = document.querySelector('.top-btn');
   if (!topBtn) return;
+
+  topBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    gsap.to(window, {duration: 1, scrollTo: 0});
+  })
 
   const introElement = document.querySelector('.intro');
 
