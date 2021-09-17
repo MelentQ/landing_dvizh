@@ -47,6 +47,9 @@
     @include breakpoint(small-tablet) {
       margin-bottom: 4rem;
     }
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__subtitle {
@@ -115,6 +118,18 @@
     color: var(--text-color);
 
     z-index: 2;
+
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
+
+    &_mobile {
+      display: none;
+      @include breakpoint(small-tablet) {
+        display: block;
+        margin-bottom: 6rem;
+      }
+    }
   }
 
   &__paragraph {
