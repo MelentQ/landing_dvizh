@@ -12,7 +12,7 @@
     min-height: 75rem;
   }
   @media screen and (max-width: 736px) {
-    min-height: 72rem;
+    min-height: 67rem;
   }
 
   &__bg-image {
@@ -32,7 +32,7 @@
     bottom: 0;
     right: 0;
 
-    background: radial-gradient(143.45% 255.01% at 11.01% 57.38%, #0f347c 0%, rgba(15, 52, 124, 0) 100%);
+    background: linear-gradient(180deg,rgba(15,52,124,.6) 0%,rgba(15,52,124,.1) 80%);
     transform: rotate(-180deg);
   }
 
@@ -44,11 +44,11 @@
     justify-content: space-between;
 
     height: 100%;
-    padding-top: 28rem;
+    padding-top: 40rem;
     padding-bottom: 8.8rem;
 
     @include breakpoint(tablet) {
-      padding-top: 12rem;
+      padding-top: 26rem;
       padding-bottom: 4rem;
     }
     @include breakpoint(mobile) {
@@ -62,20 +62,18 @@
     z-index: 2;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 8rem;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 12rem;
 
     margin-bottom: 10rem;
     margin-right: 6rem;
 
     @include breakpoint(tablet) {
-      margin-bottom: 4rem;
-      margin-right: 0;
-      column-gap: 2rem;
-    }
-    @media screen and (max-width: 900px) {
       grid-template-columns: 1fr;
       row-gap: 4rem;
+    }
+    @include breakpoint(small-tablet) {
+      margin-right: 0;
     }
     @include breakpoint(mobile) {
       margin-bottom: 2rem;
@@ -93,13 +91,49 @@
 
     position: relative;
 
+    margin-left: 32rem;
+
+    @include breakpoint(tablet) {
+      justify-self: flex-start;
+      margin-left: 22rem;
+    }
+
     @media screen and (max-width: 900px) {
       max-width: 48.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-left: 18rem;
+    }
+
+    @include breakpoint(xx-mobile) {
+      margin-left: 15rem;
+    }
+    @include breakpoint(supersmall-mobile) {
+      margin-left: 11rem;
     }
 
     &.animated {
       transform: translateY(0);
       opacity: 1;
+    }
+  }
+
+  &__subtitle {
+    max-width: 60rem;
+    font-size: var(--fs-t2);
+    font-weight: 400;
+    margin-top: 1.5rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 0;
+      max-width: 64rem;
+    }
+    @include breakpoint(mobile) {
+      margin-left: 2.5rem;
+    }
+    @include breakpoint(xx-mobile) {
+      margin-left: 1rem;
     }
   }
 
@@ -112,7 +146,6 @@
       flex-direction: column;
       justify-content: flex-start;
       width: fit-content;
-      margin-left: auto;
       align-items: flex-start;
     }
   }
@@ -141,11 +174,41 @@
     }
   }
 
+  &__title-img-2 {
+    position: absolute;
+    top: -25.8rem;
+    left: -36.5rem;
+
+    width: 46.1rem;
+    height: auto;
+
+    @include breakpoint(tablet) {
+      top: -18.8rem;
+      left: -26.5rem;
+      width: 35rem;
+    }
+
+    @include breakpoint(mobile) {
+      top: -14.8rem;
+      left: -20.5rem;
+    }
+
+    @include breakpoint(xx-mobile) {
+      width: 18rem;
+      top: -10.8rem;
+      left: -15.5rem;
+    }
+    @include breakpoint(supersmall-mobile) {
+      width: 15rem;
+      top: -8.8rem;
+      left: -12rem;
+    }
+  }
+
   &__title {
     position: relative;
     z-index: 2;
 
-    width: min-content;
     margin-bottom: 4rem;
 
     font-size: var(--fs-h1);
@@ -154,7 +217,7 @@
     text-transform: uppercase;
     @include titleFF;
 
-    @include breakpoint(mobile) {
+    @include breakpoint(tablet) {
       margin-bottom: 2rem;
     }
   }
@@ -190,6 +253,7 @@
     align-self: flex-start;
 
     padding: 1.5rem 7.5rem;
+    margin-left: 1rem;
 
     background: linear-gradient(90deg, rgba(227, 28, 36, 0) -27.1%, rgba(227, 28, 36, 0.415053) 46.93%, #e31c24 100%);
     border-radius: 0.2rem;
@@ -228,6 +292,7 @@
     }
     @include breakpoint(mobile) {
       padding: 1.2rem 5rem;
+      margin-left: 0;
     }
   }
 

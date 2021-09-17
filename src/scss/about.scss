@@ -47,9 +47,6 @@
     @include breakpoint(small-tablet) {
       margin-bottom: 4rem;
     }
-    @include breakpoint(mobile) {
-      margin-bottom: 2rem;
-    }
   }
 
   &__subtitle {
