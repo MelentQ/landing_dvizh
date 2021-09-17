@@ -34,6 +34,10 @@
 
     background: linear-gradient(180deg,rgba(15,52,124,.6) 0%,rgba(15,52,124,.1) 80%);
     transform: rotate(-180deg);
+
+    @include breakpoint(mobile) {
+      background: linear-gradient(180deg,rgba(15,52,124,.8) 0%,rgba(15,52,124,.1) 100%);
+    }
   }
 
   &__inner {
