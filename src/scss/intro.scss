@@ -349,13 +349,8 @@
   &__footer {
     flex-shrink: 0;
     display: flex;
-    justify-content: center;
-    // justify-content: space-between; // Поставить, если вернутся иконки партнеров
-    align-items: flex-start;
-
-    @media screen and (max-width: 900px) {
-      justify-content: center;
-    }
+    justify-content: space-between;
+    align-items: flex-end;
   }
 
   &__partner {

@@ -31,7 +31,7 @@
     // animations
 
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 3fr;
 
     @include breakpoint(small-tablet) {
       margin: 0 3rem;
@@ -47,7 +47,7 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
 
     @include breakpoint(tablet) {
