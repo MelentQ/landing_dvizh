@@ -22,13 +22,17 @@
   &__logo {
     @include defaultHoverEffect(0.6);
 
+    &_mobile {
+      display: none;
+    }
+
     &_name {
       &_dvizh {
-        flex: 0 0 17.4rem;
+        flex: 0 0 26rem;
         height: auto;
 
         @include breakpoint(tablet) {
-          flex-basis: 14rem;
+          flex-basis: 20rem;
         }
         @include breakpoint(mobile) {
           flex-basis: 8rem;
@@ -50,6 +54,10 @@
           flex-basis: 8rem;
         }
       }
+    }
+
+    img {
+      width: 100%;
     }
   }
 
@@ -190,11 +198,18 @@
       display: flex;
 
       width: 10rem;
+
+      &_mobile {
+        display: block !important;
+      }
+
       &_name {
         &_dvizh {
           flex-basis: auto;
           order: 2;
           margin-bottom: 2rem;
+
+          display: none;
         }
         &_devision {
           flex-basis: auto;

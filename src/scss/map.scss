@@ -78,10 +78,6 @@
 
 .map__map-wrapper {
   @include imageWrapper(16, 9);
-
-  @include breakpoint(small-mobile) {
-    margin-bottom: 14rem;
-  }
 }
 
 .map__map-title-container {
@@ -91,7 +87,7 @@
   width: 100%;
 
   font-weight: 600;
-  font-size: var(--fs-h1);
+  font-size: var(--fs-h2);
   line-height: 1.2;
   color: var(--text-color);
 

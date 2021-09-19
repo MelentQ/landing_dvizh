@@ -4,6 +4,8 @@ import Swiper from "swiper";
  * Включает слайдер на секции "Билеты"
  */
 function initTicketsSlider() {
+  if (document.documentElement.clientWidth > 1024) return;
+
   const container = document.querySelector('.tickets__slider');
 
   if (!container) return;
@@ -21,41 +23,40 @@ function initTicketsSlider() {
       },
       769: {
         slidesPerView: 3,
-      },
-      1025: {
-        slidesPerView: 4,
         resistanceRatio: 0
       }
     }
   })
 
-  const cards = container.querySelectorAll('.tickets__item');
+  // Анимация фокуса
+  
+  // const cards = container.querySelectorAll('.tickets__item');
 
-  const focus = (index) => {
-    cards.forEach((card, i) => {
-      if (index != i) {
-        card.style.opacity = 0.6;
-      }
-      else {
-        card.style.opacity = 1;
-      }
-    })
-  }
+  // const focus = (index) => {
+  //   cards.forEach((card, i) => {
+  //     if (index != i) {
+  //       card.style.opacity = 0.6;
+  //     }
+  //     else {
+  //       card.style.opacity = 1;
+  //     }
+  //   })
+  // }
 
-  const unfocusAll = () => {
-    cards.forEach((card, i) => {
-      card.style.opacity = 1;
-    })
-  }
+  // const unfocusAll = () => {
+  //   cards.forEach((card, i) => {
+  //     card.style.opacity = 1;
+  //   })
+  // }
 
-  cards.forEach((card, i) => {
-    card.addEventListener('mouseover', () => {
-      focus(i);
-    })
-    card.addEventListener('mouseleave', () => {
-      unfocusAll();
-    })
-  })
+  // cards.forEach((card, i) => {
+  //   card.addEventListener('mouseover', () => {
+  //     focus(i);
+  //   })
+  //   card.addEventListener('mouseleave', () => {
+  //     unfocusAll();
+  //   })
+  // })
 }
 
 export default initTicketsSlider;
