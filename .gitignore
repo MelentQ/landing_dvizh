@@ -83,7 +83,8 @@ typings/
 #DynamoDB Local files
 .dynamodb/
 
-
+.vscode
+.idea
 
 
 # MacOS Files
