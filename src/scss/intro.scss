@@ -6,13 +6,19 @@
   color: white;
 
   @media screen and (max-width: 900px) {
-    min-height: 80rem;
+    min-height: 54rem;
   }
   @media screen and (max-width: 812px) {
-    min-height: 75rem;
+    min-height: 52rem;
   }
   @media screen and (max-width: 736px) {
-    min-height: 67rem;
+    min-height: 50rem;
+  }
+
+  &__not-mobile {
+    @include breakpoint(mobile) {
+      display: none;
+    }
   }
 
   &__bg-image {
@@ -32,11 +38,11 @@
     bottom: 0;
     right: 0;
 
-    background: linear-gradient(180deg,rgba(15,52,124,.6) 0%,rgba(15,52,124,.1) 80%);
+    background: linear-gradient(180deg,rgba(15,52,124,.6) 0%,rgba(15,52,124,.1) 100%);
     transform: rotate(-180deg);
 
     @include breakpoint(mobile) {
-      background: linear-gradient(180deg,rgba(15,52,124,.8) 0%,rgba(15,52,124,.1) 100%);
+      background: linear-gradient(180deg,rgba(15,52,124,1) 0%,rgba(15,52,124,.1) 80%);
     }
   }
 
@@ -48,40 +54,25 @@
     justify-content: space-between;
 
     height: 100%;
-    padding-top: 40rem;
-    padding-bottom: 8.8rem;
+    padding-top: 18rem;
+    padding-bottom: 4rem;
 
     @include breakpoint(tablet) {
-      padding-top: 26rem;
-      padding-bottom: 4rem;
+      padding-top: 11.6rem;
     }
     @include breakpoint(mobile) {
-      padding-top: 8rem;
+      padding-top: 7rem;
       padding-bottom: 2rem;
     }
   }
 
   &__content {
+    align-self: flex-start;
+
     position: relative;
     z-index: 2;
 
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    column-gap: 12rem;
-
-    margin-bottom: 10rem;
-    margin-right: 6rem;
-
-    @include breakpoint(tablet) {
-      grid-template-columns: 1fr;
-      row-gap: 4rem;
-    }
-    @include breakpoint(small-tablet) {
-      margin-right: 0;
-    }
-    @include breakpoint(mobile) {
-      margin-bottom: 2rem;
-    }
+    display: block;
   }
 
   &__title-container {
@@ -102,19 +93,13 @@
       margin-left: 22rem;
     }
 
-    @media screen and (max-width: 900px) {
-      max-width: 48.5rem;
-    }
-
     @include breakpoint(mobile) {
-      margin-left: 18rem;
+      margin-left: 13rem;
     }
 
-    @include breakpoint(xx-mobile) {
-      margin-left: 15rem;
-    }
-    @include breakpoint(supersmall-mobile) {
-      margin-left: 11rem;
+    @media screen and (max-width: 540px) {
+      margin-left: 0;
+      margin-top: 23rem;
     }
 
     &.animated {
@@ -125,9 +110,10 @@
 
   &__subtitle {
     max-width: 60rem;
-    font-size: var(--fs-t2);
-    font-weight: 400;
     margin-top: 1.5rem;
+    
+    font-size: var(--fs-t1);
+    font-weight: 500;
 
     @include breakpoint(tablet) {
       margin-top: 0;
@@ -180,32 +166,26 @@
 
   &__title-img-2 {
     position: absolute;
-    top: -25.8rem;
-    left: -36.5rem;
+    top: -3.8rem;
+    left: -30.5rem;
 
-    width: 46.1rem;
+    width: 25.1rem;
     height: auto;
 
     @include breakpoint(tablet) {
-      top: -18.8rem;
-      left: -26.5rem;
-      width: 35rem;
+      top: -1.8rem;
+      left: -21.5rem;
+      width: 17.1rem;
     }
-
     @include breakpoint(mobile) {
-      top: -14.8rem;
-      left: -20.5rem;
+      top: -1.8rem;
+      left: -13.5rem;
+      width: 11.1rem;
     }
-
-    @include breakpoint(xx-mobile) {
-      width: 18rem;
-      top: -10.8rem;
-      left: -15.5rem;
-    }
-    @include breakpoint(supersmall-mobile) {
-      width: 15rem;
-      top: -8.8rem;
-      left: -12rem;
+    @media screen and(max-width: 540px) {
+      top: -22.8rem;
+      left: 0;
+      width: 15.1rem;
     }
   }
 

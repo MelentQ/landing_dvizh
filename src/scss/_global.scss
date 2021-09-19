@@ -95,9 +95,12 @@ h1, h2, h3, h4, h5, h6 {
 
     --fs-label: 0.8rem;
   }
-  @include breakpoint(supersmall-mobile) {
+  @include breakpoint(xx-mobile) {
     --fs-h1: 2.4rem;
-    --fs-h2: 2.2rem;
+  }
+  @include breakpoint(supersmall-mobile) {
+    --fs-h1: 2rem;
+    --fs-h2: 2rem;
     --fs-h3: 2rem;
     --fs-h4: 1.3rem;
 
@@ -251,6 +254,7 @@ img {
   border-style: none;
   max-width: 100%;
   display: block;
+  user-select: none;
 }
 
 img[data-sizes='auto'] {

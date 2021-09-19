@@ -39,8 +39,6 @@
   &__title {
     margin-bottom: 10rem;
 
-    font-size: var(--fs-h3);
-
     @include breakpoint(tablet) {
       margin-bottom: 6rem;
     }
@@ -85,7 +83,7 @@
 
   &__two-columns {
     display: grid;
-    grid-template-columns: 58.1rem 67.9rem;
+    grid-template-columns: 58.1rem auto;
     column-gap: 12rem;
 
     @include breakpoint(tablet) {
@@ -102,33 +100,40 @@
     }
   }
 
+  &__album {
+    @include breakpoint(small-tablet) {
+      grid-row: 2/3;
+    }
+  }
+
   &__text {
+    position: relative;
+
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(small-tablet) {
+      grid-row: 1/2;
+
+      margin-bottom: 4rem;
+    }
   }
 
   &__paragraphs {
     position: relative;
 
-    max-width: 60rem;
-
     font-size: var(--fs-t1);
     font-weight: 400;
-    line-height: 1.1;
+    line-height: 1.2;
     color: var(--text-color);
 
     z-index: 2;
 
     @include breakpoint(small-tablet) {
-      display: none;
+      margin-right: 5rem;
     }
-
-    &_mobile {
-      display: none;
-      @include breakpoint(small-tablet) {
-        display: block;
-        margin-bottom: 6rem;
-      }
+    @include breakpoint(mobile) {
+      margin-right: 3rem;
     }
   }
 
@@ -140,20 +145,99 @@
     }
   }
 
-  &__megaphone {
-    flex: 1 1 100%;
-    position: relative;
+  &__digits {
+    flex-grow: 1;
 
-    width: 100%;
-    min-height: 40rem;
+    margin-top: 8rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 6rem;
+    }
+    @include breakpoint(small-tablet) {
+      margin-top: 4rem;
+    }
+    @include breakpoint(mobile) {
+      margin-top: 3rem;
+    }
+  }
+
+  &__digits-list {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    height: 100%;
+    margin: 0 -2rem;
+  }
+  &__digits-item {
+    width: calc(50% - 4rem);
+    margin: 2rem;
+
+    &:nth-child(5),
+    &:nth-child(6) {
+      width: 100%;
+    }
+  }
+  &__digit {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    font-size: 11rem;
+    font-weight: 600;
+    @include titleFF;
+
+    @include breakpoint(tablet) {
+      font-size: 5rem;
+    }
+    @include breakpoint(xx-mobile) {
+      font-size: 4rem;
+    }
+  }
+  &__digit-label {
+    display: block;
+
+    font-size: 3.6rem;
+    font-weight: 600;
+    @include titleFF;
+
+    @include breakpoint(tablet) {
+      font-size: 2rem;
+    }
+    @include breakpoint(xx-mobile) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__megaphone {
+    opacity: 1;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 50%;
+    height: 0;
+    padding-bottom: 50%;
 
     pointer-events: none;
 
-    @include breakpoint(mobile) {
-      min-height: 30rem;
+    @include breakpoint(tablet) {
+      width: 65%;
+      padding-bottom: 65%;
     }
-    @include breakpoint(supersmall-mobile) {
-      min-height: 25rem;
+    @include breakpoint(small-tablet) {
+      right: 5rem;
+
+      width: 50%;
+      padding-bottom: 50%;
+    }
+    @include breakpoint(mobile) {
+      right: 3rem;
     }
   }
 
@@ -161,24 +245,12 @@
     @include animation-to-left;
 
     position: absolute;
+    left: 0;
+    bottom: 0;
 
-    top: 25rem;
-    right: 9rem;
-
-    width: 31.5rem;
+    width: 75%;
     height: auto;
     object-fit: contain;
-
-    @include breakpoint(tablet) {
-      top: 10rem;
-    }
-    @include breakpoint(small-tablet) {
-      width: 24.5rem;
-    }
-    @include breakpoint(small-mobile) {
-      top: 4rem;
-      right: 4rem;
-    }
   }
 
   &__megaphone-arr-top {
@@ -186,17 +258,10 @@
 
     position: absolute;
 
-    top: 17.5rem;
+    top: 0;
     right: 0;
 
-    width: 41rem;
-
-    @include breakpoint(tablet) {
-      top: 2rem;
-    }
-    @include breakpoint(small-tablet) {
-      width: 34rem;
-    }
+    width: 100%;
   }
 
   &__marquee {
@@ -228,8 +293,8 @@
     }
   }
 
-  &__footer {
-    margin-top: 17.9rem;
+  &__from-intro {
+    margin-top: 24rem;
 
     @include breakpoint(tablet) {
       margin-top: 12rem;
@@ -239,6 +304,25 @@
     }
     @include breakpoint(supersmall-mobile) {
       margin-top: 6rem;
+    }
+  }
+
+  &__from-intro-text {
+    font-size: var(--fs-t1);
+    font-weight: 500;
+  }
+
+  &__footer {
+    margin-top: 17.9rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 6rem;
+    }
+    @include breakpoint(mobile) {
+      margin-top: 4rem;
+    }
+    @include breakpoint(supersmall-mobile) {
+      margin-top: 3rem;
     }
   }
 
@@ -269,7 +353,7 @@
 
     align-self: flex-start;
 
-    font-size: var(--fs-t2);
+    font-size: var(--fs-t1);
     font-weight: 500;
     line-height: 1.2;
 
