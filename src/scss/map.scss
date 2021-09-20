@@ -100,7 +100,9 @@
 .map__captions {
   font-size: 8rem;
   line-height: 1;
+  font-weight: 600;
   color: var(--accent-color);
+  @include titleFF;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -145,6 +147,26 @@
     @include breakpoint(small-mobile) {
       padding-left: 0;
     }
+  }
+}
+
+.map__captions-num {
+  font-size: 11rem;
+
+  @include breakpoint(tablet) {
+    font-size: 9rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    font-size: 8rem;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 6rem;
+  }
+
+  @include breakpoint(small-mobile) {
+    font-size: 4rem;
   }
 }
 
