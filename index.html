@@ -58,9 +58,8 @@
                         </ul>
                     </nav>
         
-                    <a class="header__logo header__logo_name_devision" href="https://devision.agency/" title="Сайт DEVISION" target="_blank">
-                        <img src="img/devision-logo.svg" alt="Логотип" loading="lazy">
-                    </a>
+                    <div class="ghost header__logo header__logo_name_devision"></div>
+        
         
                     <button class="header__burger" type="button" title="Меню">
                         Меню
@@ -98,18 +97,25 @@
 
             <div class="intro__footer">
 
+                <a class="header__logo header__logo_name_devision" href="https://devision.agency/" title="Сайт DEVISION" target="_blank">
+                    <span class="header__logo-label">Организатор</span>
+                    <img src="img/devision-logo.svg" alt="Логотип" loading="lazy">
+                </a>
+
                 <a class="intro__next-slide-btn" href="#about" title="Вниз" type="button">
                     <svg class="intro__next-slide-btn-icon">
                         <use xlink:href="#next-slide">
                     </svg>
                 </a>
 
+                <div class="ghost header__logo header__logo_name_devision"></div>
+
             </div>
         </div>
     </div>
 </section>
 <section class="about" id="about">
-  
+
   <div class="about__rock">
     <img class="about__rock-circles-back js-animation" src="img/content/background/rock-circles-back.svg" alt="Фон">
 
@@ -323,6 +329,8 @@
             </div>
 
             <div class="about__digits">
+              <h2 class="section-title js-animation">Итоги мероприятий<br>2020 и 2021</h2>
+
               <ul class="about__digits-list">
                 <li class="about__digits-item">
                   <span class="about__digit">1700+</span>
@@ -333,12 +341,12 @@
                   <span class="about__digit-label">спикеров</span>
                 </li>
                 <li class="about__digits-item">
-                  <span class="about__digit">54</span>
-                  <span class="about__digit-label">города</span>
+                  <span class="about__digit">142</span>
+                  <span class="about__digit-label">выступления</span>
                 </li>
                 <li class="about__digits-item">
-                  <span class="about__digit">3</span>
-                  <span class="about__digit-label">страны</span>
+                  <span class="about__digit">9,2</span>
+                  <span class="about__digit-label">индекс лояльности участников</span>
                 </li>
                 <li class="about__digits-item">
                   <span class="about__digit">300</span>
@@ -352,19 +360,48 @@
 
               <div class="about__megaphone">
                 <img class="about__megaphone-arr-top js-animation" src="img/content/background/megaphone-arr-top.svg" alt="About image">
-                
-                <picture>
-                  <source srcset="img/content/background/megaphone.webp" type="image/webp">
-                  <img class="about__megaphone-image js-animation" src="img/content/background/megaphone.png" alt="About image">
-                </picture>
 
-                
+                <img class="about__megaphone-image js-animation" src="img/content/background/megaphone.png" alt="About image">
+
+              </div>
+            </div>
+          </div>
+
+          <div class="about__map">
+            <h2 class="section-title js-animation">Карта участников<br/>Движения 2021</h2>
+
+            <div class="map__map-wrapper">
+              <picture>
+                <source srcset="img/content/map/map.webp" type="image/webp">
+                <source srcset="img/content/map/map.png" type="image/png">
+                <img class="map__image" src="img/content/map/map.png" alt="">
+              </picture>
+
+              <img class="map__map-arrow js-animation" src="img/content/map/map-arrow.svg" alt="Стрелка">
+
+              <div class="map__captions-wrapper">
+                <div class="map__captions">
+                  <div class="map__captions-num">54</div>
+                  <div class="map__captions-text">города</div>
+                </div>
+
+                <div class="map__captions">
+                  <div class="map__captions-num">3</div>
+                  <div class="map__captions-text">страны</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+
+      <div class="about__from-intro">
+        <div class="about__from-intro-title">
+          <img class="about__from-intro-image" src="img/3d2.png" alt="3д">
+          <h2 class="section-title js-animation">Форум <br> в&nbsp;новом объёме</h2>
+        </div>
+      </div>
+
       <div class="about__two-columns about__from-intro">
         <h2 class="section-title js-animation">Форум <br> в&nbsp;новом объёме</h2>
         <p class="about__from-intro-text">В&nbsp;2022 году &laquo;Движение&raquo; пройдёт в&nbsp;3-й раз. И,&nbsp;поскольку, у&nbsp;нас есть комбинация цифры&nbsp;3 и&nbsp;буквы&nbsp;Д, которые образуют&nbsp;3Д, мы&nbsp;подумали, что будет круто поговорить не&nbsp;о&nbsp;площадях, а&nbsp;о&nbsp;пространстве, и&nbsp;уйти в&nbsp;глубину. В&nbsp;секциях будем обсуждать среду в&nbsp;жилых комплексах, культуру проживания, атмосферу в&nbsp;компании и&nbsp;отделе продаж, управление командой и&nbsp;мотивацию сотрудников.</p>
@@ -379,6 +416,7 @@
     </div>
   </div>
 </section>
+
 
 <section class="thematic-sections">
   <div class="container">
@@ -626,7 +664,7 @@
               </ul>
 
               <div class="ticket__price-block">
-                <span class="ticket__price">99 000 ₽</span>
+                <span class="ticket__price">120 000 ₽</span>
                 <span class="ticket__price-label">Цена действительна до&nbsp;1&nbsp;октября</span>
               </div>
 
@@ -712,11 +750,11 @@
 
           <li class="swiper-slide tickets__item">
             <a class="ticket" href="#" target="_blank">
-              <h3 class="ticket__title">Секция «Управляющая компания»</h3>
+              <h3 class="ticket__title">Секция, стандарт</h3>
 
               <ul class="ticket__list js-ticket-list">
                 <li class="ticket__list-item ticket__list-item--without-icon js-ticket-item">
-                  <span class="ticket__label-desc">Посещение мероприятий данной секции</span>
+                  <span class="ticket__label-desc">Посещение мероприятий выбранной секции</span>
                 </li>
                 <li class="ticket__list-item js-ticket-item">
                   <svg class="ticket__icon">
@@ -783,78 +821,6 @@
             </a>
           </li>
 
-          <li class="swiper-slide tickets__item">
-            <a class="ticket" href="#" target="_blank">
-              <h3 class="ticket__title">Секция «Продажи»</h3>
-
-              <ul class="ticket__list js-ticket-list">
-                <li class="ticket__list-item ticket__list-item--without-icon js-ticket-item">
-                  <span class="ticket__label-desc">Посещение мероприятий данной секции</span>
-                </li>
-                <li class="ticket__list-item js-ticket-item">
-                  <svg class="ticket__icon">
-                    <use xlink:href="#nay">
-                  </svg>
-                  <span class="ticket__label ticket__label_nay">Места в первом ряду</span>
-                </li>
-                <li class="ticket__list-item js-ticket-item">
-                  <svg class="ticket__icon">
-                    <use xlink:href="#nay">
-                  </svg>
-                  <span class="ticket__label ticket__label_nay">Специальная стойка регистрации</span>
-                </li>
-                <li class="ticket__list-item js-ticket-item">
-                  <svg class="ticket__icon">
-                    <use xlink:href="#yay">
-                  </svg>
-                  <span class="ticket__label">Квиз «Мозги в каске»</span>
-                </li>
-                <li class="ticket__list-item js-ticket-item">
-                  <svg class="ticket__icon">
-                    <use xlink:href="#yay">
-                  </svg>
-                  <span class="ticket__label">StandUp</span>
-                </li>
-                <li class="ticket__list-item js-ticket-item">
-                  <svg class="ticket__icon">
-                    <use xlink:href="#yay">
-                  </svg>
-                  <span class="ticket__label">Музыкальное шоу</span>
-                </li>
-                <li class="ticket__list-item js-ticket-item">
-                  <svg class="ticket__icon">
-                    <use xlink:href="#yay">
-                  </svg>
-                  <span class="ticket__label">Трансфер из аэропорта на площадку форума</span>
-                </li>
-                <li class="ticket__list-item js-ticket-item">
-                  <svg class="ticket__icon">
-                    <use xlink:href="#nay">
-                  </svg>
-                  <span class="ticket__label ticket__label_nay">Обеды в отдельном ресторане</span>
-                </li>
-                <li class="ticket__list-item js-ticket-item">
-                  <svg class="ticket__icon">
-                    <use xlink:href="#yay">
-                  </svg>
-                  <span class="ticket__label">Обеды</span>
-                </li>
-                <li class="ticket__list-item js-ticket-item">
-                  <svg class="ticket__icon">
-                    <use xlink:href="#yay">
-                  </svg>
-                  <span class="ticket__label">Кофе-брейки</span>
-                </li>
-              </ul>
-
-              <div class="ticket__price-block">
-                <span class="ticket__price">35 000 ₽</span>
-                <span class="ticket__price-label">Цена действительна до&nbsp;1&nbsp;октября</span>
-              </div>
-
-              <div class="ticket__buy ticket__buy--purple">Купить</div>
-            </a>
-          </li>
         </ul>
       </div>
     </div>
@@ -1218,23 +1184,6 @@
   </div>
 </section>
 
-<section class="map">
-  <div class="map__main-content">
-    <div class="container">
-      <h2 class="section-title js-animation">Карта участников<br/>Движения&nbsp;2021</h2>
-    </div>
-
-    <div class="map__map-wrapper">
-      <picture>
-        <source srcset="img/content/map/map.webp" type="image/webp">
-        <source srcset="img/content/map/map.png" type="image/png">
-        <img class="map__image" src="img/content/map/map.png" alt="">
-      </picture>
-
-      <img class="map__map-arrow js-animation" src="img/content/map/map-arrow.svg" alt="Стрелка">
-    </div>
-  </div>
-</section>
 <section class="ticket-reservation">
   <div class="container">
     <div class="ticket-reservation__inner">
