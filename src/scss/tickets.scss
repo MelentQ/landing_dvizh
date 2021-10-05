@@ -135,7 +135,8 @@
 
   &__list {
     margin-bottom: 2rem;
-
+    display: flex;
+    flex-direction: column;
     font-size: var(--fs-tx3);
     line-height: 1.2;
     color: var(--content-color);
@@ -146,6 +147,7 @@
     padding-bottom: 1rem;
     padding-left: var(--content-indent-left);
     padding-right: var(--content-indent-right);
+    order: 1;
     display: flex;
     align-items: center;
 
@@ -156,7 +158,14 @@
     }
 
     &--accent {
-      background-color: rgba(#C4C4C4, 0.3);
+      background-color: rgba(255, 255, 255, 0.3) !important;
+    }
+    .ticket__list_standart &:nth-child(2) {
+      box-shadow: inset 4px 0 0 red;
+      order: 0;
+      @include breakpointMF(tablet) {
+        order: 1;
+      }
     }
 
     @include breakpoint(tablet) {
@@ -180,9 +189,11 @@
   &__descrption-list {
     font-size: var(--fs-tx3);
     line-height: 1.2;
+    display: flex;
+    flex-direction: column;
 
     .ticket__list-item--accent {
-      background-color: rgba(#A0B2E0, 1);
+      background-color: rgba(#fff, 1);
     }
   }
 
@@ -195,6 +206,11 @@
     @include breakpoint(tablet) {
       margin-right: 1.4rem;
     }
+    &_laptop-hide {
+      @include breakpointMF(tablet) {
+        display: none;
+      }
+    }
   }
 
   &__label {
@@ -206,6 +222,20 @@
 
     &_nay {
       color: rgba(0, 0, 0, 0.3);
+    }
+    &_add {
+      font-weight: 700;
+      margin-left: 5px;
+      @include breakpointMF(laptop) {
+        display: block;
+        font-weight: 400;
+        margin-left: 0;
+      }
+    }
+    &_laptop-hide {
+      @include breakpointMF(tablet) {
+        display: none;
+      }
     }
   }
 
