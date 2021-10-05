@@ -161,7 +161,6 @@
       background-color: rgba(255, 255, 255, 0.3) !important;
     }
     .ticket__list_standart &:nth-child(2) {
-      box-shadow: inset 4px 0 0 red;
       order: 0;
       @include breakpointMF(tablet) {
         order: 1;
