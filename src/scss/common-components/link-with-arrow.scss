@@ -1,0 +1,20 @@
+.link-with-arrow {
+
+  display: flex;
+  align-items: center;
+
+  &__label {
+    margin-right: 0.7rem;
+
+    transition: color 0.3s ease;
+  }
+
+  &__icon {
+    width: 0.5rem;
+    height: 0.9rem;
+
+    fill: var(--text-color);
+    
+    transition: fill 0.3s ease;
+  }
+}

@@ -8,28 +8,33 @@
 
 @import '../assets/fonts/fonts.css';
 
-@import 'modal';
-@import 'form-modal';
-@import 'video-modal';
-@import 'top-btn';
-
 @import 'header';
-@import 'sticky-header';
-@import 'intro';
-@import 'about';
-@import 'album';
-@import 'slogan-marquee';
-@import 'marquee';
-@import 'gridCards';
-@import 'speakers';
-@import 'thematic-sections';
-@import 'program';
-@import 'tickets';
-@import 'promises';
-@import 'map';
-@import 'about-past';
-@import 'organizers';
-@import 'ticket-reservation';
-@import 'form';
 @import 'footer';
-@import 'socials';
+
+@import './common-components/modal';
+@import './common-components/form-modal';
+@import './common-components/video-modal';
+@import './common-components/top-btn';
+@import './common-components/form';
+@import './common-components/socials';
+@import './common-components/slogan-marquee';
+@import './common-components/marquee';
+@import './common-components/gridCards';
+@import './common-components/link-with-arrow';
+@import './common-components/slider';
+@import './common-components/filter-links';
+
+@import './pages/index/sticky-header';
+@import './pages/index/intro';
+@import './pages/index/about';
+@import './pages/index/album';
+@import './pages/index/speakers';
+@import './pages/index/thematic-sections';
+@import './pages/index/program';
+@import './pages/index/tickets';
+@import './pages/index/promises';
+@import './pages/index/map';
+@import './pages/index/about-past';
+@import './pages/index/organizers';
+@import './pages/index/ticket-reservation';
+@import './pages/index/news-preview';

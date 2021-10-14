@@ -274,23 +274,6 @@
   }
 }
 
-
-.organizers__partners-container {
-  margin-top: 12rem;
-
-  @include breakpoint(laptop) {
-    margin-top: 10rem;
-  }
-
-  @include breakpoint(tablet) {
-    margin-top: 8rem;
-  }
-
-  @include breakpoint(small-mobile) {
-    margin-top: 6rem;
-  }
-}
-
 .organizers__partners-grid {
   // animations
     opacity: 0;

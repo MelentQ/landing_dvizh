@@ -1,3 +1,50 @@
 {
-    "title": "Форум недвижимости «Движение» — 2022"
+    "title": "Форум недвижимости «Движение» — 2022",
+    "newsPreview": {
+        "filterList": ["Все", "Новости форума", "Новости участников и партнеров"],
+        "news": [
+            {
+                "image": "news-preview-1.jpg",
+                "imageWebP": "news-preview-1.webp",
+                "dateTime": "2021-09-20 12:00",
+                "date": "20 сентября",
+                "title": "Движение пройдет одновременно с зимними Олимпийскими играми"
+            },
+            {
+                "image": "news-preview-2.jpg",
+                "imageWebP": "news-preview-2.webp",
+                "dateTime": "2021-09-18 12:00",
+                "date": "18 сентября",
+                "title": "Франция в матче с Бельгией отыгралась со счета 0:2 и вышла в финал"
+            },
+            {
+                "image": "news-preview-3.jpg",
+                "imageWebP": "news-preview-3.webp",
+                "dateTime": "2021-09-9 12:00",
+                "date": "9 сентября",
+                "title": "Звезды спорта примут участие в Российской энергетической неделе"
+            },
+            {
+                "image": "news-preview-1.jpg",
+                "imageWebP": "news-preview-1.webp",
+                "dateTime": "2021-09-20 12:00",
+                "date": "20 сентября",
+                "title": "Движение пройдет одновременно с зимними Олимпийскими играми"
+            },
+            {
+                "image": "news-preview-2.jpg",
+                "imageWebP": "news-preview-2.webp",
+                "dateTime": "2021-09-18 12:00",
+                "date": "18 сентября",
+                "title": "Франция в матче с Бельгией отыгралась со счета 0:2 и вышла в финал"
+            },
+            {
+                "image": "news-preview-3.jpg",
+                "imageWebP": "news-preview-3.webp",
+                "dateTime": "2021-09-9 12:00",
+                "date": "9 сентября",
+                "title": "Звезды спорта примут участие в Российской энергетической неделе"
+            }
+        ]
+    }
 }

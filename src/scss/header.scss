@@ -40,17 +40,13 @@
         @include breakpoint(small-mobile) {
           flex-basis: 11rem;
         }
-        @include breakpoint(xx-mobile) {
-
-        }
         @include breakpoint(supersmall-mobile) {
-          flex-basis: 9.5rem; // todo HEAD merge - a
-          //flex-basis: 8rem; todo NO_HEAD merge - a
+          flex-basis: 9.5rem;
         }
       }
 
       &_devision {
-        flex: 0 0 16rem; // todo HEAD merge - b
+        flex: 0 0 16rem;
         height: auto;
 
         display: flex;
@@ -72,19 +68,6 @@
         @include breakpoint(supersmall-mobile) {
           flex-basis: 7rem;
         }
-        //        flex: 0 0 28.2rem; todo  NO_HEAD merge - b
-        //        height: auto;
-        //
-        //        display: flex;
-        //        align-items: center;
-        //        justify-content: flex-end;
-        //
-        //        @include breakpoint(tablet) {
-        //          flex-basis: 20rem;
-        //        }
-        //        @include breakpoint(mobile) {
-        //          flex-basis: 8rem;
-        //        }
       }
     }
 
@@ -94,17 +77,12 @@
   }
 
   &__logo-label {
-    display: block; // todo HEAD merge - c
+    display: block;
 
     margin-bottom: 0.8rem;
 
     color: #C4C4C4;
     font-size: var(--fs-tx3);
-
-    //margin-right: 1.8rem; todo  NO_HEAD merge - c
-    //
-    //color: #C4C4C4;
-    //font-size: var(--fs-label);
   }
 
   &__menu {

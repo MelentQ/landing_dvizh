@@ -1,0 +1,54 @@
+.filter-links {
+
+  display: flex;
+  margin-bottom: 4rem;
+  padding-bottom: 0.6rem;
+
+  overflow-x: scroll;
+
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+
+    height: 0.2rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+    border-radius: 0.2rem;
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 0.2rem;
+    background-color: transparent;
+  }
+
+  &__item {
+    flex-shrink: 0;
+
+    margin-right: 4rem;
+
+    @include titleFF;
+    font-size: var(--fs-h4);
+    font-weight: 500;
+    line-height: 1.2;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    &.selected {
+      opacity: 0.3;
+    }
+  }
+
+  &__link--active {
+  }
+}

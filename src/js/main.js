@@ -20,6 +20,7 @@ import toggleBurgerMenu from './components/toggleBurgerMenu';
 import animations from './components/animations';
 import easyParallax from './components/easyParallax';
 import alignTicketsItemHeight from './components/alignTicketsItemHeight';
+import initNewsPreviewSlider from './components/initNewsPreviewSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     validation();
@@ -37,6 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
     timer.init('.sticky-header__time');
     smoothScroll();
     initAlbumSlider();
+
+    initNewsPreviewSlider();
 });
 
 window.addEventListener('load', function() {
