@@ -9,9 +9,6 @@
   @include breakpoint(small-tablet) {
     padding-top: 4rem;
   }
-  @include breakpoint(mobile) {
-    padding-top: 2rem;
-  }
   
   &__title {
     margin-bottom: 12rem;

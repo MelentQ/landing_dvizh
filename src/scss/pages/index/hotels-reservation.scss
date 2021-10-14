@@ -22,6 +22,9 @@
       margin-left: 2rem;
       margin-right: 2rem;
     }
+    @include breakpoint(mobile) {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__slider-wrapper {
@@ -36,6 +39,10 @@
     height: 0;
     padding-bottom: 68.57%;
     margin-bottom: 2.5rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__image {
@@ -53,10 +60,18 @@
 
   &__title {
     margin-bottom: 1.2rem;
+    
+    @include titleFF;
+    font-weight: 600;
+    font-size: var(--fs-h4);
   }
 
   &__rating {
     margin-bottom: 2.5rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__btn {

@@ -150,6 +150,24 @@
 
 .album-scroll {
 
+  position: absolute;
+  top: 0;
+  left: -5.6rem;
+  z-index: 25;
+
+  height: 100%;
+
+  @include breakpoint(tablet) {
+    left: -3.6rem;
+  }
+  @include breakpoint(small-tablet) {
+    left: unset;
+    right: -3.6rem;
+  }
+  @include breakpoint(mobile) {
+    right: -2rem;
+  }
+
   &.noUi-target {
     width: 0.2rem;
 
@@ -236,24 +254,6 @@
         transform: scale(1.02) translateY(1px);
       }
     }
-  }
-
-  position: absolute;
-  top: 0;
-  left: -5.6rem;
-  z-index: 25;
-
-  height: 100%;
-
-  @include breakpoint(tablet) {
-    left: -3.6rem;
-  }
-  @include breakpoint(small-tablet) {
-    left: unset;
-    right: -3.6rem;
-  }
-  @include breakpoint(mobile) {
-    right: -2rem;
   }
 
   &__label {
