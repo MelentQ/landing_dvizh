@@ -21,6 +21,7 @@ import animations from './components/animations';
 import easyParallax from './components/easyParallax';
 import alignTicketsItemHeight from './components/alignTicketsItemHeight';
 import initNewsPreviewSlider from './components/initNewsPreviewSlider';
+import initHotelsSlider from './components/initHotelsSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     validation();
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initAlbumSlider();
 
     initNewsPreviewSlider();
+    initHotelsSlider();
 });
 
 window.addEventListener('load', function() {

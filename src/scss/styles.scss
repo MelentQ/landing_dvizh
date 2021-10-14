@@ -14,6 +14,7 @@
 @import './common-components/modal';
 @import './common-components/form-modal';
 @import './common-components/video-modal';
+@import './common-components/modal-hotels';
 @import './common-components/top-btn';
 @import './common-components/form';
 @import './common-components/socials';
@@ -23,6 +24,7 @@
 @import './common-components/link-with-arrow';
 @import './common-components/slider';
 @import './common-components/filter-links';
+@import './common-components/rating';
 
 @import './pages/index/sticky-header';
 @import './pages/index/intro';
@@ -38,3 +40,4 @@
 @import './pages/index/organizers';
 @import './pages/index/ticket-reservation';
 @import './pages/index/news-preview';
+@import './pages/index/hotels-reservation';

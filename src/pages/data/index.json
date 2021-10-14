@@ -46,5 +46,43 @@
                 "title": "Звезды спорта примут участие в Российской энергетической неделе"
             }
         ]
-    }
+    },
+    "hotelsList": [
+        {
+            "image": "hotel-1.jpg",
+            "imageWebP": "hotel-1.webp",
+            "name": "Tulip Inn",
+            "stars": 3
+        },
+        {
+            "image": "hotel-2.jpg",
+            "imageWebP": "hotel-2.webp",
+            "name": "Park Inn by Radisson",
+            "stars": 4
+        },
+        {
+            "image": "hotel-3.jpg",
+            "imageWebP": "hotel-3.webp",
+            "name": "Golden Tulip",
+            "stars": 4
+        },
+        {
+            "image": "hotel-1.jpg",
+            "imageWebP": "hotel-1.webp",
+            "name": "Tulip Inn",
+            "stars": 3
+        },
+        {
+            "image": "hotel-2.jpg",
+            "imageWebP": "hotel-2.webp",
+            "name": "Park Inn by Radisson",
+            "stars": 4
+        },
+        {
+            "image": "hotel-3.jpg",
+            "imageWebP": "hotel-3.webp",
+            "name": "Golden Tulip",
+            "stars": 4
+        }
+    ]
 }

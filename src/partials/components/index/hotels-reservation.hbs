@@ -1,0 +1,84 @@
+<section class="hotels-reservation" id="hotels-reservation">
+  <div class="container">
+    <div class="hotels-reservation__inner">
+      <h2 class="section-title hotels-reservation__title js-animation">Бронирование проживания <br> на курорте «Роза
+        Хутор»
+      </h2>
+
+      <p class="hotels-reservation__subtitle">Мы выкупили большой номерной фонд с одноместным и двухместным размещением
+        в горном кластере города Сочи, чтобы участники форума смогли жить рядом с площадками мероприятия. Рекомендуем
+        позаботиться о проживании заранее — это поможет сэкономить и гарантировано обеспечить комфорт.</p>
+
+      <div class="swiper slider hotels-reservation__slider">
+        <ul class="swiper-wrapper slider__wrapper hotels-reservation__slider-wrapper">
+          {{#each hotelsList }}
+          <li class="swiper-slide slider__slide hotel-card">
+            <div class="hotel-card__image-wrapper">
+              <picture>
+                {{#if this.imageWebP }}
+                <source srcset="img/content/hotels/{{this.imageWebP}}" type="image/webp">
+                {{/if}}
+                <img class="hotel-card__image" src="img/content/hotels/{{this.image}}" alt="Архив фото">
+              </picture>
+            </div>
+
+            <h3 class="hotel-card__title">{{this.name}}</h3>
+
+            <ul class="rating hotel-card__rating" data-rating="{{this.stars}}">
+              <li class="rating__unit">
+                <svg class="rating__star">
+                  <use xlink:href="#star">
+                </svg>
+              </li>
+              <li class="rating__unit">
+                <svg class="rating__star">
+                  <use xlink:href="#star">
+                </svg>
+              </li>
+              <li class="rating__unit">
+                <svg class="rating__star">
+                  <use xlink:href="#star">
+                </svg>
+              </li>
+              <li class="rating__unit">
+                <svg class="rating__star">
+                  <use xlink:href="#star">
+                </svg>
+              </li>
+              <li class="rating__unit">
+                <svg class="rating__star">
+                  <use xlink:href="#star">
+                </svg>
+              </li>
+            </ul>
+
+            <a class="sticky-header__btn hotel-card__btn" href="#">
+              <svg class="sticky-header__btn-bg" width="281" height="57" viewBox="0 0 281 57" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="279" height="54.6667" rx="1" stroke="url(#paint0_linear)" stroke-width="2" />
+                <defs>
+                  <linearGradient id="paint0_linear" x1="-96.656" y1="28.8889" x2="294.302" y2="-83.8926"
+                    gradientUnits="userSpaceOnUse">
+                    <stop offset="0.0190612" stop-color="#E31C24" stop-opacity="0" />
+                    <stop offset="0.538823" stop-color="#E31C24" stop-opacity="0.415053" />
+                    <stop offset="1" stop-color="#E31C24" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              Забронировать
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <button class="link-with-arrow hotels-reservation__map-link" type="button" data-hystmodal="#hotels">
+        <span class="link-with-arrow__label">Смотреть на карте</span>
+        <svg class="link-with-arrow__icon">
+          <use xlink:href="#link-arrow">
+        </svg>
+      </button>
+
+    </div>
+  </div>
+</section>

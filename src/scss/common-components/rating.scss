@@ -1,0 +1,19 @@
+.rating {
+  display: flex;
+
+  &__unit {
+    margin-right: 0.5rem;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__star {
+    width: 1.1rem;
+    height: 1rem;
+
+    fill: var(--text-color);
+    opacity: 0.3;
+  }
+}
