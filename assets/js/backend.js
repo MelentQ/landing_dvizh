@@ -15,21 +15,4 @@ document.addEventListener('DOMContentLoaded', () => {
     form.reset();
     window.hystModal.open('#formModal');
   })
-
-  // Кнопки фильтра новостей на главной странице
-  const links = document.querySelectorAll('.filter-links__link');
-  if (links) {
-    links.forEach((link, i) => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault(); // !!!
-
-        link.classList.add('selected');
-
-        links.forEach((link, j) => {
-          if (j === i) return;
-          link.classList.remove('selected');
-        })
-      })
-    })
-  }
 });
