@@ -20,12 +20,16 @@ import toggleBurgerMenu from './components/toggleBurgerMenu';
 import animations from './components/animations';
 import easyParallax from './components/easyParallax';
 import alignTicketsItemHeight from './components/alignTicketsItemHeight';
-import initNewsPreviewSlider from './components/initNewsPreviewSlider';
 import initHotelsSlider from './components/initHotelsSlider';
+import generateNews from './components/generateNews';
+import generateNewsPage from './components/generateNewsPage';
 
 document.addEventListener('DOMContentLoaded', function() {
     validation();
     masks();
+
+    generateNews();
+    generateNewsPage();
 
     aboutPast();
     setThematicSectionTabs();
@@ -40,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
     smoothScroll();
     initAlbumSlider();
 
-    initNewsPreviewSlider();
     initHotelsSlider();
 });
 
@@ -51,6 +54,7 @@ window.addEventListener('load', function() {
     toggleStickyHeader();
     toggleTopBtn();
     toggleBurgerMenu();
+    alignHeights('.news-preview__slider-wrapper', '.news-preview-item__title');
     alignHeights('.thematic-sections__list', '.thematic-section__title');
     alignHeights('.speakers__inner', '.speaker__name');
     alignHeights('.tickets__slider', '.ticket__title');

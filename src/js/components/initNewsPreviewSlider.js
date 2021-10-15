@@ -15,11 +15,18 @@ function initNewsPreviewSlider() {
 
   // Настройки noUiSlider
   const scrollContainer = container.querySelector('.slider__scroll');
+  if (scrollContainer.noUiSlider) scrollContainer.noUiSlider.destroy();
+
+  let maxValue = 0;
+  if (slides.length - slidesPerView >= 0) {
+    maxValue = slides.length - slidesPerView;
+  }
+  
   let customScroll = noUiSlider.create(scrollContainer, {
     start: 0,
     range: {
       'min': 0,
-      'max': slides.length - slidesPerView
+      'max': maxValue
     },
     step: 1
   });
@@ -31,7 +38,7 @@ function initNewsPreviewSlider() {
   const rightBtn = scrollContainer.querySelector('#arr-right');
 
   const slider = new Swiper('.news-preview__slider', {
-    slidesPerView: 3,
+    slidesPerView: slidesPerView,
     breakpoints: {
       320: {
         spaceBetween: 20
@@ -44,6 +51,8 @@ function initNewsPreviewSlider() {
       }
     }
   })
+
+  window.newsSlider = slider;
 
   // Связываем noUiSlider и Swiper
   customScroll.on('change', (values) => {

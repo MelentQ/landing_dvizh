@@ -4,42 +4,37 @@
       <h2 class="section-title news-preview__title js-animation">Новости «Движения»</h2>
 
       <ul class="filter-links">
-        {{#each newsPreview.filterList }}
-        <li class="filter-links__item">
-          <a class="filter-links__link" href="#">{{this}}</a>
-        </li>
-        {{/each}}
+        <template id="filter-link-template">
+          <li class="filter-links__item">
+            <button class="filter-links__link" type="button"></button>
+          </li>
+        </template>
       </ul>
 
       <div class="slider__scroll"></div>
 
       <div class="swiper slider news-preview__slider">
         <ul class="swiper-wrapper slider__wrapper news-preview__slider-wrapper">
-          {{#each newsPreview.news }}
-          <li class="swiper-slide slider__slide news-preview-item">
-            <a class="news-preview-item__wrapper-link" title="Открыть страницу с новостью" href="#">
-              <div class="news-preview-item__image-wrapper">
-                <picture>
-                  {{#if this.imageWebP }}
-                  <source srcset="img/content/news-preview/{{this.imageWebP}}" type="image/webp">
-                  {{/if}}
-                  <img class="news-preview-item__image" src="img/content/news-preview/{{this.image}}" alt="Архив фото">
-                </picture>
-              </div>
+          <template id="news-card-template">
+            <li class="swiper-slide slider__slide news-preview-item">
+              <a class="news-preview-item__wrapper-link" title="Открыть страницу с новостью" href="#">
+                <div class="news-preview-item__image-wrapper">
+                  <img class="news-preview-item__image" src="" alt="">
+                </div>
 
-              <time class="news-preview-item__date" datetime="{{this.dateTime}}">{{this.date}}</time>
+                <time class="news-preview-item__date" datetime=""></time>
 
-              <h3 class="news-preview-item__title">{{this.title}}</h3>
+                <h3 class="news-preview-item__title"></h3>
 
-              <div class="link-with-arrow news-preview-item__link">
-                <span class="link-with-arrow__label">Читать</span>
-                <svg class="link-with-arrow__icon">
-                  <use xlink:href="#link-arrow">
-                </svg>
-              </div>
-            </a>
-          </li>
-          {{/each}}
+                <div class="link-with-arrow news-preview-item__link">
+                  <span class="link-with-arrow__label">Читать</span>
+                  <svg class="link-with-arrow__icon">
+                    <use xlink:href="#link-arrow">
+                  </svg>
+                </div>
+              </a>
+            </li>
+          </template>
         </ul>
       </div>
 

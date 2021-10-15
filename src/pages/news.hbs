@@ -1,0 +1,63 @@
+{{#extend "layout"}}
+{{#content "main"}}
+<section class="news" id="js-generated-news">
+  <div class="container">
+    <div class="news__inner">
+      <h2 class="section-title news__title js-animation">Новости «Движения»</h2>
+
+      <ul class="filter-links">
+        <template id="filter-link-template">
+          <li class="filter-links__item">
+            <button class="filter-links__link" type="button"></button>
+          </li>
+        </template>
+      </ul>
+
+      <ul class="news__list">
+        <template id="news-item-template">
+          <li class="news-item">
+            <a class="news-item__inner" title="Открыть страницу с новостью" href="#">
+              <div class="news-item__image-wrapper">
+                <img class="news-item__image" src="" alt="">
+              </div>
+              <div class="news-item__content">
+                <div>
+                  <time class="news-item__date" datetime=""></time>
+
+                  <h3 class="news-item__title"></h3>
+
+                  <p class="news-item__preview-text"></p>
+                </div>
+
+                <div class="link-with-arrow news-item__link">
+                  <span class="link-with-arrow__label">Читать</span>
+                  <svg class="link-with-arrow__icon">
+                    <use xlink:href="#link-arrow">
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </li>
+        </template>
+      </ul>
+
+      <button class="sticky-header__btn news__more-btn news__more-btn_hidden" type="button">
+        <svg class="sticky-header__btn-bg" width="129" height="57" viewBox="0 0 129 57" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="127" height="55" rx="1" stroke="url(#paint0_linear_23:358)" stroke-width="2" />
+          <defs>
+            <linearGradient id="paint0_linear_23:358" x1="-44.3723" y1="29.0588" x2="146.73" y2="3.8989"
+              gradientUnits="userSpaceOnUse">
+              <stop offset="0.0190612" stop-color="#E31C24" stop-opacity="0" />
+              <stop offset="0.538823" stop-color="#E31C24" stop-opacity="0.415053" />
+              <stop offset="1" stop-color="#E31C24" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="news__more-btn-label">Ещё</span>
+      </button>
+    </div>
+  </div>
+</section>
+{{/content}}
+{{/extend}}

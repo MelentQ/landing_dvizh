@@ -1,0 +1,164 @@
+.news {
+  padding-top: 22rem;
+  padding-bottom: 6rem;
+
+  @include breakpoint(tablet) {
+    padding-top: 11.6rem;
+  }
+  @include breakpoint(mobile) {
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+  }
+
+  &__inner {
+  }
+
+  &__title {
+    margin-bottom: 3.2rem;
+  }
+
+  &__list {
+    margin-bottom: 6rem;
+    @include breakpoint(mobile) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__more-btn {
+    margin: 0 auto;
+    padding: 1.2rem 3rem;
+
+    &_hidden {
+      display: none;
+    }
+
+    &::before {
+      z-index: 0;
+    }
+    .sticky-header__btn-bg {
+      z-index: 0;
+    }
+  }
+
+  &__more-btn-label {
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.news-item {
+
+  margin-bottom: 6rem;
+
+  min-height: 45rem;
+
+  @include breakpoint(small-tablet) {
+    min-height: unset;
+  }
+  @include breakpoint(mobile) {
+    margin-bottom: 3rem;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+
+    height: 100%;
+
+    @include breakpoint(tablet) {
+      column-gap: 2rem;
+    }
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+      row-gap: 2rem;
+    }
+    @include breakpoint(mobile) {
+      row-gap: 1rem;
+    }
+
+    &:hover,
+    &:focus {
+      .link-with-arrow__label {
+        color: var(--accent-color);
+      }
+      .link-with-arrow__icon {
+        fill: var(--accent-color);
+      }
+      .news-item__image {
+        transform: scale(1.01);
+      }
+    }
+  }
+
+  &__image-wrapper {
+    overflow: hidden;
+    position: relative;
+
+    @include breakpoint(small-tablet) {
+      height: 0;
+      padding-bottom: 56.25%;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 1s linear;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__date {
+    display: block;
+
+    margin-bottom: 1.2rem;
+
+    font-size: var(--fs-tx3);
+    line-height: 1.2;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 0.6rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.6rem;
+
+    @include titleFF;
+    font-weight: 600;
+    font-size: var(--fs-h4);
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__preview-text {
+    margin-bottom: 1.4rem;
+    
+    font-size: var(--fs-t1);
+
+    @include breakpoint(mobile) {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__link {
+  }
+}

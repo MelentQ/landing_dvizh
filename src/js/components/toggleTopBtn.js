@@ -16,13 +16,11 @@ gsap.registerPlugin(ScrollToPlugin);
     gsap.to(window, {duration: 1, scrollTo: 0});
   })
 
-  const introElement = document.querySelector('.intro');
-
   let isOpen = false;
 
   const toggle = () => {
     const scrollPos = window.pageYOffset;
-    const togglePositon = introElement.clientHeight;
+    const togglePositon = document.documentElement.clientHeight;
 
     if (scrollPos >= togglePositon && !isOpen) {
       topBtn.classList.add('visible');
