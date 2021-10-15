@@ -23,6 +23,7 @@ import alignTicketsItemHeight from './components/alignTicketsItemHeight';
 import initHotelsSlider from './components/initHotelsSlider';
 import generateNews from './components/generateNews';
 import generateNewsPage from './components/generateNewsPage';
+import initOtherNewsSlider from './components/initOtherNewsSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     validation();
@@ -45,6 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initAlbumSlider();
 
     initHotelsSlider();
+
+    initOtherNewsSlider();
 });
 
 window.addEventListener('load', function() {

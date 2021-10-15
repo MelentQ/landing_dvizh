@@ -1,0 +1,40 @@
+.share-links {
+  display: flex;
+  align-items: center;
+
+  &__label {
+    margin-right: 1.6rem;
+
+    font-size: var(--fs-tx3);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: 1.6rem;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    &:hover,
+    &:focus {
+      .share-links__link-icon {
+        fill: var(--accent-color);
+      }
+    }
+  }
+
+  &__link-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    fill: var(--text-color);
+
+    transition: fill 0.3s ease;
+  }
+}
