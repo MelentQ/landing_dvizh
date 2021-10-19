@@ -1,15 +1,26 @@
 .news-item-page {
 
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 10rem;
+
   padding-top: 22rem;
   padding-bottom: 6rem;
 
   @include breakpoint(tablet) {
+    display: block;
+    column-gap: 0;
+
     padding-top: 11.6rem;
     padding-bottom: 5rem;
   }
   @include breakpoint(mobile) {
     padding-top: 7rem;
     padding-bottom: 4rem;
+  }
+
+  &__news-item {
+    
   }
 
   &__inner {

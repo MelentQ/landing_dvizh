@@ -1,28 +1,29 @@
 .other-news {
 
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-
   @include breakpoint(tablet) {
-    padding-top: 5rem;
+    padding-top: 11.6rem;
     padding-bottom: 5rem;
   }
   @include breakpoint(mobile) {
-    padding-top: 4rem;
+    padding-top: 7rem;
     padding-bottom: 4rem;
   }
-
+  
   &__inner {
   }
 
   &__title {
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
+
+    @include titleFF;
+    font-size: var(--fs-h3);
+    font-weight: 600;
 
     @include breakpoint(tablet) {
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
     }
     @include breakpoint(small-tablet) {
-      margin-bottom: 3rem;
+      margin-bottom: 1.8rem;
     }
   }
 
@@ -40,8 +41,22 @@
   }
 
   &__slider-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(tablet) {
+      flex-direction: row;
+    }
   }
 
   &__item {
+    margin-bottom: 2rem;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint(tablet) {
+      margin-bottom: 0;
+    }
   }
 }
