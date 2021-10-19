@@ -1,0 +1,19 @@
+.speakers-page {
+  padding-top: 22rem;
+  padding-bottom: 6rem;
+
+  background: none;
+
+  @include breakpoint(tablet) {
+    padding-top: 11.6rem;
+    padding-bottom: 5rem;
+  }
+  @include breakpoint(mobile) {
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+  }
+
+  &__more-btn {
+    margin-top: 4rem;
+  }
+}

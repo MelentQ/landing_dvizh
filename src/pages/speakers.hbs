@@ -1,4 +1,6 @@
-<section class="speakers" id="speakers">
+{{#extend "layout"}}
+{{#content "main"}}
+<section class="speakers speakers-page" id="speakers">
   <div class="container">
     <div class="speakers__inner">
       <div class="speakers__microphone">
@@ -15,8 +17,7 @@
       </div>
 
       <div class="speakers__header">
-        <h2 class="section-title js-animation">С длинными ДОКЛАДАМИ <br /> ВЫСТУПЯТ СПИКЕРЫ</h2>
-        <a class="speakers__more" href="#" target="_blank">ЕЩЁ</a>
+        <h2 class="section-title js-animation">Спикеры форума "Движение"</h2>
       </div>
 
       <ul class="speakers__list gridCards">
@@ -74,8 +75,46 @@
             <span class="speaker__post">Президент "ИНТЕКО"</span>
           </div>
         </li>
+        <li class="speakers__item gridCards__item">
+          <div class="speaker">
+            <div class="speaker__image-wrapper">
+              <img class="speaker__photo" src="img/content/speakers/speaker-2.png" alt="Спикер" loading="lazy">
+            </div>
+            <span class="speaker__name">Александр Николаев</span>
+            <span class="speaker__post">Президент "ИНТЕКО"</span>
+          </div>
+        </li>
+        <li class="speakers__item gridCards__item">
+          <div class="speaker">
+            <div class="speaker__image-wrapper">
+              <img class="speaker__photo" src="img/content/speakers/speaker-2.png" alt="Спикер" loading="lazy">
+            </div>
+            <span class="speaker__name">Александр Николаев</span>
+            <span class="speaker__post">Президент "ИНТЕКО"</span>
+          </div>
+        </li>
       </ul>
 
     </div>
+
+
+    <button class="sticky-header__btn news__more-btn speakers-page__more-btn" type="button">
+      <svg class="sticky-header__btn-bg" width="129" height="57" viewBox="0 0 129 57" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="127" height="55" rx="1" stroke="url(#paint0_linear_23:358)" stroke-width="2" />
+        <defs>
+          <linearGradient id="paint0_linear_23:358" x1="-44.3723" y1="29.0588" x2="146.73" y2="3.8989"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0.0190612" stop-color="#E31C24" stop-opacity="0" />
+            <stop offset="0.538823" stop-color="#E31C24" stop-opacity="0.415053" />
+            <stop offset="1" stop-color="#E31C24" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="news__more-btn-label">Ещё</span>
+    </button>
+
   </div>
 </section>
+{{/content}}
+{{/extend}}
