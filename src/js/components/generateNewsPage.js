@@ -1,4 +1,4 @@
-import data from './../../results.json'
+import data from './../../results.json';
 import alignHeights from './alignHeights';
 
 export default function generateNewsPage() {
@@ -30,11 +30,11 @@ export default function generateNewsPage() {
     const newsElement = _getTemplate(newsContainer, '#news-item-template');
 
     const newsLink = newsElement.querySelector('.news-item__inner');
-    newsLink.href = "https://dvizh.ru" + newsItem.link;
+    newsLink.href = 'https://dvizh.ru' + newsItem.link;
 
     const newsImage = newsElement.querySelector('.news-item__image');
-    // newsImage.src = newsItem.image;
-    newsImage.src = "img/content/intro-bg-3.jpg" // Для тестов
+    newsImage.src = newsItem.image;
+    // newsImage.src = "img/content/intro-bg-3.jpg" // Для тестов
     newsItem.alt = newsItem.name;
 
     const newsDate = newsElement.querySelector('.news-item__date');
@@ -50,7 +50,7 @@ export default function generateNewsPage() {
     cards.push({
       category: newsItem.category,
       card: newsElement
-    })
+    });
 
     initialCount++;
 
@@ -62,7 +62,7 @@ export default function generateNewsPage() {
 
   window.addEventListener('load', function() {
     if (document.documentElement.clientWidth > 768) alignHeights('.news__list', '.news-item');
-  })
+  });
 
   // Генерируем фильтр
   const filterContainer = container.querySelector('.filter-links');
@@ -70,7 +70,7 @@ export default function generateNewsPage() {
 
   const allOption = _getTemplate(filterContainer, '#filter-link-template');
   const allOptionLink = allOption.querySelector('.filter-links__link');
-  const allOptionLinkValue = "Все";
+  const allOptionLinkValue = 'Все';
   allOptionLink.textContent = allOptionLinkValue;
   allOptionLink.classList.add('selected');
   allOptionLink.addEventListener('click', () => {
@@ -78,7 +78,7 @@ export default function generateNewsPage() {
     selectFilter(filterLinks, allOptionLinkValue);
     renderCards(newsContainer, cards, moreBtn);
     if (document.documentElement.clientWidth > 768) alignHeights('.news__list', '.news-item');
-  })
+  });
   filterLinks.push({
     name: allOptionLinkValue,
     element: allOptionLink
@@ -87,7 +87,7 @@ export default function generateNewsPage() {
 
   categories.forEach(category => {
     const filterElement = _getTemplate(filterContainer, '#filter-link-template');
-    
+
     const filterBtn = filterElement.querySelector('.filter-links__link');
     filterBtn.textContent = category;
     filterBtn.addEventListener('click', () => {
@@ -96,20 +96,20 @@ export default function generateNewsPage() {
       renderCards(newsContainer, cards, moreBtn, category);
       currentCategory = category;
       if (document.documentElement.clientWidth > 768) alignHeights('.news__list', '.news-item');
-    })
+    });
     filterLinks.push({
       name: category,
       element: filterBtn
     });
 
     filterContainer.append(filterElement);
-  })
+  });
 
   moreBtn.addEventListener('click', () => {
     renderAllCards(newsContainer, cards, currentCategory);
     moreBtn.classList.add('news__more-btn_hidden');
     if (document.documentElement.clientWidth > 768) alignHeights('.news__list', '.news-item');
-  })
+  });
 }
 
 /**
@@ -118,15 +118,12 @@ export default function generateNewsPage() {
  * @param {String} selector CSS-селектор шаблона
  * @returns {Object} DOM-элемент
  */
- function _getTemplate(container = document, selector) {
-  return container.querySelector(selector)
-    .content
-    .children[0]
-    .cloneNode(true);
+function _getTemplate(container = document, selector) {
+  return container.querySelector(selector).content.children[0].cloneNode(true);
 }
 
 function renderCards(container, cards, moreBtn, category) {
-  container.innerHTML = "";
+  container.innerHTML = '';
 
   let cardsCount = 0;
 
@@ -134,7 +131,7 @@ function renderCards(container, cards, moreBtn, category) {
     if (card.category === category) {
       if (cardsCount === 3) {
         moreBtn.classList.remove('news__more-btn_hidden');
-        return
+        return;
       }
       cardsCount++;
       container.append(card.card);
@@ -142,26 +139,26 @@ function renderCards(container, cards, moreBtn, category) {
     if (!category) {
       if (cardsCount === 3) {
         moreBtn.classList.remove('news__more-btn_hidden');
-        return
+        return;
       }
-      
+
       cardsCount++;
-      container.append(card.card)
+      container.append(card.card);
     }
-  })
+  });
 }
 
 function renderAllCards(container, cards, category) {
-  container.innerHTML = "";
+  container.innerHTML = '';
 
   cards.forEach(card => {
     if (card.category === category) {
       container.append(card.card);
     }
     if (!category) {
-      container.append(card.card)
+      container.append(card.card);
     }
-  })
+  });
 }
 
 function selectFilter(filters, name) {
