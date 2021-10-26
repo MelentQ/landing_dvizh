@@ -5,6 +5,7 @@ export default function easyParallax() {
   if (!about) return;
 
   const rock = about.querySelector('.about__bg-iamge');
+  if (!rock) return;
 
   window.addEventListener('scroll', () => {
     const triggerPos = intro.clientHeight + about.clientHeight - (document.documentElement.clientHeight / 1);

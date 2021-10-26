@@ -76,6 +76,7 @@
 
 .promise {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
 
   @include breakpoint(tablet) {
