@@ -13,7 +13,7 @@ import initPromisesSlider from './components/initPromisesSlider';
 import initMarquee from './components/initMarquee';
 // import initSponsorsSlider from './components/initSponsorsSlider';
 import openYouTubeModal from './components/openYouTubeModal';
-import {timer} from './components/timer';
+import { timer } from './components/timer';
 import smoothScroll from './components/smoothScroll';
 import toggleTopBtn from './components/toggleTopBtn';
 import toggleBurgerMenu from './components/toggleBurgerMenu';
@@ -24,47 +24,50 @@ import initHotelsSlider from './components/initHotelsSlider';
 import generateNews from './components/generateNews';
 import generateNewsPage from './components/generateNewsPage';
 import initOtherNewsSlider from './components/initOtherNewsSlider';
+import { initHotelsMap } from './components/yandexMap';
 
 document.addEventListener('DOMContentLoaded', function() {
-    validation();
-    masks();
+  validation();
+  masks();
 
-    generateNews();
-    generateNewsPage();
+  generateNews();
+  generateNewsPage();
 
-    aboutPast();
-    setThematicSectionTabs();
-    initMarquee();
+  aboutPast();
+  setThematicSectionTabs();
+  initMarquee();
 
-    initTicketsSlider();
-    
-    // initSponsorsSlider();
-    openYouTubeModal();
+  initTicketsSlider();
 
-    timer.init('.sticky-header__time');
-    smoothScroll();
-    initAlbumSlider();
+  // initSponsorsSlider();
+  openYouTubeModal();
 
-    initHotelsSlider();
+  timer.init('.sticky-header__time');
+  smoothScroll();
+  initAlbumSlider();
 
-    initOtherNewsSlider();
+  initHotelsSlider();
+
+  initOtherNewsSlider();
+
+  initHotelsMap();
 });
 
 window.addEventListener('load', function() {
-    document.body.classList.add('loaded');
-    setTimeout(() => document.body.classList.add('animatable'), 300);
+  document.body.classList.add('loaded');
+  setTimeout(() => document.body.classList.add('animatable'), 300);
 
-    toggleStickyHeader();
-    toggleTopBtn();
-    toggleBurgerMenu();
-    alignHeights('.news-preview__slider-wrapper', '.news-preview-item__title');
-    alignHeights('.thematic-sections__list', '.thematic-section__title');
-    alignHeights('.speakers__inner', '.speaker__name');
-    alignHeights('.tickets__slider', '.ticket__title');
-    alignTicketsItemHeight();
-    alignHeights('.tickets__slider', '.ticket__list');
-    animations();
-    easyParallax();
+  toggleStickyHeader();
+  toggleTopBtn();
+  toggleBurgerMenu();
+  alignHeights('.news-preview__slider-wrapper', '.news-preview-item__title');
+  alignHeights('.thematic-sections__list', '.thematic-section__title');
+  alignHeights('.speakers__inner', '.speaker__name');
+  alignHeights('.tickets__slider', '.ticket__title');
+  alignTicketsItemHeight();
+  alignHeights('.tickets__slider', '.ticket__list');
+  animations();
+  easyParallax();
 
-    initPromisesSlider();
-})
+  initPromisesSlider();
+});

@@ -1,0 +1,152 @@
+.map-balloon {
+
+  padding: 1.4rem;
+
+  background-color: var(--accent-color);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+
+  &__title {
+    display: block;
+
+    margin-bottom: 0.4rem;
+
+    font-size: var(--fs-t2);
+  }
+
+  &__rating {
+    margin-bottom: 0.6rem;
+  }
+
+  &__cost {
+    display: block;
+
+    font-size: var(--fs-tx1);
+  }
+
+  &__timetable-list {
+    margin-top: 0.6rem;
+  }
+
+  &__timetable-list-item {
+    font-size: var(--fs-tx3);
+    line-height: 1.2;
+    color: var(--text-color);
+  }
+}
+
+.map-hall-balloon {
+
+  padding: 1.4rem;
+
+  background-color: var(--text-color);
+  color: white;
+  font-size: var(--fs-tx3);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+
+  &__title {
+    display: block;
+
+    margin-bottom: 1.4rem;
+
+    font-size: var(--fs-t1);
+  }
+
+  &__timetable-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1.6rem;
+    row-gap: 1.6rem;
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+      row-gap: 1rem;
+    }
+  }
+
+  &__timetable-date {
+    display: block;
+
+    font-weight: 500;
+    color: var(--accent-color);
+  }
+
+  &__timetable {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1.6rem;
+    row-gap: 0.6rem;
+  }
+
+  &__timetable-time {
+    display: block;
+
+    font-size: 12px;
+
+    @include breakpoint(mobile) {
+      font-size: 10px;
+    }
+  }
+
+  &__timetable-name {
+    display: block;
+
+    font-size: 12px;
+
+    @include breakpoint(mobile) {
+      font-size: 10px;
+    }
+  }
+}
+
+.ymaps-2-1-79-balloon.active .ymaps-2-1-79-balloon__content {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.ymaps-2-1-79-balloon.active .ymaps-2-1-79-balloon__tail:after {
+  background-color: var(--accent-color);
+}
+
+.ymaps-2-1-79-balloon.active .ymaps-2-1-79-balloon__close-button {
+  position: relative;
+  top: 6px;
+  right: 6px;
+  
+  width: 24px;
+  height: 24px;
+
+  background-image: url(./../img/icons/cross-white.svg);
+  background-repeat: no-repeat;
+}
+
+.ymaps-2-1-79-balloon.active.hall .ymaps-2-1-79-balloon__tail:after {
+  background-color: var(--text-color);
+}
+
+.ymaps-2-1-79-balloon.active.hall .scroll-balloon {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0.6rem;
+
+    @include breakpoint(mobile) {
+      width: 0.3rem;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--text-color);
+  }
+}

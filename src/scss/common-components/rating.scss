@@ -17,3 +17,11 @@
     opacity: 0.3;
   }
 }
+
+.map-balloon {
+  .rating {
+    &__star {
+      fill: white;
+    }
+  }
+}

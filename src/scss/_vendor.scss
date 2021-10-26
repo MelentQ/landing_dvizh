@@ -7,17 +7,20 @@
 @import './vendor/hystmodal.min';
 
 .swiper-slide {
-    box-sizing: border-box;
-    height: auto;
-    display: flex;
-    flex-direction: column;
+  box-sizing: border-box;
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .lazyload,
 .lazyloading {
-    opacity: 0;
+  opacity: 0;
 }
 .lazyloaded {
-    opacity: 1;
-    transition: opacity 300ms;
+  opacity: 1;
+  transition: opacity 300ms;
+}
+[class*='ymaps-2'][class*='-ground-pane'] {
+  filter: grayscale(100%);
 }
