@@ -9,6 +9,13 @@
   @include breakpoint(small-tablet) {
     padding-top: 4rem;
   }
+
+  &__next-section-btn {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   
   &__title {
     margin-bottom: 12rem;
@@ -37,10 +44,10 @@
       padding-bottom: 6rem;
     }
     @include breakpoint(small-tablet) {
-      padding-bottom: 4rem;
+      padding-bottom: 6rem;
     }
     @include breakpoint(mobile) {
-      padding-bottom: 2rem;
+      padding-bottom: 6rem;
     }
   }
   
@@ -89,19 +96,16 @@
   &__content {
     flex: 0 0 50%;
 
-    padding-right: 12.1rem;
+    padding-left: 12rem;
 
     @include breakpoint(tablet) {
-      padding-right: 6rem;
-      padding-left: 4rem;
-
       flex-basis: 60%;
+      padding-left: 6rem;
     }
     @include breakpoint(small-tablet) {
       flex-basis: auto;
+
       margin-bottom: 3rem;
-      padding-left: 2.5rem;
-      padding-right: 0;
     }
   }
 
@@ -156,7 +160,6 @@
       flex-basis: auto;
 
       max-width: 40rem;
-      padding-left: 2.5rem;
     }
   }
 }

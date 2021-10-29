@@ -3,17 +3,19 @@ function initHotelsMap() {
   // Промис -> Промис -> Выполнение кода
   // 1. Берем данные из json
   // 2. Ждем загрузку ymaps
-  fetch('assets/data/map.json')
-    .then(res => {
-      return res.json();
-    })
-    .then(res => {
-      ymaps.ready(() => {
-        init(res);
-      });
-    });
 
-  const container = document.querySelector('#hotelsMap')
+  const container = document.querySelector('#hotelsMap');
+  if (!container) return;
+
+  fetch('assets/data/map.json')
+  .then(res => {
+    return res.json();
+  })
+  .then(res => {
+    ymaps.ready(() => {
+      init(res);
+    });
+  });
 
   function init(data) {
     const map = new ymaps.Map(container, {
@@ -115,6 +117,7 @@ function initHotelsMap() {
       balloonContentLayout: balloonLayout,
       balloonMaxHeight: 1000,
       balloonMaxWidth: 400,
+      balloonPanelMaxMapArea: 400000,
       iconLayout: 'default#image',
       iconImageHref: timetable ? 'img/icons/pin-icon.svg' : 'img/icons/pin-icon-red.svg',
       iconImageSize: [50, 50],

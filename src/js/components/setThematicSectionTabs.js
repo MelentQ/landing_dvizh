@@ -71,6 +71,11 @@ function setThematicSectionTabs() {
   cards.forEach((card, i) => {
     const btn = card.querySelector('.thematic-section__btn');
     const closeBtn = card.querySelector('.thematic-section__description-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        descriptions[i].classList.remove('thematic-section__description_opened');
+      })
+    }
 
     btn.addEventListener('click', () => {
       btn.blur();
@@ -89,10 +94,6 @@ function setThematicSectionTabs() {
 
     descriptions[i].addEventListener('mouseleave', () => {
       hideAll();
-    })
-
-    closeBtn.addEventListener('click', () => {
-      descriptions[i].classList.remove('thematic-section__description_opened');
     })
   })
 

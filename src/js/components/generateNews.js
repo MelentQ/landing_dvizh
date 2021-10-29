@@ -4,7 +4,7 @@ export default function generateNews() {
   const container = document.querySelector('#news-preview');
   if (!container) return;
 
-  fetch('assets/json/results.json')
+  fetch('assets/data/results.json')
     .then(res => {
       return res.json();
     })

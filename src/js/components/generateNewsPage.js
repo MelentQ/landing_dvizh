@@ -1,10 +1,10 @@
-import alignHeights from './alignHeights';
+// import alignHeights from './alignHeights';
 
 export default function generateNewsPage() {
   const container = document.querySelector('#js-generated-news');
   if (!container) return;
 
-  fetch('/results.json')
+  fetch('assets/data/results.json')
     .then(res => {
       return res.json();
     })
@@ -37,8 +37,8 @@ export default function generateNewsPage() {
         newsLink.href = 'https://dvizh.ru' + newsItem.link;
 
         const newsImage = newsElement.querySelector('.news-item__image');
-        newsImage.src = newsItem.image;
-        // newsImage.src = "img/content/intro-bg-3.jpg" // Для тестов
+        // newsImage.src = newsItem.image;
+        newsImage.src = "img/content/intro-bg-3.jpg" // Для тестов
         newsItem.alt = newsItem.name;
 
         const newsDate = newsElement.querySelector('.news-item__date');
@@ -64,9 +64,9 @@ export default function generateNewsPage() {
         }
       });
 
-      window.addEventListener('load', function() {
-        if (document.documentElement.clientWidth > 768) alignHeights('.news__list', '.news-item');
-      });
+      // window.addEventListener('load', function() {
+      //   if (document.documentElement.clientWidth > 768) alignHeights('.news__list', '.news-item');
+      // });
 
       // Генерируем фильтр
       const filterContainer = container.querySelector('.filter-links');
@@ -81,7 +81,7 @@ export default function generateNewsPage() {
         moreBtn.classList.add('news__more-btn_hidden');
         selectFilter(filterLinks, allOptionLinkValue);
         renderCards(newsContainer, cards, moreBtn);
-        if (document.documentElement.clientWidth > 768) alignHeights('.news__list', '.news-item');
+        // if (document.documentElement.clientWidth > 768) alignHeights('.news__list', '.news-item');
       });
       filterLinks.push({
         name: allOptionLinkValue,
@@ -99,7 +99,7 @@ export default function generateNewsPage() {
           selectFilter(filterLinks, category);
           renderCards(newsContainer, cards, moreBtn, category);
           currentCategory = category;
-          if (document.documentElement.clientWidth > 768) alignHeights('.news__list', '.news-item');
+          // if (document.documentElement.clientWidth > 768) alignHeights('.news__list', '.news-item');
         });
         filterLinks.push({
           name: category,
@@ -110,9 +110,10 @@ export default function generateNewsPage() {
       });
 
       moreBtn.addEventListener('click', () => {
+        console.log("a");
         renderAllCards(newsContainer, cards, currentCategory);
         moreBtn.classList.add('news__more-btn_hidden');
-        if (document.documentElement.clientWidth > 768) alignHeights('.news__list', '.news-item');
+        // if (document.documentElement.clientWidth > 768) alignHeights('.news__list', '.news-item');
       });
     });
 }

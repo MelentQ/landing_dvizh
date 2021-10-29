@@ -18,7 +18,6 @@ import smoothScroll from './components/smoothScroll';
 import toggleTopBtn from './components/toggleTopBtn';
 import toggleBurgerMenu from './components/toggleBurgerMenu';
 import animations from './components/animations';
-import easyParallax from './components/easyParallax';
 import alignTicketsItemHeight from './components/alignTicketsItemHeight';
 import initHotelsSlider from './components/initHotelsSlider';
 import generateNews from './components/generateNews';
@@ -67,7 +66,6 @@ window.addEventListener('load', function() {
   alignTicketsItemHeight();
   alignHeights('.tickets__slider', '.ticket__list');
   animations();
-  easyParallax();
 
   initPromisesSlider();
 });
