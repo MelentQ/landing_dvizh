@@ -24,6 +24,7 @@ import generateNews from './components/generateNews';
 import generateNewsPage from './components/generateNewsPage';
 import initOtherNewsSlider from './components/initOtherNewsSlider';
 import { initHotelsMap } from './components/yandexMap';
+import externalPageSlider from './components/externalPageSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
   validation();
@@ -50,6 +51,8 @@ document.addEventListener('DOMContentLoaded', function() {
   initOtherNewsSlider();
 
   initHotelsMap();
+
+  externalPageSlider();
 });
 
 window.addEventListener('load', function() {

@@ -7,7 +7,7 @@ function initHotelsMap() {
   const container = document.querySelector('#hotelsMap');
   if (!container) return;
 
-  fetch('assets/data/map.json')
+  fetch('/map.json')
   .then(res => {
     return res.json();
   })
@@ -119,7 +119,7 @@ function initHotelsMap() {
       balloonMaxWidth: 400,
       balloonPanelMaxMapArea: 400000,
       iconLayout: 'default#image',
-      iconImageHref: timetable ? 'img/icons/pin-icon.svg' : 'img/icons/pin-icon-red.svg',
+      iconImageHref: timetable ? '/local/templates/index/img/icons/pin-icon.svg' : '/local/templates/index/img/icons/pin-icon-red.svg',
       iconImageSize: [50, 50],
       iconImageOffset: [-25, -45],
       hideIconOnBalloonOpen: false

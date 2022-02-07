@@ -4,7 +4,7 @@ export default function generateNewsPage() {
   const container = document.querySelector('#js-generated-news');
   if (!container) return;
 
-  fetch('assets/data/results.json')
+  fetch('/results.json')
     .then(res => {
       return res.json();
     })
@@ -37,8 +37,8 @@ export default function generateNewsPage() {
         newsLink.href = 'https://dvizh.ru' + newsItem.link;
 
         const newsImage = newsElement.querySelector('.news-item__image');
-        // newsImage.src = newsItem.image;
-        newsImage.src = "img/content/intro-bg-3.jpg" // Для тестов
+        newsImage.src = newsItem.image;
+        // newsImage.src = "img/content/intro-bg-3.jpg" // Для тестов
         newsItem.alt = newsItem.name;
 
         const newsDate = newsElement.querySelector('.news-item__date');
